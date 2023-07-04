@@ -1,15 +1,15 @@
 // Consensus module include everything related to Consensus
 package raft
 
-// TODO: Remove after debugging
-var networkSeparate = make(map[int]bool)
-
+import "math"
 type CMState int
 
 const (
 	Follower CMState = iota
 	Candidate
 	Leader
+	// Only for debugging - Simulate a Failure machine (Both machine fail or network separate)
+	Failure
 )
 
 type ConsensusModule struct {
@@ -18,19 +18,31 @@ type ConsensusModule struct {
 	id      int
 	peerIds []int
 
-	server *server
+	server *Server
 
+	// Persistent state of Server
 	currentTerm int
 	votedFor    int
 	log         []LogEntry
 
+	// Volatile state of Server
+	commitIndex int
+	lastApplied int
+	// State of server
 	state CMState
 	// Store the last election reset timestamp
 	electionTimeoutReset time.Time
-	// Fire the AppendEntries Event
+
+	// Event fire by client
 	appendEntriesEvent chan struct{}
+	commitEvent        chan struct{}
+
+	// Volatile leader state
+	nextIndex  map[int]int
+	matchIndex map[int]int
 }
 
+/******************************************* Common Function ************************************/
 func (cm *ConsensusModule) electionTimeout() {
 	timeoutDuration := cm.timeoutDuration()
 	cm.mu.Lock()
@@ -44,8 +56,8 @@ func (cm *ConsensusModule) electionTimeout() {
 		<-ticker.C
 
 		cm.mu.Lock()
-		// In leader state no timeout
-		if cm.state == Leader {
+		// In leader and failure no timeout
+		if cm.state == Leader || cm.state == Failure {
 			cm.mu.Unlock()
 			return
 		}
@@ -65,6 +77,15 @@ func (cm *ConsensusModule) electionTimeout() {
 		cm.mu.Unlock()
 	}
 }
+func (cm *ConsensusModule) revertToFollower(term int) {
+	cm.state = Follower
+	cm.currentTerm = term
+	cm.votedFor = -1
+	cm.electionTimeoutReset = time.Now()
+
+	go cm.electionTimeout()
+}
+
 
 // Different consensus state consider moving them separately
 /************************************************Follower State******************************************/
@@ -80,29 +101,40 @@ type RequestVoteResponse struct {
 	VoteGranted bool
 }
 
-// RequestVote RPC.
+// RequestVote RPC for receiver implementation
 func (cm *ConsensusModule) RequestVote(args RequestVoteArgs, response *RequestVoteResponse) error {
 	cm.mu.Lock()
 	defer cm.mu.Unlock()
 
+	// Get the last log index and term of this server
 	lastLogIndex, lastLogTerm := cm.lastLogIndexAndTerm()
 
-	// Revert to follower if the term is not up to date
+	// Revert to follower if the term is not up to date (Rules for Servers)
 	if args.Term > cm.currentTerm {
 		cm.revertToFollower(args.Term)
 	}
 
-	// If this server havent vote for anyone and the request server meet criteria
-	if cm.currentTerm == args.Term &&
-		(cm.votedFor == -1 || cm.votedFor == args.CandidateId) &&
-		(args.LastLogTerm > lastLogTerm ||
-			(args.LastLogTerm == lastLogTerm && args.LastLogIndex >= lastLogIndex)) {
-		response.VoteGranted = true
-		cm.votedFor = args.CandidateId
-	} else {
+	// If request term < currentTerm return false (5.1)
+	if args.Term < cm.currentTerm {
 		response.VoteGranted = false
+		response.term = cm.currentTerm
+	} else {
+		// Check vote granted criteria
+		if (cm.votedFor == -1 || cm.votedFor == args.CandidateId) &&
+			(args.LastLogTerm > lastLogTerm ||
+				(args.LastLogTerm == lastLogTerm && args.LastLogIndex >= lastLogIndex)) {
+			// Response result
+			response.VoteGranted = true
+			response.Term = cm.currentTerm
+			// Set server state
+			cm.votedFor = args.CandidateId
+			// Reset timeout when vote for a candidate
+			cm.electionTimeoutReset = time.Now()
+		} else {
+			response.VoteGranted = false
+			response.term = cm.currentTerm
+		}
 	}
-	response.Term = cm.currentTerm
 	cm.persistToStorage()
 	return nil
 }
@@ -120,16 +152,14 @@ type AppendEntriesArgs struct {
 type AppendEntriesResponse struct {
 	Term    int
 	Success bool
-
-	// Optimization
-	ConflictIndex int
-	ConflictTerm  int
 }
 
+// Receiver implementation
 func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *AppendEntriesResponse) error {
 	cm.mu.Lock()
 	defer cm.mu.Unlock()
-	if cm.state == Dead {
+	// Consider no response from Failure machine
+	if cm.state == Failure {
 		return nil
 	}
 
@@ -138,62 +168,44 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 		cm.revertToFollower(args.Term)
 	}
 
-	response.Success = false
-	if args.Term == cm.currentTerm {
-		// Revert to follower if in Candidate
-		if cm.state != Follower {
-			cm.revertToFollower(args.Term)
-		}
-		// Reset the election timeout
-		cm.electionTimeoutReset = time.Now()
+	// Heartbeat to reset timeout
+	cm.electionTimeoutReset = time.Now()
 
-		// Do log matching
-		if args.PrevLogIndex == -1 ||
-			(args.PrevLogIndex < len(cm.log) && args.PrevLogTerm == cm.log[args.PrevLogIndex].Term) {
-			reply.Success = true
-
-			// Find the insert point
-			logInsertIndex := args.PrevLogIndex + 1
-			newEntriesIndex := 0
-
-			for {
-				if logInsertIndex >= len(cm.log) || newEntriesIndex >= len(args.Entries) {
-					break
-				}
-				if cm.log[logInsertIndex].Term != args.Entries[newEntriesIndex].Term {
-					break
-				}
-				logInsertIndex++
-				newEntriesIndex++
-			}
-
-			if newEntriesIndex < len(args.Entries) {
-				cm.log = append(cm.log[:logInsertIndex], args.Entries[newEntriesIndex:]...)
-			}
-
-			// Set commit index.
-			if args.LeaderCommit > cm.commitIndex {
-				cm.commitIndex = intMin(args.LeaderCommit, len(cm.log)-1)
-				cm.newCommitReadyChan <- struct{}{}
-			}
+	// Return false if request term < currentTerm (5.1)
+	if args.Term < cm.currentTerm {
+		response.Success = false
+		response.Term = cm.currentTerm
+	} else {
+		// All entries are different
+		if args.PrevLogIndex == -1 {
+			// Replace the whole current log by the master log entries
+			cm.log = append(cm.log[:0],args.Entries...)
+			response.Success = true
+			response.Term = cm.currentTerm
 		} else {
+			// The server log does not have index at PrevLogIndex (An outdate log)
 			if args.PrevLogIndex >= len(cm.log) {
-				reply.ConflictIndex = len(cm.log)
-				reply.ConflictTerm = -1
+				response.Success = false
+				response.Term = cm.currentTerm
 			} else {
-				reply.ConflictTerm = cm.log[args.PrevLogIndex].Term
-				var i int
-				for i = args.PrevLogIndex - 1; i >= 0; i-- {
-					if cm.log[i].Term != reply.ConflictTerm {
-						break
+				// The term at PrevLogIndex are different with leader
+				if args.PrevLogTerm != cm.log[args.PrevLogIndex].Term {
+					response.Success = false
+					response.Term = cm.currentTerm
+				} else {
+					// Find the matching index then replace from that upward
+					cm.log = append(cm.log[:args.PrevLogIndex+1],args.Entries...)
+					response.Success = true
+					response.Term = cm.currentTerm
+					// Set commit index
+					if args.LeaderCommit > cm.commitIndex {
+						cm.commitIndex = int(math.Min(args.LeaderCommit, len(cm.log)-1))
+						cm.commitEvent <- struct{}{}
 					}
 				}
-				reply.ConflictIndex = i + 1
 			}
 		}
 	}
-
-	reply.Term = cm.currentTerm
 	cm.persistToStorage()
 	return nil
 }
