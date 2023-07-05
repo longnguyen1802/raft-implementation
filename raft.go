@@ -3,14 +3,15 @@ package raft
 
 import (
 	"fmt"
-	"math"
-	"os"
-	"sync"
 	"log"
-	"time"
-	"strconv"
+	"math"
 	"math/rand"
+	"os"
+	"strconv"
+	"sync"
+	"time"
 )
+var loglock sync.Mutex
 type CMState int
 
 const (
@@ -18,8 +19,20 @@ const (
 	Candidate
 	Leader
 	// Only for debugging - Simulate a Failure machine (Both machine fail or network separate)
-	Failure
+	//Failure
 )
+func (s CMState) String() string {
+	switch s {
+	case Follower:
+		return "Follower"
+	case Candidate:
+		return "Candidate"
+	case Leader:
+		return "Leader"
+	default:
+		panic("unreachable")
+	}
+}
 
 type Log struct {
 	Command string
@@ -99,7 +112,7 @@ func (cm *ConsensusModule) electionTimeout() {
 		<-ticker.C
 
 		cm.mu.Lock()
-		// In leader and failure no timeout
+		// In leader no timeout
 		if cm.state == Leader {
 			cm.mu.Unlock()
 			return
@@ -131,13 +144,14 @@ func (cm *ConsensusModule) revertToFollower(term int) {
 }
 
 func (cm *ConsensusModule) applyStateMachine() {
-	for range cm.AppendEntriesEvent {
+	for range cm.applyStateMachineEvent {
 		cm.mu.Lock()
 		//var logs []Log
 		if cm.commitIndex > cm.lastApplied {
 			//logs = cm.log[cm.lastApplied+1 : cm.commitIndex+1]
 			cm.lastApplied = cm.commitIndex
 		}
+		cm.debugLog("Apply new commit %d to state machine",cm.lastApplied)
 		// Apply to state machine can call a go routine function
 		// Pending
 		cm.mu.Unlock()
@@ -218,11 +232,11 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 	cm.mu.Lock()
 	defer cm.mu.Unlock()
 	// Consider no response from Failure machine
-	if cm.state == Failure {
-		return nil
-	}
+	// if cm.state == Failure {
+	// 	return nil
+	// }
 
-	cm.debugLog("AppendEntries: %+v", args)
+	cm.debugLog("Receive AppendEntries: %+v", args)
 
 	// Revert to follower if term is not up to date
 	if args.Term > cm.currentTerm {
@@ -243,6 +257,7 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 			cm.log = append(cm.log[:0], args.Entries...)
 			response.Success = true
 			response.Term = cm.currentTerm
+			cm.debugLog("New log update: %v",cm.log)
 		} else {
 			// The server log does not have index at PrevLogIndex (An outdate log)
 			if args.PrevLogIndex >= len(cm.log) {
@@ -256,12 +271,14 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 				} else {
 					// Find the matching index then replace from that upward
 					cm.log = append(cm.log[:args.PrevLogIndex+1], args.Entries...)
+					cm.debugLog("New log update: %v",cm.log)
 					response.Success = true
 					response.Term = cm.currentTerm
 					// Set commit index
 					if args.LeaderCommit > cm.commitIndex {
+						cm.debugLog("New commit index is coming")
 						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
-						cm.AppendEntriesEvent <- struct{}{}
+						cm.applyStateMachineEvent <- struct{}{}
 					}
 				}
 			}
@@ -362,6 +379,7 @@ func (cm *ConsensusModule) leaderLoop() {
 			case _, ok := <-cm.AppendEntriesEvent:
 				// Trigger by another event
 				if ok {
+					cm.debugLog("Heartbeat got stopped by another event")
 					sending = true
 				} else {
 					return
@@ -456,7 +474,7 @@ func (cm *ConsensusModule) sendAppendEntries() {
 						// Change in commit index (some command successfull get majority)
 						if cm.commitIndex != commitIndex {
 							cm.applyStateMachineEvent <- struct{}{}
-							cm.AppendEntriesEvent <- struct{}{}
+							//cm.AppendEntriesEvent <- struct{}{}
 						}
 					} else {
 						cm.nextIndex[peerId] -= 1
@@ -480,14 +498,14 @@ func (cm *ConsensusModule) SubmitCommand(command string) bool {
 		cm.AppendEntriesEvent <- struct{}{}
 		return true
 	}
-
+	cm.mu.Unlock()
 	return false
 }
 /***********************************  Utility function *****************************************************/
-// According to the paper setting timeout to 150ms - 300ms
+// According to the paper setting timeout to 300ms - 600ms
 
 func (cm *ConsensusModule) timeoutDuration() time.Duration {
-	return time.Duration(150+rand.Intn(150)) * time.Millisecond
+	return time.Duration(300+rand.Intn(300)) * time.Millisecond
 }
 
 func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {
@@ -500,12 +518,14 @@ func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {
 }
 
 func (cm *ConsensusModule) debugLog(format string, args ...interface{}) {
-	f, err := os.OpenFile("server"+strconv.Itoa(cm.id), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	f, err := os.OpenFile("server"+strconv.Itoa(cm.id)+".txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
 	}
 	defer f.Close()
+	loglock.Lock()
 	log.SetOutput(f)
 	format = fmt.Sprintf("[%d] ", cm.id) + format
 	log.Printf(format, args...)
+	defer loglock.Unlock()
 }

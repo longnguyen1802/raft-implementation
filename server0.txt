@@ -1,0 +1,907 @@
+2023/07/06 00:31:33 [0] Election timeout started (347ms), term=0
+2023/07/06 00:31:34 [0] Become Candidate (currentTerm=1); log=[]
+2023/07/06 00:31:34 [0] sending RequestVote to 2: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/06 00:31:34 [0] Election timeout started (359ms), term=1
+2023/07/06 00:31:34 [0] sending RequestVote to 1: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/06 00:31:34 [0] received RequestVoteResponse {Term:1 VoteGranted:true}
+2023/07/06 00:31:34 [0] wins election with 2 votes
+2023/07/06 00:31:34 [0] received RequestVoteResponse {Term:1 VoteGranted:true}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:0], matchIndex := map[1:-1 2:-1]; commitIndex := -1
+2023/07/06 00:31:34 [0] Submit received by Leader: command 425
+2023/07/06 00:31:34 [0] New log update: [{command 425 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 540
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 456
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 425 Term:1} {Command:command 540 Term:1} {Command:command 456 Term:1}] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 425 Term:1} {Command:command 540 Term:1} {Command:command 456 Term:1}] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 300
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 694
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 425 Term:1} {Command:command 540 Term:1} {Command:command 456 Term:1} {Command:command 300 Term:1}] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1}]
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 425 Term:1} {Command:command 540 Term:1} {Command:command 456 Term:1} {Command:command 300 Term:1} {Command:command 694 Term:1}] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:0 2:3], matchIndex := map[1:-1 2:2]; commitIndex := 2
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:3 2:3], matchIndex := map[1:2 2:2]; commitIndex := 2
+2023/07/06 00:31:34 [0] Apply new commit 2 to state machine
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 425 Term:1} {Command:command 540 Term:1} {Command:command 456 Term:1} {Command:command 300 Term:1} {Command:command 694 Term:1}] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=0, args={Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 425 Term:1} {Command:command 540 Term:1} {Command:command 456 Term:1} {Command:command 300 Term:1} {Command:command 694 Term:1}] LeaderCommit:-1}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 511
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 162
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=3, args={Term:1 LeaderId:0 PrevLogIndex:2 PrevLogTerm:1 Entries:[{Command:command 300 Term:1} {Command:command 694 Term:1} {Command:command 511 Term:1} {Command:command 162 Term:1}] LeaderCommit:2}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:3 2:5], matchIndex := map[1:2 2:4]; commitIndex := 4
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=3, args={Term:1 LeaderId:0 PrevLogIndex:2 PrevLogTerm:1 Entries:[{Command:command 300 Term:1} {Command:command 694 Term:1} {Command:command 511 Term:1} {Command:command 162 Term:1}] LeaderCommit:2}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:4 2:5], matchIndex := map[1:3 2:4]; commitIndex := 4
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Apply new commit 4 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:4 2:5], matchIndex := map[1:3 2:4]; commitIndex := 4
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=5, args={Term:1 LeaderId:0 PrevLogIndex:4 PrevLogTerm:1 Entries:[{Command:command 511 Term:1} {Command:command 162 Term:1}] LeaderCommit:4}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=4, args={Term:1 LeaderId:0 PrevLogIndex:3 PrevLogTerm:1 Entries:[{Command:command 694 Term:1} {Command:command 511 Term:1} {Command:command 162 Term:1}] LeaderCommit:4}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 89
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:5 2:5], matchIndex := map[1:4 2:4]; commitIndex := 4
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=5, args={Term:1 LeaderId:0 PrevLogIndex:4 PrevLogTerm:1 Entries:[{Command:command 511 Term:1} {Command:command 162 Term:1} {Command:command 89 Term:1}] LeaderCommit:4}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=5, args={Term:1 LeaderId:0 PrevLogIndex:4 PrevLogTerm:1 Entries:[{Command:command 511 Term:1} {Command:command 162 Term:1} {Command:command 89 Term:1}] LeaderCommit:4}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 728
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:5 2:7], matchIndex := map[1:4 2:6]; commitIndex := 6
+2023/07/06 00:31:34 [0] Apply new commit 6 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:7 2:7], matchIndex := map[1:6 2:6]; commitIndex := 6
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:7 2:7], matchIndex := map[1:6 2:6]; commitIndex := 6
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:7 2:7], matchIndex := map[1:6 2:6]; commitIndex := 6
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=7, args={Term:1 LeaderId:0 PrevLogIndex:6 PrevLogTerm:1 Entries:[{Command:command 89 Term:1} {Command:command 728 Term:1}] LeaderCommit:6}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=7, args={Term:1 LeaderId:0 PrevLogIndex:6 PrevLogTerm:1 Entries:[{Command:command 89 Term:1} {Command:command 728 Term:1}] LeaderCommit:6}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 274
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1}]
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Submit received by Leader: command 211
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=7, args={Term:1 LeaderId:0 PrevLogIndex:6 PrevLogTerm:1 Entries:[{Command:command 89 Term:1} {Command:command 728 Term:1} {Command:command 274 Term:1} {Command:command 211 Term:1}] LeaderCommit:6}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=7, args={Term:1 LeaderId:0 PrevLogIndex:6 PrevLogTerm:1 Entries:[{Command:command 89 Term:1} {Command:command 728 Term:1} {Command:command 274 Term:1} {Command:command 211 Term:1}] LeaderCommit:6}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:8 2:7], matchIndex := map[1:7 2:6]; commitIndex := 7
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:8 2:8], matchIndex := map[1:7 2:7]; commitIndex := 7
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=8, args={Term:1 LeaderId:0 PrevLogIndex:7 PrevLogTerm:1 Entries:[{Command:command 728 Term:1} {Command:command 274 Term:1} {Command:command 211 Term:1}] LeaderCommit:7}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 445
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=8, args={Term:1 LeaderId:0 PrevLogIndex:7 PrevLogTerm:1 Entries:[{Command:command 728 Term:1} {Command:command 274 Term:1} {Command:command 211 Term:1} {Command:command 445 Term:1}] LeaderCommit:7}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:8 2:9], matchIndex := map[1:7 2:8]; commitIndex := 8
+2023/07/06 00:31:34 [0] Apply new commit 8 to state machine
+2023/07/06 00:31:34 [0] Apply new commit 8 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:9 2:9], matchIndex := map[1:8 2:8]; commitIndex := 8
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:9 2:11], matchIndex := map[1:8 2:10]; commitIndex := 10
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:11 2:11], matchIndex := map[1:10 2:10]; commitIndex := 10
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:11 2:11], matchIndex := map[1:10 2:10]; commitIndex := 10
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Apply new commit 10 to state machine
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=11, args={Term:1 LeaderId:0 PrevLogIndex:10 PrevLogTerm:1 Entries:[{Command:command 445 Term:1}] LeaderCommit:10}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 237
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=11, args={Term:1 LeaderId:0 PrevLogIndex:10 PrevLogTerm:1 Entries:[{Command:command 445 Term:1} {Command:command 237 Term:1}] LeaderCommit:10}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:11 2:12], matchIndex := map[1:10 2:11]; commitIndex := 11
+2023/07/06 00:31:34 [0] Apply new commit 11 to state machine
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=12, args={Term:1 LeaderId:0 PrevLogIndex:11 PrevLogTerm:1 Entries:[{Command:command 237 Term:1}] LeaderCommit:11}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=11, args={Term:1 LeaderId:0 PrevLogIndex:10 PrevLogTerm:1 Entries:[{Command:command 445 Term:1} {Command:command 237 Term:1}] LeaderCommit:11}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 106
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:12 2:12], matchIndex := map[1:11 2:11]; commitIndex := 11
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Submit received by Leader: command 495
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=12, args={Term:1 LeaderId:0 PrevLogIndex:11 PrevLogTerm:1 Entries:[{Command:command 237 Term:1} {Command:command 106 Term:1}] LeaderCommit:11}
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=12, args={Term:1 LeaderId:0 PrevLogIndex:11 PrevLogTerm:1 Entries:[{Command:command 237 Term:1} {Command:command 106 Term:1} {Command:command 495 Term:1}] LeaderCommit:11}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:12 2:13], matchIndex := map[1:11 2:12]; commitIndex := 12
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=12, args={Term:1 LeaderId:0 PrevLogIndex:11 PrevLogTerm:1 Entries:[{Command:command 237 Term:1} {Command:command 106 Term:1} {Command:command 495 Term:1}] LeaderCommit:12}
+2023/07/06 00:31:34 [0] Apply new commit 12 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:13 2:13], matchIndex := map[1:12 2:12]; commitIndex := 12
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=13, args={Term:1 LeaderId:0 PrevLogIndex:12 PrevLogTerm:1 Entries:[{Command:command 106 Term:1} {Command:command 495 Term:1}] LeaderCommit:12}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:13 2:13], matchIndex := map[1:12 2:12]; commitIndex := 12
+2023/07/06 00:31:34 [0] Submit received by Leader: command 466
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:14 2:13], matchIndex := map[1:13 2:12]; commitIndex := 13
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:15 2:13], matchIndex := map[1:14 2:12]; commitIndex := 14
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:15 2:15], matchIndex := map[1:14 2:14]; commitIndex := 14
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=15, args={Term:1 LeaderId:0 PrevLogIndex:14 PrevLogTerm:1 Entries:[{Command:command 466 Term:1}] LeaderCommit:14}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=15, args={Term:1 LeaderId:0 PrevLogIndex:14 PrevLogTerm:1 Entries:[{Command:command 466 Term:1}] LeaderCommit:14}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 528
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1}]
+2023/07/06 00:31:34 [0] Apply new commit 14 to state machine
+2023/07/06 00:31:34 [0] Apply new commit 14 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:15 2:15], matchIndex := map[1:14 2:14]; commitIndex := 14
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:16 2:15], matchIndex := map[1:15 2:14]; commitIndex := 15
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Apply new commit 15 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:16 2:16], matchIndex := map[1:15 2:15]; commitIndex := 15
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=16, args={Term:1 LeaderId:0 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 528 Term:1}] LeaderCommit:15}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=16, args={Term:1 LeaderId:0 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 528 Term:1}] LeaderCommit:15}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 258
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=16, args={Term:1 LeaderId:0 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 528 Term:1} {Command:command 258 Term:1}] LeaderCommit:15}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=16, args={Term:1 LeaderId:0 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 528 Term:1} {Command:command 258 Term:1}] LeaderCommit:15}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Submit received by Leader: command 47
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:17 2:16], matchIndex := map[1:16 2:15]; commitIndex := 16
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=17, args={Term:1 LeaderId:0 PrevLogIndex:16 PrevLogTerm:1 Entries:[{Command:command 258 Term:1} {Command:command 47 Term:1}] LeaderCommit:16}
+2023/07/06 00:31:34 [0] Apply new commit 16 to state machine
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=16, args={Term:1 LeaderId:0 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 528 Term:1} {Command:command 258 Term:1} {Command:command 47 Term:1}] LeaderCommit:16}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 947
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:17 2:17], matchIndex := map[1:16 2:16]; commitIndex := 16
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=17, args={Term:1 LeaderId:0 PrevLogIndex:16 PrevLogTerm:1 Entries:[{Command:command 258 Term:1} {Command:command 47 Term:1} {Command:command 947 Term:1}] LeaderCommit:16}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:18 2:17], matchIndex := map[1:17 2:16]; commitIndex := 17
+2023/07/06 00:31:34 [0] Apply new commit 17 to state machine
+2023/07/06 00:31:34 [0] Submit received by Leader: command 287
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:18 2:18], matchIndex := map[1:17 2:17]; commitIndex := 17
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=18, args={Term:1 LeaderId:0 PrevLogIndex:17 PrevLogTerm:1 Entries:[{Command:command 47 Term:1} {Command:command 947 Term:1} {Command:command 287 Term:1}] LeaderCommit:17}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:20 2:18], matchIndex := map[1:19 2:17]; commitIndex := 19
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:19 2:18], matchIndex := map[1:18 2:17]; commitIndex := 19
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:19 2:19], matchIndex := map[1:18 2:18]; commitIndex := 19
+2023/07/06 00:31:34 [0] Apply new commit 19 to state machine
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=19, args={Term:1 LeaderId:0 PrevLogIndex:18 PrevLogTerm:1 Entries:[{Command:command 947 Term:1} {Command:command 287 Term:1}] LeaderCommit:19}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=19, args={Term:1 LeaderId:0 PrevLogIndex:18 PrevLogTerm:1 Entries:[{Command:command 947 Term:1} {Command:command 287 Term:1}] LeaderCommit:19}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 888
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:19 2:21], matchIndex := map[1:18 2:20]; commitIndex := 20
+2023/07/06 00:31:34 [0] Apply new commit 20 to state machine
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=19, args={Term:1 LeaderId:0 PrevLogIndex:18 PrevLogTerm:1 Entries:[{Command:command 947 Term:1} {Command:command 287 Term:1} {Command:command 888 Term:1}] LeaderCommit:20}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 790
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=21, args={Term:1 LeaderId:0 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 888 Term:1}] LeaderCommit:20}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:21 2:21], matchIndex := map[1:20 2:20]; commitIndex := 20
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:21 2:21], matchIndex := map[1:20 2:20]; commitIndex := 20
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=21, args={Term:1 LeaderId:0 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 888 Term:1} {Command:command 790 Term:1}] LeaderCommit:20}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 15
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=21, args={Term:1 LeaderId:0 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 888 Term:1} {Command:command 790 Term:1}] LeaderCommit:20}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 541
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=21, args={Term:1 LeaderId:0 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 888 Term:1} {Command:command 790 Term:1} {Command:command 15 Term:1} {Command:command 541 Term:1}] LeaderCommit:20}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=21, args={Term:1 LeaderId:0 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 888 Term:1} {Command:command 790 Term:1} {Command:command 15 Term:1} {Command:command 541 Term:1}] LeaderCommit:20}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:22 2:21], matchIndex := map[1:21 2:20]; commitIndex := 21
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Apply new commit 21 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:23 2:21], matchIndex := map[1:22 2:20]; commitIndex := 22
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:23 2:22], matchIndex := map[1:22 2:21]; commitIndex := 22
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=23, args={Term:1 LeaderId:0 PrevLogIndex:22 PrevLogTerm:1 Entries:[{Command:command 15 Term:1} {Command:command 541 Term:1}] LeaderCommit:22}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 408
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=22, args={Term:1 LeaderId:0 PrevLogIndex:21 PrevLogTerm:1 Entries:[{Command:command 790 Term:1} {Command:command 15 Term:1} {Command:command 541 Term:1}] LeaderCommit:22}
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=23, args={Term:1 LeaderId:0 PrevLogIndex:22 PrevLogTerm:1 Entries:[{Command:command 15 Term:1} {Command:command 541 Term:1} {Command:command 408 Term:1}] LeaderCommit:22}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Submit received by Leader: command 387
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=22, args={Term:1 LeaderId:0 PrevLogIndex:21 PrevLogTerm:1 Entries:[{Command:command 790 Term:1} {Command:command 15 Term:1} {Command:command 541 Term:1} {Command:command 408 Term:1} {Command:command 387 Term:1}] LeaderCommit:22}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:25 2:22], matchIndex := map[1:24 2:21]; commitIndex := 24
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:25 2:23], matchIndex := map[1:24 2:22]; commitIndex := 24
+2023/07/06 00:31:34 [0] Apply new commit 24 to state machine
+2023/07/06 00:31:34 [0] Apply new commit 24 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:25 2:25], matchIndex := map[1:24 2:24]; commitIndex := 24
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:25 2:25], matchIndex := map[1:24 2:24]; commitIndex := 24
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:25 2:25], matchIndex := map[1:24 2:24]; commitIndex := 24
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:26 2:25], matchIndex := map[1:25 2:24]; commitIndex := 25
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:26 2:27], matchIndex := map[1:25 2:26]; commitIndex := 26
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=26, args={Term:1 LeaderId:0 PrevLogIndex:25 PrevLogTerm:1 Entries:[{Command:command 387 Term:1}] LeaderCommit:26}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=27, args={Term:1 LeaderId:0 PrevLogIndex:26 PrevLogTerm:1 Entries:[] LeaderCommit:26}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 831
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1}]
+2023/07/06 00:31:34 [0] Apply new commit 26 to state machine
+2023/07/06 00:31:34 [0] Apply new commit 26 to state machine
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=26, args={Term:1 LeaderId:0 PrevLogIndex:25 PrevLogTerm:1 Entries:[{Command:command 387 Term:1} {Command:command 831 Term:1}] LeaderCommit:26}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=27, args={Term:1 LeaderId:0 PrevLogIndex:26 PrevLogTerm:1 Entries:[{Command:command 831 Term:1}] LeaderCommit:26}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 429
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:26 2:27], matchIndex := map[1:25 2:26]; commitIndex := 26
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:27 2:27], matchIndex := map[1:26 2:26]; commitIndex := 26
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=27, args={Term:1 LeaderId:0 PrevLogIndex:26 PrevLogTerm:1 Entries:[{Command:command 831 Term:1} {Command:command 429 Term:1}] LeaderCommit:26}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=27, args={Term:1 LeaderId:0 PrevLogIndex:26 PrevLogTerm:1 Entries:[{Command:command 831 Term:1} {Command:command 429 Term:1}] LeaderCommit:26}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 356
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:27 2:28], matchIndex := map[1:26 2:27]; commitIndex := 27
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Submit received by Leader: command 737
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:28 2:28], matchIndex := map[1:27 2:27]; commitIndex := 27
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=28, args={Term:1 LeaderId:0 PrevLogIndex:27 PrevLogTerm:1 Entries:[{Command:command 429 Term:1} {Command:command 356 Term:1} {Command:command 737 Term:1}] LeaderCommit:27}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:29 2:28], matchIndex := map[1:28 2:27]; commitIndex := 28
+2023/07/06 00:31:34 [0] Apply new commit 28 to state machine
+2023/07/06 00:31:34 [0] Apply new commit 28 to state machine
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=28, args={Term:1 LeaderId:0 PrevLogIndex:27 PrevLogTerm:1 Entries:[{Command:command 429 Term:1} {Command:command 356 Term:1} {Command:command 737 Term:1}] LeaderCommit:28}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:29 2:29], matchIndex := map[1:28 2:28]; commitIndex := 28
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=29, args={Term:1 LeaderId:0 PrevLogIndex:28 PrevLogTerm:1 Entries:[{Command:command 356 Term:1} {Command:command 737 Term:1}] LeaderCommit:28}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=29, args={Term:1 LeaderId:0 PrevLogIndex:28 PrevLogTerm:1 Entries:[{Command:command 356 Term:1} {Command:command 737 Term:1}] LeaderCommit:28}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 631
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1}]
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=29, args={Term:1 LeaderId:0 PrevLogIndex:28 PrevLogTerm:1 Entries:[{Command:command 356 Term:1} {Command:command 737 Term:1} {Command:command 631 Term:1}] LeaderCommit:28}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 485
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=29, args={Term:1 LeaderId:0 PrevLogIndex:28 PrevLogTerm:1 Entries:[{Command:command 356 Term:1} {Command:command 737 Term:1} {Command:command 631 Term:1}] LeaderCommit:28}
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:31 2:29], matchIndex := map[1:30 2:28]; commitIndex := 30
+2023/07/06 00:31:34 [0] Apply new commit 30 to state machine
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:31 2:31], matchIndex := map[1:30 2:30]; commitIndex := 30
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=31, args={Term:1 LeaderId:0 PrevLogIndex:30 PrevLogTerm:1 Entries:[{Command:command 631 Term:1} {Command:command 485 Term:1}] LeaderCommit:30}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 26
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=31, args={Term:1 LeaderId:0 PrevLogIndex:30 PrevLogTerm:1 Entries:[{Command:command 631 Term:1} {Command:command 485 Term:1} {Command:command 26 Term:1}] LeaderCommit:30}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:31 2:31], matchIndex := map[1:30 2:30]; commitIndex := 30
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:31 2:31], matchIndex := map[1:30 2:30]; commitIndex := 30
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:32 2:31], matchIndex := map[1:31 2:30]; commitIndex := 31
+2023/07/06 00:31:34 [0] Apply new commit 31 to state machine
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=31, args={Term:1 LeaderId:0 PrevLogIndex:30 PrevLogTerm:1 Entries:[{Command:command 631 Term:1} {Command:command 485 Term:1} {Command:command 26 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Submit received by Leader: command 413
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 90
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=32, args={Term:1 LeaderId:0 PrevLogIndex:31 PrevLogTerm:1 Entries:[{Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=32, args={Term:1 LeaderId:0 PrevLogIndex:31 PrevLogTerm:1 Entries:[{Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=32, args={Term:1 LeaderId:0 PrevLogIndex:31 PrevLogTerm:1 Entries:[{Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=31, args={Term:1 LeaderId:0 PrevLogIndex:30 PrevLogTerm:1 Entries:[{Command:command 631 Term:1} {Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=32, args={Term:1 LeaderId:0 PrevLogIndex:31 PrevLogTerm:1 Entries:[{Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=31, args={Term:1 LeaderId:0 PrevLogIndex:30 PrevLogTerm:1 Entries:[{Command:command 631 Term:1} {Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=32, args={Term:1 LeaderId:0 PrevLogIndex:31 PrevLogTerm:1 Entries:[{Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=31, args={Term:1 LeaderId:0 PrevLogIndex:30 PrevLogTerm:1 Entries:[{Command:command 631 Term:1} {Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 194
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 563
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 433
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=31, args={Term:1 LeaderId:0 PrevLogIndex:30 PrevLogTerm:1 Entries:[{Command:command 631 Term:1} {Command:command 485 Term:1} {Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1} {Command:command 194 Term:1} {Command:command 563 Term:1} {Command:command 433 Term:1}] LeaderCommit:31}
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:32 2:34], matchIndex := map[1:31 2:33]; commitIndex := 33
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:36 2:34], matchIndex := map[1:35 2:33]; commitIndex := 35
+2023/07/06 00:31:34 [0] Apply new commit 35 to state machine
+2023/07/06 00:31:34 [0] Apply new commit 35 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:36 2:32], matchIndex := map[1:35 2:31]; commitIndex := 35
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:36 2:34], matchIndex := map[1:35 2:33]; commitIndex := 35
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:33 2:34], matchIndex := map[1:32 2:33]; commitIndex := 35
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=33, args={Term:1 LeaderId:0 PrevLogIndex:32 PrevLogTerm:1 Entries:[{Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1} {Command:command 194 Term:1} {Command:command 563 Term:1} {Command:command 433 Term:1}] LeaderCommit:35}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=34, args={Term:1 LeaderId:0 PrevLogIndex:33 PrevLogTerm:1 Entries:[{Command:command 413 Term:1} {Command:command 90 Term:1} {Command:command 194 Term:1} {Command:command 563 Term:1} {Command:command 433 Term:1}] LeaderCommit:35}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 147
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 78
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=33, args={Term:1 LeaderId:0 PrevLogIndex:32 PrevLogTerm:1 Entries:[{Command:command 26 Term:1} {Command:command 413 Term:1} {Command:command 90 Term:1} {Command:command 194 Term:1} {Command:command 563 Term:1} {Command:command 433 Term:1} {Command:command 147 Term:1} {Command:command 78 Term:1}] LeaderCommit:35}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=34, args={Term:1 LeaderId:0 PrevLogIndex:33 PrevLogTerm:1 Entries:[{Command:command 413 Term:1} {Command:command 90 Term:1} {Command:command 194 Term:1} {Command:command 563 Term:1} {Command:command 433 Term:1} {Command:command 147 Term:1} {Command:command 78 Term:1}] LeaderCommit:35}
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:36 2:34], matchIndex := map[1:35 2:33]; commitIndex := 35
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:36 2:36], matchIndex := map[1:35 2:35]; commitIndex := 35
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:36 2:39], matchIndex := map[1:35 2:38]; commitIndex := 38
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:36 2:36], matchIndex := map[1:35 2:35]; commitIndex := 38
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:36 2:36], matchIndex := map[1:35 2:35]; commitIndex := 38
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:36 2:36], matchIndex := map[1:35 2:35]; commitIndex := 38
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:36 2:36], matchIndex := map[1:35 2:35]; commitIndex := 38
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:36 2:39], matchIndex := map[1:35 2:38]; commitIndex := 38
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:36 2:39], matchIndex := map[1:35 2:38]; commitIndex := 38
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:39 2:39], matchIndex := map[1:38 2:38]; commitIndex := 38
+2023/07/06 00:31:34 [0] Apply new commit 38 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:41 2:39], matchIndex := map[1:40 2:38]; commitIndex := 40
+2023/07/06 00:31:34 [0] Apply new commit 40 to state machine
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=39, args={Term:1 LeaderId:0 PrevLogIndex:38 PrevLogTerm:1 Entries:[{Command:command 147 Term:1} {Command:command 78 Term:1}] LeaderCommit:40}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=41, args={Term:1 LeaderId:0 PrevLogIndex:40 PrevLogTerm:1 Entries:[] LeaderCommit:40}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=39, args={Term:1 LeaderId:0 PrevLogIndex:38 PrevLogTerm:1 Entries:[{Command:command 147 Term:1} {Command:command 78 Term:1}] LeaderCommit:40}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 324
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 159
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1}]
+2023/07/06 00:31:34 [0] Submit received by Leader: command 353
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1}]
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=41, args={Term:1 LeaderId:0 PrevLogIndex:40 PrevLogTerm:1 Entries:[{Command:command 324 Term:1} {Command:command 159 Term:1} {Command:command 353 Term:1}] LeaderCommit:40}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=39, args={Term:1 LeaderId:0 PrevLogIndex:38 PrevLogTerm:1 Entries:[{Command:command 147 Term:1} {Command:command 78 Term:1} {Command:command 324 Term:1} {Command:command 159 Term:1} {Command:command 353 Term:1}] LeaderCommit:40}
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=41, args={Term:1 LeaderId:0 PrevLogIndex:40 PrevLogTerm:1 Entries:[{Command:command 324 Term:1} {Command:command 159 Term:1} {Command:command 353 Term:1}] LeaderCommit:40}
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=41, args={Term:1 LeaderId:0 PrevLogIndex:40 PrevLogTerm:1 Entries:[{Command:command 324 Term:1} {Command:command 159 Term:1} {Command:command 353 Term:1}] LeaderCommit:40}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=39, args={Term:1 LeaderId:0 PrevLogIndex:38 PrevLogTerm:1 Entries:[{Command:command 147 Term:1} {Command:command 78 Term:1} {Command:command 324 Term:1} {Command:command 159 Term:1} {Command:command 353 Term:1}] LeaderCommit:40}
+2023/07/06 00:31:34 [0] Submit received by Leader: command 957
+2023/07/06 00:31:34 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1}]
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:44 2:39], matchIndex := map[1:43 2:38]; commitIndex := 43
+2023/07/06 00:31:34 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:34 [0] Apply new commit 43 to state machine
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:41 2:39], matchIndex := map[1:40 2:38]; commitIndex := 43
+2023/07/06 00:31:34 [0] AppendEntries response from 1 success: nextIndex := map[1:44 2:39], matchIndex := map[1:43 2:38]; commitIndex := 43
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:44 2:41], matchIndex := map[1:43 2:40]; commitIndex := 43
+2023/07/06 00:31:34 [0] AppendEntries response from 2 success: nextIndex := map[1:44 2:41], matchIndex := map[1:43 2:40]; commitIndex := 43
+2023/07/06 00:31:34 [0] sending AppendEntries to 1: nextIndex=44, args={Term:1 LeaderId:0 PrevLogIndex:43 PrevLogTerm:1 Entries:[{Command:command 957 Term:1}] LeaderCommit:43}
+2023/07/06 00:31:34 [0] sending AppendEntries to 2: nextIndex=41, args={Term:1 LeaderId:0 PrevLogIndex:40 PrevLogTerm:1 Entries:[{Command:command 324 Term:1} {Command:command 159 Term:1} {Command:command 353 Term:1} {Command:command 957 Term:1}] LeaderCommit:43}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 721
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1}]
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:44 2:41], matchIndex := map[1:43 2:40]; commitIndex := 43
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:44 2:44], matchIndex := map[1:43 2:43]; commitIndex := 43
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:44 2:44], matchIndex := map[1:43 2:43]; commitIndex := 43
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:44 2:44], matchIndex := map[1:43 2:43]; commitIndex := 43
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:45 2:44], matchIndex := map[1:44 2:43]; commitIndex := 44
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:45 2:45], matchIndex := map[1:44 2:44]; commitIndex := 44
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=45, args={Term:1 LeaderId:0 PrevLogIndex:44 PrevLogTerm:1 Entries:[{Command:command 721 Term:1}] LeaderCommit:44}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=45, args={Term:1 LeaderId:0 PrevLogIndex:44 PrevLogTerm:1 Entries:[{Command:command 721 Term:1}] LeaderCommit:44}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 189
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1}]
+2023/07/06 00:31:35 [0] Apply new commit 44 to state machine
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:45 2:46], matchIndex := map[1:44 2:45]; commitIndex := 45
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:46 2:46], matchIndex := map[1:45 2:45]; commitIndex := 45
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=46, args={Term:1 LeaderId:0 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 189 Term:1}] LeaderCommit:45}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 199
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1}]
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=46, args={Term:1 LeaderId:0 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 189 Term:1}] LeaderCommit:45}
+2023/07/06 00:31:35 [0] Apply new commit 45 to state machine
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=46, args={Term:1 LeaderId:0 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 189 Term:1} {Command:command 199 Term:1}] LeaderCommit:45}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=46, args={Term:1 LeaderId:0 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 189 Term:1} {Command:command 199 Term:1}] LeaderCommit:45}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 0
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1}]
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=46, args={Term:1 LeaderId:0 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 189 Term:1} {Command:command 199 Term:1} {Command:command 0 Term:1}] LeaderCommit:45}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] Submit received by Leader: command 705
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1}]
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:47 2:46], matchIndex := map[1:46 2:45]; commitIndex := 46
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=46, args={Term:1 LeaderId:0 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 189 Term:1} {Command:command 199 Term:1} {Command:command 0 Term:1}] LeaderCommit:45}
+2023/07/06 00:31:35 [0] Apply new commit 46 to state machine
+2023/07/06 00:31:35 [0] Submit received by Leader: command 888
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=47, args={Term:1 LeaderId:0 PrevLogIndex:46 PrevLogTerm:1 Entries:[{Command:command 199 Term:1} {Command:command 0 Term:1} {Command:command 705 Term:1}] LeaderCommit:46}
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1}]
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:47 2:47], matchIndex := map[1:46 2:46]; commitIndex := 46
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=46, args={Term:1 LeaderId:0 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 189 Term:1} {Command:command 199 Term:1} {Command:command 0 Term:1} {Command:command 705 Term:1} {Command:command 888 Term:1}] LeaderCommit:46}
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:47 2:48], matchIndex := map[1:46 2:47]; commitIndex := 47
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:47 2:49], matchIndex := map[1:46 2:48]; commitIndex := 48
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:48 2:49], matchIndex := map[1:47 2:48]; commitIndex := 48
+2023/07/06 00:31:35 [0] Apply new commit 48 to state machine
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] Apply new commit 48 to state machine
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:49 2:49], matchIndex := map[1:48 2:48]; commitIndex := 48
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=49, args={Term:1 LeaderId:0 PrevLogIndex:48 PrevLogTerm:1 Entries:[{Command:command 705 Term:1} {Command:command 888 Term:1}] LeaderCommit:48}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 538
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1}]
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:49 2:51], matchIndex := map[1:48 2:50]; commitIndex := 50
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=49, args={Term:1 LeaderId:0 PrevLogIndex:48 PrevLogTerm:1 Entries:[{Command:command 705 Term:1} {Command:command 888 Term:1} {Command:command 538 Term:1}] LeaderCommit:48}
+2023/07/06 00:31:35 [0] Apply new commit 50 to state machine
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:50 2:51], matchIndex := map[1:49 2:50]; commitIndex := 50
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=51, args={Term:1 LeaderId:0 PrevLogIndex:50 PrevLogTerm:1 Entries:[{Command:command 538 Term:1}] LeaderCommit:50}
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=50, args={Term:1 LeaderId:0 PrevLogIndex:49 PrevLogTerm:1 Entries:[{Command:command 888 Term:1} {Command:command 538 Term:1}] LeaderCommit:50}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 703
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1}]
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:51 2:51], matchIndex := map[1:50 2:50]; commitIndex := 50
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] Submit received by Leader: command 355
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=51, args={Term:1 LeaderId:0 PrevLogIndex:50 PrevLogTerm:1 Entries:[{Command:command 538 Term:1} {Command:command 703 Term:1}] LeaderCommit:50}
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1} {command 355 1}]
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=51, args={Term:1 LeaderId:0 PrevLogIndex:50 PrevLogTerm:1 Entries:[{Command:command 538 Term:1} {Command:command 703 Term:1} {Command:command 355 Term:1}] LeaderCommit:50}
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:51 2:52], matchIndex := map[1:50 2:51]; commitIndex := 51
+2023/07/06 00:31:35 [0] Apply new commit 51 to state machine
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:52 2:52], matchIndex := map[1:51 2:51]; commitIndex := 51
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=52, args={Term:1 LeaderId:0 PrevLogIndex:51 PrevLogTerm:1 Entries:[{Command:command 703 Term:1} {Command:command 355 Term:1}] LeaderCommit:51}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:52 2:52], matchIndex := map[1:51 2:51]; commitIndex := 51
+2023/07/06 00:31:35 [0] Submit received by Leader: command 451
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1} {command 355 1} {command 451 1}]
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=52, args={Term:1 LeaderId:0 PrevLogIndex:51 PrevLogTerm:1 Entries:[{Command:command 703 Term:1} {Command:command 355 Term:1} {Command:command 451 Term:1}] LeaderCommit:51}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:54 2:52], matchIndex := map[1:53 2:51]; commitIndex := 53
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=54, args={Term:1 LeaderId:0 PrevLogIndex:53 PrevLogTerm:1 Entries:[{Command:command 451 Term:1}] LeaderCommit:53}
+2023/07/06 00:31:35 [0] Apply new commit 53 to state machine
+2023/07/06 00:31:35 [0] Submit received by Leader: command 510
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1} {command 355 1} {command 451 1} {command 510 1}]
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:54 2:53], matchIndex := map[1:53 2:52]; commitIndex := 53
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=52, args={Term:1 LeaderId:0 PrevLogIndex:51 PrevLogTerm:1 Entries:[{Command:command 703 Term:1} {Command:command 355 Term:1} {Command:command 451 Term:1}] LeaderCommit:53}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:54 2:53], matchIndex := map[1:53 2:52]; commitIndex := 53
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:54 2:55], matchIndex := map[1:53 2:54]; commitIndex := 54
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=54, args={Term:1 LeaderId:0 PrevLogIndex:53 PrevLogTerm:1 Entries:[{Command:command 451 Term:1} {Command:command 510 Term:1}] LeaderCommit:54}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=55, args={Term:1 LeaderId:0 PrevLogIndex:54 PrevLogTerm:1 Entries:[{Command:command 510 Term:1}] LeaderCommit:54}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 605
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1} {command 355 1} {command 451 1} {command 510 1} {command 605 1}]
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:55 2:55], matchIndex := map[1:54 2:54]; commitIndex := 54
+2023/07/06 00:31:35 [0] Apply new commit 54 to state machine
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=55, args={Term:1 LeaderId:0 PrevLogIndex:54 PrevLogTerm:1 Entries:[{Command:command 510 Term:1} {Command:command 605 Term:1}] LeaderCommit:54}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 156
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1} {command 355 1} {command 451 1} {command 510 1} {command 605 1} {command 156 1}]
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:55 2:55], matchIndex := map[1:54 2:54]; commitIndex := 54
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=55, args={Term:1 LeaderId:0 PrevLogIndex:54 PrevLogTerm:1 Entries:[{Command:command 510 Term:1} {Command:command 605 Term:1}] LeaderCommit:54}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:56 2:55], matchIndex := map[1:55 2:54]; commitIndex := 55
+2023/07/06 00:31:35 [0] Apply new commit 55 to state machine
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=56, args={Term:1 LeaderId:0 PrevLogIndex:55 PrevLogTerm:1 Entries:[{Command:command 605 Term:1} {Command:command 156 Term:1}] LeaderCommit:55}
+2023/07/06 00:31:35 [0] Submit received by Leader: command 266
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1} {command 355 1} {command 451 1} {command 510 1} {command 605 1} {command 156 1} {command 266 1}]
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=55, args={Term:1 LeaderId:0 PrevLogIndex:54 PrevLogTerm:1 Entries:[{Command:command 510 Term:1} {Command:command 605 Term:1} {Command:command 156 Term:1} {Command:command 266 Term:1}] LeaderCommit:55}
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=56, args={Term:1 LeaderId:0 PrevLogIndex:55 PrevLogTerm:1 Entries:[{Command:command 605 Term:1} {Command:command 156 Term:1} {Command:command 266 Term:1}] LeaderCommit:55}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] Submit received by Leader: command 828
+2023/07/06 00:31:35 [0] New log update: [{command 425 1} {command 540 1} {command 456 1} {command 300 1} {command 694 1} {command 511 1} {command 162 1} {command 89 1} {command 728 1} {command 274 1} {command 211 1} {command 445 1} {command 237 1} {command 106 1} {command 495 1} {command 466 1} {command 528 1} {command 258 1} {command 47 1} {command 947 1} {command 287 1} {command 888 1} {command 790 1} {command 15 1} {command 541 1} {command 408 1} {command 387 1} {command 831 1} {command 429 1} {command 356 1} {command 737 1} {command 631 1} {command 485 1} {command 26 1} {command 413 1} {command 90 1} {command 194 1} {command 563 1} {command 433 1} {command 147 1} {command 78 1} {command 324 1} {command 159 1} {command 353 1} {command 957 1} {command 721 1} {command 189 1} {command 199 1} {command 0 1} {command 705 1} {command 888 1} {command 538 1} {command 703 1} {command 355 1} {command 451 1} {command 510 1} {command 605 1} {command 156 1} {command 266 1} {command 828 1}]
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=55, args={Term:1 LeaderId:0 PrevLogIndex:54 PrevLogTerm:1 Entries:[{Command:command 510 Term:1} {Command:command 605 Term:1} {Command:command 156 Term:1} {Command:command 266 Term:1} {Command:command 828 Term:1}] LeaderCommit:55}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:57 2:55], matchIndex := map[1:56 2:54]; commitIndex := 56
+2023/07/06 00:31:35 [0] Apply new commit 56 to state machine
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:57 2:56], matchIndex := map[1:56 2:55]; commitIndex := 56
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:58 2:56], matchIndex := map[1:57 2:55]; commitIndex := 57
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:58 2:57], matchIndex := map[1:57 2:56]; commitIndex := 57
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=58, args={Term:1 LeaderId:0 PrevLogIndex:57 PrevLogTerm:1 Entries:[{Command:command 266 Term:1} {Command:command 828 Term:1}] LeaderCommit:57}
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=57, args={Term:1 LeaderId:0 PrevLogIndex:56 PrevLogTerm:1 Entries:[{Command:command 156 Term:1} {Command:command 266 Term:1} {Command:command 828 Term:1}] LeaderCommit:57}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:59 2:57], matchIndex := map[1:58 2:56]; commitIndex := 58
+2023/07/06 00:31:35 [0] Apply new commit 58 to state machine
+2023/07/06 00:31:35 [0] Apply new commit 58 to state machine
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:59 2:59], matchIndex := map[1:58 2:58]; commitIndex := 58
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:59], matchIndex := map[1:59 2:58]; commitIndex := 59
+2023/07/06 00:31:35 [0] Heartbeat got stopped by another event
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=59, args={Term:1 LeaderId:0 PrevLogIndex:58 PrevLogTerm:1 Entries:[{Command:command 828 Term:1}] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=59, args={Term:1 LeaderId:0 PrevLogIndex:58 PrevLogTerm:1 Entries:[{Command:command 828 Term:1}] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] Apply new commit 59 to state machine
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:35 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:35 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:36 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:36 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:37 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:37 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:38 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:38 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] sending AppendEntries to 1: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] sending AppendEntries to 2: nextIndex=60, args={Term:1 LeaderId:0 PrevLogIndex:59 PrevLogTerm:1 Entries:[] LeaderCommit:59}
+2023/07/06 00:31:39 [0] AppendEntries response from 1 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59
+2023/07/06 00:31:39 [0] AppendEntries response from 2 success: nextIndex := map[1:60 2:60], matchIndex := map[1:59 2:59]; commitIndex := 59

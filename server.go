@@ -2,11 +2,11 @@
 package raft
 
 import (
+	"fmt"
 	"log"
 	"net"
 	"net/rpc"
 	"sync"
-	"fmt"
 )
 
 type Server struct {
