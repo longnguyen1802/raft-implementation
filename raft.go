@@ -1,7 +1,13 @@
 // Consensus module include everything related to Consensus
 package raft
 
-import "math"
+import (
+	"fmt"
+	"log"
+	"math"
+	"strconv"
+)
+
 type CMState int
 
 const (
@@ -11,6 +17,11 @@ const (
 	// Only for debugging - Simulate a Failure machine (Both machine fail or network separate)
 	Failure
 )
+
+type Log struct {
+	Command string
+	Term    int
+}
 
 type ConsensusModule struct {
 	mu sync.Mutex
@@ -23,23 +34,52 @@ type ConsensusModule struct {
 	// Persistent state of Server
 	currentTerm int
 	votedFor    int
-	log         []LogEntry
+	log         []Log
 
 	// Volatile state of Server
 	commitIndex int
 	lastApplied int
+
 	// State of server
 	state CMState
 	// Store the last election reset timestamp
 	electionTimeoutReset time.Time
 
-	// Event fire by client
+	// This help to force run appendEntries when client send request (Instead of manual heartbeat)
 	appendEntriesEvent chan struct{}
-	commitEvent        chan struct{}
+	// This will enforce to run applyStateMachine when there is new commit log
+	applyStateMachineEvent chan struct{}
 
 	// Volatile leader state
 	nextIndex  map[int]int
 	matchIndex map[int]int
+}
+
+func NewConsensusModule(id int, peerIds []int, server *Server,ready <-chan interface{}) *ConsensusModule {
+	cm := new(ConsensusModule)
+	cm.id = id
+	cm.peerIds = peerIds
+	cm.server = server
+	cm.applyStateMachineEvent = make(chan struct{}, 16)
+	cm.appendEntriesEvent = make(chan struct{}, 1)
+	cm.state = Follower
+	cm.votedFor = -1
+	cm.commitIndex = -1
+	cm.lastApplied = -1
+	cm.nextIndex = make(map[int]int)
+	cm.matchIndex = make(map[int]int)
+
+	go func() {
+		// Wait the start of server until setup all server
+		<-ready
+		cm.mu.Lock()
+		cm.electionTimeoutReset = time.Now()
+		cm.mu.Unlock()
+		cm.electionTimeout()
+	}()
+
+	go cm.applyStateMachine()
+	return cm
 }
 
 /******************************************* Common Function ************************************/
@@ -86,6 +126,21 @@ func (cm *ConsensusModule) revertToFollower(term int) {
 	go cm.electionTimeout()
 }
 
+func (cm *ConsensusModule) applyStateMachine() {
+	for range cm.appendEntriesEvent {
+		cm.mu.Lock()
+		currentTerm := cm.currentTerm
+		lastApplied = cm.lastApplied
+		var logs []Log
+		if cm.commitIndex > cm.lastApplied {
+			logs = cm.log[cm.lastApplied+1 : cm.commitIndex+1]
+			cm.lastApplied = cm.commitIndex
+		}
+		// Apply to state machine can call a go routine function
+		// Pending
+		cm.mu.Unlock()
+	}
+}
 
 // Different consensus state consider moving them separately
 /************************************************Follower State******************************************/
@@ -135,7 +190,6 @@ func (cm *ConsensusModule) RequestVote(args RequestVoteArgs, response *RequestVo
 			response.term = cm.currentTerm
 		}
 	}
-	cm.persistToStorage()
 	return nil
 }
 
@@ -179,7 +233,7 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 		// All entries are different
 		if args.PrevLogIndex == -1 {
 			// Replace the whole current log by the master log entries
-			cm.log = append(cm.log[:0],args.Entries...)
+			cm.log = append(cm.log[:0], args.Entries...)
 			response.Success = true
 			response.Term = cm.currentTerm
 		} else {
@@ -194,19 +248,18 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 					response.Term = cm.currentTerm
 				} else {
 					// Find the matching index then replace from that upward
-					cm.log = append(cm.log[:args.PrevLogIndex+1],args.Entries...)
+					cm.log = append(cm.log[:args.PrevLogIndex+1], args.Entries...)
 					response.Success = true
 					response.Term = cm.currentTerm
 					// Set commit index
 					if args.LeaderCommit > cm.commitIndex {
 						cm.commitIndex = int(math.Min(args.LeaderCommit, len(cm.log)-1))
-						cm.commitEvent <- struct{}{}
+						cm.appendEntriesEvent <- struct{}{}
 					}
 				}
 			}
 		}
 	}
-	cm.persistToStorage()
 	return nil
 }
 
@@ -389,9 +442,9 @@ func (cm *ConsensusModule) sendAppendEntries() {
 							}
 						}
 
-						// Change in commit index (Client Request) notify by sending appendEntries
+						// Change in commit index (some command successfull get majority)
 						if cm.commitIndex != commitIndex {
-							cm.newCommitReadyChan <- struct{}{}
+							cm.applyStateMachineEvent <- struct{}{}
 							cm.appendEntriesEvent <- struct{}{}
 						}
 					} else {
@@ -417,7 +470,20 @@ func (cm *ConsensusModule) sendAppendEntries() {
 		}(peerId)
 	}
 }
+// Client submit command to server (Only leader can handle this) 
+// Can do better by response the leader id but assume this will not happen
+func (cm *ConsensusModule) SubmitCommand(command string) bool {
+	cm.mu.Lock()
+	if cm.state == Leader {
+		cm.log = append(cm.log,Log{Command:command,Term:cm.currentTerm})
+		cm.mu.Unlock()
+		// Trigger append entries event
+		cm.appendEntriesEvent <- struct{}{}
+		return true
+	}
 
+	return false
+}
 /***********************************  Utility function *****************************************************/
 // According to the paper setting timeout to 150ms - 300ms
 
@@ -432,4 +498,15 @@ func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {
 	} else {
 		return -1, -1
 	}
+}
+
+func (cm *ConsensusModule) debugLog(format string, args ...interface{}) {
+	f, err := os.OpenFile("server"+strconv.Itoa(cm.id), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatalf("error opening file: %v", err)
+	}
+	defer f.Close()
+	log.SetOutput(f)
+	format = fmt.Sprintf("[%d] ", cm.id) + format
+	log.Println(format, args...)
 }
