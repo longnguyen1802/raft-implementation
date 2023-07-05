@@ -2,19 +2,13 @@
 package raft
 
 import (
-	"fmt"
 	"log"
-	"math/rand"
 	"net"
 	"net/rpc"
-	"os"
 	"sync"
-	"time"
-	"strconv"
-	"github.com/nhatlong/raft/logging"
+	"fmt"
 )
 
-var log = logging.GetInstance()
 type Server struct {
 	mu sync.Mutex
 
@@ -22,7 +16,6 @@ type Server struct {
 	peerIds  []int
 
 	cm       *ConsensusModule
-	storage  Storage
 	rpcProxy *RPCProxy
 
 	rpcServer *rpc.Server
@@ -32,7 +25,7 @@ type Server struct {
 
 	ready <-chan interface{}
 
-	waitgroup    sync.WaitGroup
+	wg sync.WaitGroup
 }
 
 func NewServer(serverId int, peerIds []int, ready <-chan interface{}) *Server {
@@ -46,7 +39,7 @@ func NewServer(serverId int, peerIds []int, ready <-chan interface{}) *Server {
 
 func (s *Server) Serve() {
 	s.mu.Lock()
-	s.sm = NewConsensusModule(s.ServerId,s.peerIds,s,s.ready)
+	s.cm = NewConsensusModule(s.serverId, s.peerIds, s, s.ready)
 
 	s.rpcServer = rpc.NewServer()
 	s.rpcProxy = &RPCProxy{cm: s.cm}
@@ -57,7 +50,6 @@ func (s *Server) Serve() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Info().Caller().Msg("[%v] listening at %s", s.serverId, s.listener.Addr())
 	s.mu.Unlock()
 
 	s.wg.Add(1)
@@ -68,12 +60,7 @@ func (s *Server) Serve() {
 		for {
 			conn, err := s.listener.Accept()
 			if err != nil {
-				select {
-				case <-s.quit:
-					return
-				default:
-					log.Fatal("accept error:", err)
-				}
+				log.Fatal("accept error:", err)
 			}
 			s.wg.Add(1)
 			go func() {
@@ -125,15 +112,15 @@ func (s *Server) DisconnectPeer(peerId int) error {
 	return nil
 }
 
-func (s *Server) Call(id int, serviceMethod string, args interface{}, reply interface{}) error {
+func (s *Server) Call(id int, serviceMethod string, args interface{}, response interface{}) error {
 	s.mu.Lock()
 	peer := s.peerClients[id]
 	s.mu.Unlock()
 
 	if peer == nil {
-		return log.Error().Msg("call client %d after it's closed", id)
+		return fmt.Errorf("call client %d after it's closed", id)
 	} else {
-		return peer.Call(serviceMethod, args, reply)
+		return peer.Call(serviceMethod, args, response)
 	}
 }
 
@@ -141,10 +128,10 @@ type RPCProxy struct {
 	cm *ConsensusModule
 }
 
-func (rpp *RPCProxy) RequestVote(args RequestVoteArgs, reply *RequestVoteReply) error {
-	return rpp.cm.RequestVote(args, reply)
+func (rpp *RPCProxy) RequestVote(args RequestVoteArgs, response *RequestVoteResponse) error {
+	return rpp.cm.RequestVote(args, response)
 }
 
-func (rpp *RPCProxy) AppendEntries(args AppendEntriesArgs, reply *AppendEntriesReply) error {
-	return rpp.cm.AppendEntries(args, reply)
+func (rpp *RPCProxy) AppendEntries(args AppendEntriesArgs, response *AppendEntriesResponse) error {
+	return rpp.cm.AppendEntries(args, response)
 }

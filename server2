@@ -1,0 +1,33 @@
+2023/07/05 18:56:36 [2] Term out dated
+2023/07/05 18:56:36 [2] becomes Follower with term=1; log=[]
+2023/07/05 18:56:36 [1] RequestVote response: &{Term:1 VoteGranted:true}
+2023/07/05 18:56:36 [2] Election timeout started (178ms), term=1
+2023/07/05 18:56:36 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:36 [2] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:36 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [1] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [1] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [1] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [1] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [1] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [1] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [2] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/05 18:56:37 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [2] AppendEntries response: {Term:1 Success:true}
+2023/07/05 18:56:37 [1] AppendEntries: {Term:1 LeaderId:0 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
