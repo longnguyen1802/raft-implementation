@@ -1,0 +1,649 @@
+2023/07/06 16:11:54 [4] Election timeout started (442ms), term=0
+2023/07/06 16:11:55 [4] RequestVote: {Term:1 CandidateId:1 LastLogIndex:-1 LastLogTerm:-1} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]
+2023/07/06 16:11:55 [4] Term out dated
+2023/07/06 16:11:55 [4] becomes Follower with term=1; log=[]
+2023/07/06 16:11:55 [4] RequestVote response: &{Term:1 VoteGranted:true}
+2023/07/06 16:11:55 [4] Election timeout started (395ms), term=1
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: []
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 299 Term:1} {Command:command 351 Term:1}] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: [{command 299 1} {command 351 1}]
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 299 Term:1} {Command:command 351 Term:1}] LeaderCommit:-1}
+2023/07/06 16:11:55 [4] New log update: [{command 299 1} {command 351 1}]
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:1 PrevLogTerm:1 Entries:[] LeaderCommit:1}
+2023/07/06 16:11:55 [4] New log update: [{command 299 1} {command 351 1}]
+2023/07/06 16:11:55 [4] New commit index is coming
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Apply new commit 1 to state machine
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:1 PrevLogTerm:1 Entries:[] LeaderCommit:1}
+2023/07/06 16:11:55 [4] New log update: [{command 299 1} {command 351 1}]
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:1 PrevLogTerm:1 Entries:[] LeaderCommit:1}
+2023/07/06 16:11:55 [4] New log update: [{command 299 1} {command 351 1}]
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Submit received by Follower: command 137
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:1 PrevLogTerm:1 Entries:[{Command:command 948 Term:1}] LeaderCommit:1}
+2023/07/06 16:11:55 [4] New log update: [{command 299 1} {command 351 1} {command 948 1}]
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:55 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:1 PrevLogTerm:1 Entries:[{Command:command 948 Term:1} {Command:command 84 Term:1}] LeaderCommit:1}
+2023/07/06 16:11:55 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1}]
+2023/07/06 16:11:55 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:3 PrevLogTerm:1 Entries:[] LeaderCommit:3}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1}]
+2023/07/06 16:11:56 [4] New commit index is coming
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Apply new commit 3 to state machine
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:3 PrevLogTerm:1 Entries:[] LeaderCommit:3}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:3 PrevLogTerm:1 Entries:[{Command:command 373 Term:1}] LeaderCommit:3}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:4 PrevLogTerm:1 Entries:[] LeaderCommit:4}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1}]
+2023/07/06 16:11:56 [4] New commit index is coming
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Apply new commit 4 to state machine
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:4 PrevLogTerm:1 Entries:[] LeaderCommit:4}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:4 PrevLogTerm:1 Entries:[] LeaderCommit:4}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Submit received by Follower: command 354
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:4 PrevLogTerm:1 Entries:[{Command:command 120 Term:1}] LeaderCommit:4}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:5 PrevLogTerm:1 Entries:[] LeaderCommit:5}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1}]
+2023/07/06 16:11:56 [4] New commit index is coming
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Apply new commit 5 to state machine
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:5 PrevLogTerm:1 Entries:[] LeaderCommit:5}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:5 PrevLogTerm:1 Entries:[] LeaderCommit:5}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Submit received by Follower: command 766
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:5 PrevLogTerm:1 Entries:[{Command:command 365 Term:1} {Command:command 206 Term:1}] LeaderCommit:5}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:5 PrevLogTerm:1 Entries:[{Command:command 365 Term:1} {Command:command 206 Term:1}] LeaderCommit:5}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:5 PrevLogTerm:1 Entries:[{Command:command 365 Term:1} {Command:command 206 Term:1} {Command:command 48 Term:1}] LeaderCommit:5}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:8 PrevLogTerm:1 Entries:[] LeaderCommit:8}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1}]
+2023/07/06 16:11:56 [4] New commit index is coming
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Apply new commit 8 to state machine
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:8 PrevLogTerm:1 Entries:[] LeaderCommit:8}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:8 PrevLogTerm:1 Entries:[] LeaderCommit:8}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:8 PrevLogTerm:1 Entries:[{Command:command 393 Term:1}] LeaderCommit:8}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:9 PrevLogTerm:1 Entries:[] LeaderCommit:9}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1}]
+2023/07/06 16:11:56 [4] New commit index is coming
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Apply new commit 9 to state machine
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:9 PrevLogTerm:1 Entries:[] LeaderCommit:9}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Submit received by Follower: command 256
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:9 PrevLogTerm:1 Entries:[{Command:command 139 Term:1}] LeaderCommit:9}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:10 PrevLogTerm:1 Entries:[] LeaderCommit:10}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1}]
+2023/07/06 16:11:56 [4] New commit index is coming
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Apply new commit 10 to state machine
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:10 PrevLogTerm:1 Entries:[] LeaderCommit:10}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:56 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:10 PrevLogTerm:1 Entries:[] LeaderCommit:10}
+2023/07/06 16:11:56 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1}]
+2023/07/06 16:11:56 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:10 PrevLogTerm:1 Entries:[{Command:command 594 Term:1}] LeaderCommit:10}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:10 PrevLogTerm:1 Entries:[{Command:command 594 Term:1} {Command:command 613 Term:1}] LeaderCommit:10}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:12 PrevLogTerm:1 Entries:[] LeaderCommit:12}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1}]
+2023/07/06 16:11:57 [4] New commit index is coming
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Apply new commit 12 to state machine
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:12 PrevLogTerm:1 Entries:[] LeaderCommit:12}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Submit received by Follower: command 900
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:12 PrevLogTerm:1 Entries:[{Command:command 790 Term:1} {Command:command 543 Term:1}] LeaderCommit:12}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:12 PrevLogTerm:1 Entries:[{Command:command 790 Term:1} {Command:command 543 Term:1}] LeaderCommit:12}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:14 PrevLogTerm:1 Entries:[{Command:command 190 Term:1}] LeaderCommit:14}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1}]
+2023/07/06 16:11:57 [4] New commit index is coming
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Apply new commit 14 to state machine
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:15 PrevLogTerm:1 Entries:[] LeaderCommit:15}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1}]
+2023/07/06 16:11:57 [4] New commit index is coming
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Apply new commit 15 to state machine
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:15 PrevLogTerm:1 Entries:[] LeaderCommit:15}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:15 PrevLogTerm:1 Entries:[] LeaderCommit:15}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Submit received by Follower: command 742
+2023/07/06 16:11:57 [4] Submit received by Follower: command 223
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 949 Term:1} {Command:command 152 Term:1}] LeaderCommit:15}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 949 Term:1} {Command:command 152 Term:1}] LeaderCommit:15}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:17 PrevLogTerm:1 Entries:[{Command:command 483 Term:1}] LeaderCommit:17}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1}]
+2023/07/06 16:11:57 [4] New commit index is coming
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Apply new commit 17 to state machine
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:18 PrevLogTerm:1 Entries:[] LeaderCommit:18}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1}]
+2023/07/06 16:11:57 [4] New commit index is coming
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Apply new commit 18 to state machine
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:18 PrevLogTerm:1 Entries:[] LeaderCommit:18}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:18 PrevLogTerm:1 Entries:[{Command:command 501 Term:1} {Command:command 255 Term:1}] LeaderCommit:18}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:18 PrevLogTerm:1 Entries:[{Command:command 501 Term:1} {Command:command 255 Term:1}] LeaderCommit:18}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:20 PrevLogTerm:1 Entries:[] LeaderCommit:20}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1}]
+2023/07/06 16:11:57 [4] New commit index is coming
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Apply new commit 20 to state machine
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:20 PrevLogTerm:1 Entries:[] LeaderCommit:20}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:20 PrevLogTerm:1 Entries:[] LeaderCommit:20}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Submit received by Follower: command 912
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 506 Term:1} {Command:command 691 Term:1}] LeaderCommit:20}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 506 Term:1} {Command:command 691 Term:1}] LeaderCommit:20}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:22 PrevLogTerm:1 Entries:[] LeaderCommit:22}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:57 [4] New commit index is coming
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Apply new commit 22 to state machine
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:22 PrevLogTerm:1 Entries:[] LeaderCommit:22}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Receive AppendEntries: {Term:1 LeaderId:1 PrevLogIndex:22 PrevLogTerm:1 Entries:[] LeaderCommit:22}
+2023/07/06 16:11:57 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:57 [4] AppendEntries response: {Term:1 Success:true}
+2023/07/06 16:11:57 [4] Submit received by Follower: command 694
+2023/07/06 16:11:58 [4] Submit received by Follower: command 478
+2023/07/06 16:11:58 [4] Submit received by Follower: command 90
+2023/07/06 16:11:58 [4] Become Candidate (currentTerm=2); log=[{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:58 [4] Election timeout started (344ms), term=2
+2023/07/06 16:11:58 [4] sending RequestVote to 1: {Term:2 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] sending RequestVote to 0: {Term:2 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] sending RequestVote to 2: {Term:2 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] sending RequestVote to 3: {Term:2 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] Submit received by Candidate: command 133
+2023/07/06 16:11:58 [4] Submit received by Candidate: command 132
+2023/07/06 16:11:58 [4] Submit received by Candidate: command 161
+2023/07/06 16:11:58 [4] Become Candidate (currentTerm=3); log=[{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:58 [4] Election timeout started (573ms), term=3
+2023/07/06 16:11:58 [4] sending RequestVote to 2: {Term:3 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] sending RequestVote to 3: {Term:3 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] sending RequestVote to 1: {Term:3 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] sending RequestVote to 0: {Term:3 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:58 [4] Submit received by Candidate: command 708
+2023/07/06 16:11:58 [4] Submit received by Candidate: command 27
+2023/07/06 16:11:58 [4] Submit received by Candidate: command 780
+2023/07/06 16:11:59 [4] Submit received by Candidate: command 474
+2023/07/06 16:11:59 [4] Submit received by Candidate: command 775
+2023/07/06 16:11:59 [4] Become Candidate (currentTerm=4); log=[{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:59 [4] sending RequestVote to 1: {Term:4 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] sending RequestVote to 2: {Term:4 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] sending RequestVote to 3: {Term:4 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] Election timeout started (482ms), term=4
+2023/07/06 16:11:59 [4] sending RequestVote to 0: {Term:4 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] Submit received by Candidate: command 433
+2023/07/06 16:11:59 [4] Submit received by Candidate: command 18
+2023/07/06 16:11:59 [4] Submit received by Candidate: command 426
+2023/07/06 16:11:59 [4] Become Candidate (currentTerm=5); log=[{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:59 [4] sending RequestVote to 0: {Term:5 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] sending RequestVote to 3: {Term:5 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] sending RequestVote to 1: {Term:5 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] sending RequestVote to 2: {Term:5 CandidateId:4 LastLogIndex:22 LastLogTerm:1}
+2023/07/06 16:11:59 [4] Election timeout started (555ms), term=5
+2023/07/06 16:11:59 [4] Submit received by Candidate: command 614
+2023/07/06 16:11:59 [4] Submit received by Candidate: command 101
+2023/07/06 16:11:59 [4] RequestVote: {Term:6 CandidateId:3 LastLogIndex:23 LastLogTerm:1} [currentTerm=5, votedFor=4, log index/term=(22, 1)]
+2023/07/06 16:11:59 [4] Term out dated
+2023/07/06 16:11:59 [4] becomes Follower with term=6; log=[{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1}]
+2023/07/06 16:11:59 [4] RequestVote response: &{Term:6 VoteGranted:true}
+2023/07/06 16:11:59 [4] Election timeout started (447ms), term=6
+2023/07/06 16:11:59 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:23 PrevLogTerm:1 Entries:[] LeaderCommit:22}
+2023/07/06 16:11:59 [4] AppendEntries response: {Term:6 Success:false}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:22 PrevLogTerm:1 Entries:[{Command:command 768 Term:1}] LeaderCommit:22}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Submit received by Follower: command 900
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:23 PrevLogTerm:1 Entries:[] LeaderCommit:22}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:23 PrevLogTerm:1 Entries:[] LeaderCommit:22}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:23 PrevLogTerm:1 Entries:[{Command:command 992 Term:6}] LeaderCommit:22}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] New commit index is coming
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Apply new commit 24 to state machine
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Submit received by Follower: command 679
+2023/07/06 16:12:00 [4] Submit received by Follower: command 425
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:24 PrevLogTerm:6 Entries:[{Command:command 408 Term:6}] LeaderCommit:24}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:25 PrevLogTerm:6 Entries:[] LeaderCommit:25}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6}]
+2023/07/06 16:12:00 [4] New commit index is coming
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Apply new commit 25 to state machine
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:25 PrevLogTerm:6 Entries:[] LeaderCommit:25}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:25 PrevLogTerm:6 Entries:[] LeaderCommit:25}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:25 PrevLogTerm:6 Entries:[{Command:command 647 Term:6}] LeaderCommit:25}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[] LeaderCommit:26}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6}]
+2023/07/06 16:12:00 [4] New commit index is coming
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Apply new commit 26 to state machine
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[] LeaderCommit:26}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[] LeaderCommit:26}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[] LeaderCommit:26}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[] LeaderCommit:26}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:00 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[] LeaderCommit:26}
+2023/07/06 16:12:00 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6}]
+2023/07/06 16:12:00 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Submit received by Follower: command 297
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[{Command:command 620 Term:6}] LeaderCommit:26}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:26 PrevLogTerm:6 Entries:[{Command:command 620 Term:6} {Command:command 240 Term:6}] LeaderCommit:26}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:28 PrevLogTerm:6 Entries:[] LeaderCommit:28}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 28 to state machine
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:28 PrevLogTerm:6 Entries:[] LeaderCommit:28}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:28 PrevLogTerm:6 Entries:[] LeaderCommit:28}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:28 PrevLogTerm:6 Entries:[{Command:command 499 Term:6}] LeaderCommit:28}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:29 PrevLogTerm:6 Entries:[] LeaderCommit:29}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 29 to state machine
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:29 PrevLogTerm:6 Entries:[] LeaderCommit:29}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Submit received by Follower: command 541
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:29 PrevLogTerm:6 Entries:[{Command:command 879 Term:6}] LeaderCommit:29}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 30 to state machine
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Submit received by Follower: command 474
+2023/07/06 16:12:01 [4] Submit received by Follower: command 500
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:30 PrevLogTerm:6 Entries:[{Command:command 504 Term:6}] LeaderCommit:30}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:31 PrevLogTerm:6 Entries:[{Command:command 543 Term:6}] LeaderCommit:31}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 31 to state machine
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:32 PrevLogTerm:6 Entries:[] LeaderCommit:32}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 32 to state machine
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:32 PrevLogTerm:6 Entries:[] LeaderCommit:32}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:32 PrevLogTerm:6 Entries:[] LeaderCommit:32}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Submit received by Follower: command 963
+2023/07/06 16:12:01 [4] Submit received by Follower: command 851
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:32 PrevLogTerm:6 Entries:[{Command:command 387 Term:6}] LeaderCommit:32}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:33 PrevLogTerm:6 Entries:[{Command:command 972 Term:6}] LeaderCommit:33}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 33 to state machine
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:34 PrevLogTerm:6 Entries:[] LeaderCommit:34}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 34 to state machine
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:34 PrevLogTerm:6 Entries:[] LeaderCommit:34}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:34 PrevLogTerm:6 Entries:[{Command:command 933 Term:6}] LeaderCommit:34}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:34 PrevLogTerm:6 Entries:[{Command:command 933 Term:6} {Command:command 531 Term:6}] LeaderCommit:34}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6}]
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:36 PrevLogTerm:6 Entries:[] LeaderCommit:36}
+2023/07/06 16:12:01 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6}]
+2023/07/06 16:12:01 [4] New commit index is coming
+2023/07/06 16:12:01 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:01 [4] Apply new commit 36 to state machine
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:36 PrevLogTerm:6 Entries:[] LeaderCommit:36}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:36 PrevLogTerm:6 Entries:[] LeaderCommit:36}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Submit received by Follower: command 265
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:36 PrevLogTerm:6 Entries:[{Command:command 33 Term:6}] LeaderCommit:36}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:37 PrevLogTerm:6 Entries:[] LeaderCommit:37}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6}]
+2023/07/06 16:12:02 [4] New commit index is coming
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Apply new commit 37 to state machine
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:37 PrevLogTerm:6 Entries:[] LeaderCommit:37}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:37 PrevLogTerm:6 Entries:[] LeaderCommit:37}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Submit received by Follower: command 367
+2023/07/06 16:12:02 [4] Submit received by Follower: command 638
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:37 PrevLogTerm:6 Entries:[{Command:command 30 Term:6}] LeaderCommit:37}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:37 PrevLogTerm:6 Entries:[{Command:command 30 Term:6} {Command:command 970 Term:6}] LeaderCommit:37}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:39 PrevLogTerm:6 Entries:[] LeaderCommit:39}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6}]
+2023/07/06 16:12:02 [4] New commit index is coming
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Apply new commit 39 to state machine
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:39 PrevLogTerm:6 Entries:[] LeaderCommit:39}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Submit received by Follower: command 491
+2023/07/06 16:12:02 [4] Submit received by Follower: command 910
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:39 PrevLogTerm:6 Entries:[{Command:command 523 Term:6} {Command:command 36 Term:6}] LeaderCommit:39}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:39 PrevLogTerm:6 Entries:[{Command:command 523 Term:6} {Command:command 36 Term:6}] LeaderCommit:39}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:41 PrevLogTerm:6 Entries:[] LeaderCommit:41}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6}]
+2023/07/06 16:12:02 [4] New commit index is coming
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Apply new commit 41 to state machine
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:41 PrevLogTerm:6 Entries:[] LeaderCommit:41}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:41 PrevLogTerm:6 Entries:[] LeaderCommit:41}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Submit received by Follower: command 491
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:41 PrevLogTerm:6 Entries:[{Command:command 738 Term:6}] LeaderCommit:41}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:42 PrevLogTerm:6 Entries:[] LeaderCommit:42}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6}]
+2023/07/06 16:12:02 [4] New commit index is coming
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Apply new commit 42 to state machine
+2023/07/06 16:12:02 [4] Submit received by Follower: command 738
+2023/07/06 16:12:02 [4] Submit received by Follower: command 392
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:42 PrevLogTerm:6 Entries:[{Command:command 295 Term:6} {Command:command 664 Term:6}] LeaderCommit:42}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:42 PrevLogTerm:6 Entries:[{Command:command 295 Term:6} {Command:command 664 Term:6} {Command:command 818 Term:6}] LeaderCommit:42}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:44 PrevLogTerm:6 Entries:[{Command:command 818 Term:6}] LeaderCommit:42}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:45 PrevLogTerm:6 Entries:[] LeaderCommit:45}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6}]
+2023/07/06 16:12:02 [4] New commit index is coming
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Apply new commit 45 to state machine
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:45 PrevLogTerm:6 Entries:[] LeaderCommit:45}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:45 PrevLogTerm:6 Entries:[] LeaderCommit:45}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Submit received by Follower: command 83
+2023/07/06 16:12:02 [4] Submit received by Follower: command 455
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:45 PrevLogTerm:6 Entries:[{Command:command 380 Term:6}] LeaderCommit:45}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:45 PrevLogTerm:6 Entries:[{Command:command 380 Term:6} {Command:command 53 Term:6}] LeaderCommit:45}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6}]
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:47 PrevLogTerm:6 Entries:[] LeaderCommit:47}
+2023/07/06 16:12:02 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6}]
+2023/07/06 16:12:02 [4] New commit index is coming
+2023/07/06 16:12:02 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:02 [4] Apply new commit 47 to state machine
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:47 PrevLogTerm:6 Entries:[] LeaderCommit:47}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:47 PrevLogTerm:6 Entries:[] LeaderCommit:47}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:47 PrevLogTerm:6 Entries:[{Command:command 641 Term:6} {Command:command 729 Term:6}] LeaderCommit:47}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:47 PrevLogTerm:6 Entries:[{Command:command 641 Term:6} {Command:command 729 Term:6}] LeaderCommit:47}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:47 PrevLogTerm:6 Entries:[{Command:command 641 Term:6} {Command:command 729 Term:6} {Command:command 116 Term:6}] LeaderCommit:47}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:50 PrevLogTerm:6 Entries:[] LeaderCommit:50}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6}]
+2023/07/06 16:12:03 [4] New commit index is coming
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Apply new commit 50 to state machine
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:50 PrevLogTerm:6 Entries:[] LeaderCommit:50}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:50 PrevLogTerm:6 Entries:[] LeaderCommit:50}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Submit received by Follower: command 982
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:50 PrevLogTerm:6 Entries:[{Command:command 922 Term:6} {Command:command 436 Term:6}] LeaderCommit:50}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:50 PrevLogTerm:6 Entries:[{Command:command 922 Term:6} {Command:command 436 Term:6}] LeaderCommit:50}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:52 PrevLogTerm:6 Entries:[] LeaderCommit:52}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6}]
+2023/07/06 16:12:03 [4] New commit index is coming
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Apply new commit 52 to state machine
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:52 PrevLogTerm:6 Entries:[] LeaderCommit:52}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:52 PrevLogTerm:6 Entries:[] LeaderCommit:52}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:52 PrevLogTerm:6 Entries:[{Command:command 329 Term:6}] LeaderCommit:52}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6} {command 329 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:53 PrevLogTerm:6 Entries:[] LeaderCommit:53}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6} {command 329 6}]
+2023/07/06 16:12:03 [4] New commit index is coming
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Apply new commit 53 to state machine
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:53 PrevLogTerm:6 Entries:[] LeaderCommit:53}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6} {command 329 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:53 PrevLogTerm:6 Entries:[] LeaderCommit:53}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6} {command 329 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Submit received by Follower: command 345
+2023/07/06 16:12:03 [4] Submit received by Follower: command 29
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:53 PrevLogTerm:6 Entries:[{Command:command 116 Term:6} {Command:command 34 Term:6}] LeaderCommit:53}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6} {command 329 6} {command 116 6} {command 34 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
+2023/07/06 16:12:03 [4] Receive AppendEntries: {Term:6 LeaderId:3 PrevLogIndex:53 PrevLogTerm:6 Entries:[{Command:command 116 Term:6} {Command:command 34 Term:6}] LeaderCommit:53}
+2023/07/06 16:12:03 [4] New log update: [{command 299 1} {command 351 1} {command 948 1} {command 84 1} {command 373 1} {command 120 1} {command 365 1} {command 206 1} {command 48 1} {command 393 1} {command 139 1} {command 594 1} {command 613 1} {command 790 1} {command 543 1} {command 190 1} {command 949 1} {command 152 1} {command 483 1} {command 501 1} {command 255 1} {command 506 1} {command 691 1} {command 768 1} {command 992 6} {command 408 6} {command 647 6} {command 620 6} {command 240 6} {command 499 6} {command 879 6} {command 504 6} {command 543 6} {command 387 6} {command 972 6} {command 933 6} {command 531 6} {command 33 6} {command 30 6} {command 970 6} {command 523 6} {command 36 6} {command 738 6} {command 295 6} {command 664 6} {command 818 6} {command 380 6} {command 53 6} {command 641 6} {command 729 6} {command 116 6} {command 922 6} {command 436 6} {command 329 6} {command 116 6} {command 34 6}]
+2023/07/06 16:12:03 [4] AppendEntries response: {Term:6 Success:true}
