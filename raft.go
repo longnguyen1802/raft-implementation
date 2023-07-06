@@ -208,7 +208,7 @@ func (cm *ConsensusModule) RequestVote(args RequestVoteArgs, response *RequestVo
 			response.Term = cm.currentTerm
 		}
 	}
-	cm.debugLog("RequestVote response: %+v", response)
+	cm.debugLog("RequestVote response for candidate %d: %+v",args.CandidateId, response)
 	return nil
 }
 
@@ -321,7 +321,7 @@ func (cm *ConsensusModule) startElection() {
 			if err := cm.server.Call(peerId, "ConsensusModule.RequestVote", args, &response); err == nil {
 				cm.mu.Lock()
 				defer cm.mu.Unlock()
-				cm.debugLog("received RequestVoteResponse %+v", response)
+				cm.debugLog("received RequestVoteResponse from peer %d %+v",peerId, response)
 				// In case it already win or already become follower
 				if cm.state != Candidate {
 					return
