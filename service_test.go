@@ -167,7 +167,7 @@ func TestElectionBasic(t *testing.T) {
 				RestoreIsolatedServer(servers, rand_machine_2, num_server,failures)
 				failures[rand_machine_2] = false
 			}
-			if elapsed.Sub(start) < 9*time.Second {
+			if elapsed.Sub(start) < 11*time.Second {
 				time.Sleep(time.Duration(50+rand.Intn(50)) * time.Millisecond)
 				for j := 0; j < 1+rand.Intn(4); j++ {
 					for _, i := range rand.Perm(num_server) {
@@ -181,7 +181,7 @@ func TestElectionBasic(t *testing.T) {
 		}
 
 	}()
-	time.Sleep(14 * time.Second)
+	time.Sleep(15 * time.Second)
 }
 
 

@@ -416,9 +416,10 @@ func (cm *ConsensusModule) sendAppendEntries() {
 	}
 
 	currentTerm := cm.currentTerm
+	peerIds := cm.peerIds
 	cm.mu.Unlock()
 
-	for _, peerId := range cm.peerIds {
+	for _, peerId := range peerIds {
 		go func(peerId int) {
 			cm.mu.Lock()
 			nextIndex := cm.nextIndex[peerId]
@@ -438,10 +439,11 @@ func (cm *ConsensusModule) sendAppendEntries() {
 				Entries:      entries,
 				LeaderCommit: cm.commitIndex,
 			}
-			cm.mu.Unlock()
 			cm.debugLog("sending AppendEntries to %v: nextIndex=%d, args=%+v", peerId, nextIndex, args)
 			var response AppendEntriesResponse
-			if err := cm.server.Call(peerId, "ConsensusModule.AppendEntries", args, &response); err == nil {
+			cm_server := cm.server
+			cm.mu.Unlock()
+			if err := cm_server.Call(peerId, "ConsensusModule.AppendEntries", args, &response); err == nil {
 				cm.mu.Lock()
 				defer cm.mu.Unlock()
 				if response.Term > cm.currentTerm {
