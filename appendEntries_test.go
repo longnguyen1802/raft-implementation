@@ -204,4 +204,3 @@ func TestAppendEntries(t *testing.T) {
 		})
 	}
 }
-
