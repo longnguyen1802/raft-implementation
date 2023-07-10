@@ -6,13 +6,13 @@ import (
 )
 
 type Snapshot struct {
-	LastIncludeIndex int      `json:"lastIncludeIndex"`
-	LastIncludeTerm  int      `json:"lastIncludeTerm"`
-	Logs             []string `json:"log"`
+	LastIncludeIndex int   `json:"lastIncludeIndex"`
+	LastIncludeTerm  int   `json:"lastIncludeTerm"`
+	Logs             []Log `json:"log"`
 }
 
 func SaveSnapshot(snapshot Snapshot, filename string) error {
-	snapShotdata, err := json.Marshal(snapshot)
+	snapShotdata, err := json.MarshalIndent(snapshot, "", "  ")
 	if err != nil {
 		return err
 	}
@@ -28,5 +28,8 @@ func GetSnapshot(filename string) (Snapshot, error) {
 	}
 
 	err = json.Unmarshal(jsonData, &snapshot)
-	return snapshot, err
+	if err != nil {
+		return Snapshot{}, err
+	}
+	return snapshot, nil
 }
