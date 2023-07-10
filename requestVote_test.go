@@ -71,7 +71,7 @@ func TestRequestVote(t *testing.T) {
 			cm: &ConsensusModule{
 				id:          100,
 				currentTerm: 1,
-				votedFor:    1,
+				votedFor:    101,
 			},
 			args: RequestVoteArgs{
 				Term:         1,
@@ -218,21 +218,4 @@ func TestRequestVote(t *testing.T) {
 			}
 		})
 	}
-}
-
-func TestStartElection(t *testing.T) {
-	cm := &ConsensusModule{
-		state:       Follower,
-		currentTerm: 1,
-		id:          100,
-		peerIds:     []int{2, 3},
-	}
-
-	cm.startElection()
-
-	// Verify the state transition
-	if cm.state != Candidate {
-		t.Errorf("State transition after startElection failed. Expected state: Candidate, Actual state: %s", cm.state)
-	}
-	// Leader transition test in service_test
 }

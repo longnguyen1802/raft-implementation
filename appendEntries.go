@@ -163,8 +163,22 @@ func (cm *ConsensusModule) sendAppendEntries() {
 							//cm.AppendEntriesEvent <- struct{}{}
 						}
 					} else {
-						cm.nextIndex[peerId] -= 1
-						cm.debugLog("AppendEntries response from %d not success: nextIndex := %d", peerId, nextIndex-1)
+						// In case the response is false check for update if too far (at least 2 snapshot file)
+						if (cm.lastIncludedIndex - response.lastIncludedIndex >= 2 * SNAPSHOT_LOGSIZE) && (cm.pendingInstallSnapshot[peerId] ==false){
+							// Run in an go routine
+							cm.debugLog("Installsnapshot send from leader %d to peer %d with leaderIncludeindex %d and folloer include index %d",cm.id,peerId,cm.lastIncludedIndex,response.lastIncludedIndex)
+							cm.pendingInstallSnapshot[peerId] = true
+							cm.sendInstallSnapshot(peerId,response.lastIncludedIndex)
+							cm.nextIndex[peerId] = len(cm.log)-1
+						} else{
+							if cm.pendingInstallSnapshot[peerId] {
+								cm.nextIndex[peerId] = len(cm.log)-1
+							} else{
+								cm.nextIndex[peerId] -= 1
+							}
+						}
+						//cm.nextIndex[peerId] -= 1
+						cm.debugLog("AppendEntries response from %d not success: lstIncludedIndex := %d nextIndex := %d", peerId,cm.lastIncludedIndex, nextIndex-1)
 					}
 				}
 			}

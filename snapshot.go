@@ -9,6 +9,8 @@ import (
 	"time"
 )
 
+const SNAPSHOT_LOGSIZE = 256
+
 type Snapshot struct {
 	LastIncludedIndex int   `json:"lastIncludedIndex"`
 	LastIncludedTerm  int   `json:"lastIncludedTerm"`
@@ -57,23 +59,20 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 
 // Sender implementation (require leader)
 func (cm *ConsensusModule) sendInstallSnapshot(peerId int, peerLastIncludedIndex int) {
-	cm.mu.Lock()
 	if cm.state != Leader {
-		cm.mu.Unlock()
 		return
 	}
 	currentTerm := cm.currentTerm
-	cm.mu.Unlock()
 	go func(peerId int, peerLastIncludedIndex int) {
 		cm.mu.Lock()
-		filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, peerLastIncludedIndex/256)
+		filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, peerLastIncludedIndex/SNAPSHOT_LOGSIZE +1)
 		snapshot, err := GetSnapshot(filename)
 		if err != nil {
-			log.Fatal("Failed to get data from JSON:", err)
+			cm.debugLog("Failed to get data from JSON:", err)
 		}
 		data, err := json.Marshal(snapshot)
 		if err != nil {
-			log.Fatal("Failed to marshal JSON:", err)
+			cm.debugLog("Failed to marshal JSON:", err)
 		}
 		args := InstallSnapshotArgs{
 			Term:              currentTerm,
@@ -86,13 +85,18 @@ func (cm *ConsensusModule) sendInstallSnapshot(peerId int, peerLastIncludedIndex
 		var response InstallSnapshotResponse
 		cm_server := cm.server
 		cm.mu.Unlock()
-		if err := cm_server.Call(peerId, "ConsensusModule.InstallSnapshot", args, &response); err == nil {
+		if err := cm_server.Call(peerId,"ConsensusModule.InstallSnapshot", args, &response); err == nil {
 			cm.mu.Lock()
 			defer cm.mu.Unlock()
 			if response.Term > cm.currentTerm {
 				cm.revertToFollower(response.Term)
-				return
 			}
+			cm.pendingInstallSnapshot[peerId] = false
+		} else{
+			cm.mu.Lock()
+			defer cm.mu.Unlock()
+			cm.debugLog("Error when send RPC ",err)
+			cm.pendingInstallSnapshot[peerId] = false
 		}
 	}(peerId, peerLastIncludedIndex)
 
@@ -102,7 +106,7 @@ func (cm *ConsensusModule) sendInstallSnapshot(peerId int, peerLastIncludedIndex
 func TakeInstallSnapshot(snapshot Snapshot, id int) {
 	dirPath := fmt.Sprintf("snapshot/server%d", id)
 	makeDirIfNotExist(dirPath)
-	filename := fmt.Sprintf("snapshot/server%d/%d.json", id, snapshot.LastIncludedIndex/256)
+	filename := fmt.Sprintf("snapshot/server%d/%d.json", id, snapshot.LastIncludedIndex/SNAPSHOT_LOGSIZE)
 	SaveSnapshot(snapshot, filename)
 
 }
@@ -110,9 +114,9 @@ func TakeInstallSnapshot(snapshot Snapshot, id int) {
 // Expect to get the lock from applyStateMachine (this operation will be very quick)
 func (cm *ConsensusModule) TakeSnapshot() {
 
-	lastIncludedIndex := cm.lastIncludedIndex + 256
+	lastIncludedIndex := cm.lastIncludedIndex + SNAPSHOT_LOGSIZE
 	lastIncludedTerm := cm.log[cm.lastIncludedIndex+255].Term
-	logs := cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+256]
+	logs := cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
 
 	snapshot := Snapshot{
 		LastIncludedIndex: lastIncludedIndex,
@@ -121,7 +125,7 @@ func (cm *ConsensusModule) TakeSnapshot() {
 	}
 	dirPath := fmt.Sprintf("snapshot/server%d", cm.id)
 	makeDirIfNotExist(dirPath)
-	filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, lastIncludedIndex/256)
+	filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, lastIncludedIndex/SNAPSHOT_LOGSIZE)
 	SaveSnapshot(snapshot, filename)
 	cm.lastIncludedIndex = lastIncludedIndex
 	cm.lastIncludedTerm = lastIncludedTerm

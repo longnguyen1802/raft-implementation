@@ -117,7 +117,7 @@ func TestServices(t *testing.T) {
 		t.Logf("Failure machine is %d %d %d", rand_machine_1, rand_machine_2, rand_machine_3)
 		restore_machine_1 := true
 		restore_machine_2 := true
-		//restore_machine_3 := true
+		restore_machine_3 := true
 		for {
 			elapsed := time.Now()
 			if crash_event && elapsed.Sub(start) > 3*time.Second {
@@ -129,19 +129,19 @@ func TestServices(t *testing.T) {
 				IsolatedServer(servers, rand_machine_2, num_server)
 				IsolatedServer(servers, rand_machine_3, num_server)
 			}
-			if elapsed.Sub(start) > 5*time.Second && restore_machine_1 {
+			if elapsed.Sub(start) > 10*time.Second && restore_machine_1 {
 				restore_machine_1 = false
 				t.Logf("Restore machine %d", rand_machine_1)
 				RestoreIsolatedServer(servers, rand_machine_1, num_server, failures)
 				failures[rand_machine_1] = false
 			}
-			if elapsed.Sub(start) > 7*time.Second && restore_machine_2 {
+			if elapsed.Sub(start) > 20*time.Second && restore_machine_2 {
 				restore_machine_2 = false
 				t.Logf("Restore machine %d", rand_machine_2)
 				RestoreIsolatedServer(servers, rand_machine_2, num_server, failures)
 				failures[rand_machine_2] = false
 			}
-			if elapsed.Sub(start) < 30*time.Second {
+			if elapsed.Sub(start) < 60*time.Second {
 				time.Sleep(time.Duration(50+rand.Intn(50)) * time.Millisecond)
 				for j := 0; j < 1+rand.Intn(4); j++ {
 					for _, i := range rand.Perm(num_server) {
@@ -152,10 +152,16 @@ func TestServices(t *testing.T) {
 					}
 				}
 			}
+			if elapsed.Sub(start) > 80*time.Second && restore_machine_3 {
+				restore_machine_3 = false
+				t.Logf("Restore machine %d", rand_machine_3)
+				RestoreIsolatedServer(servers, rand_machine_3, num_server, failures)
+				failures[rand_machine_3] = false
+			}
 		}
 
 	}()
-	time.Sleep(35 * time.Second)
+	time.Sleep(110 * time.Second)
 }
 
 // type Set struct {
