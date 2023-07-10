@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-const SNAPSHOT_LOGSIZE = 16
+const SNAPSHOT_LOGSIZE = 32
 
 type Snapshot struct {
 	LastIncludedIndex int   `json:"lastIncludedIndex"`
@@ -24,16 +24,19 @@ type InstallSnapshotArgs struct {
 	LeaderId          int
 	LastIncludedIndex int
 	LastIncludedTerm  int
-	Data              []byte
+	Offset            int
+	Data              Snapshot
 }
 
 type InstallSnapshotResponse struct {
-	Term int
+	Term              int
+	LastIncludedIndex int
 }
 
 // Receiver implementation
 func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *InstallSnapshotResponse) error {
 	cm.mu.Lock()
+	defer cm.mu.Unlock()
 	currentTerm := cm.currentTerm
 	id := cm.id
 	cm.debugLog("Receive InstallSnapshot: %+v", args)
@@ -41,65 +44,90 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 		cm.revertToFollower(args.Term)
 	}
 	cm.electionTimeoutReset = time.Now()
-	cm.mu.Unlock()
-	// Save snapshot to file here (dont accquire the lock when do this) consider create a read/write system lock only
-	var snapshot Snapshot
-	err := json.Unmarshal(args.Data, &snapshot)
-	if err != nil {
-		return err
+	// Get information only
+	if args.Offset == 0 || len(args.Data.Logs) == 0{
+		response.Term = currentTerm
+		response.LastIncludedIndex = cm.lastIncludedIndex
+		return nil
 	}
-	TakeInstallSnapshot(snapshot, id)
-	cm.mu.Lock()
-	cm.lastIncludedIndex = snapshot.LastIncludedIndex
-	cm.lastIncludedTerm = snapshot.LastIncludedTerm
+	if args.LastIncludedIndex < cm.lastIncludedIndex {
+		response.Term = currentTerm
+		response.LastIncludedIndex = cm.lastIncludedIndex
+		return nil
+	}
+	cm.debugLog("Valid snapshot send with %+v", args)
+	// Save snapshot to file here (dont accquire the lock when do this) consider create a read/write system lock only
+	TakeInstallSnapshot(args.Data, id)
+	cm.lastIncludedIndex = args.Data.LastIncludedIndex
+	cm.lastIncludedTerm = args.Data.LastIncludedTerm
+	cm.debugLog("Snap shot from data %+v",args.Data)
+	cm.debugLog("Change in last Include index: %v", cm.lastIncludedIndex)
+	cm.applyStateMachineEvent <- struct{}{}
 	cm.debugLog("Install snapshot with include index %v and include term %v", cm.lastIncludedIndex, cm.lastIncludedTerm)
-	cm.mu.Unlock()
 	return nil
 }
 
 // Sender implementation (require leader)
-func (cm *ConsensusModule) sendInstallSnapshot(peerId int, peerLastIncludedIndex int) {
+func (cm *ConsensusModule) sendInstallSnapshot() {
+	cm.mu.Lock()
 	if cm.state != Leader {
+		cm.mu.Unlock()
 		return
 	}
 	currentTerm := cm.currentTerm
-	go func(peerId int, peerLastIncludedIndex int) {
-		cm.mu.Lock()
-		filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, peerLastIncludedIndex/SNAPSHOT_LOGSIZE +1)
-		snapshot, err := GetSnapshot(filename)
-		if err != nil {
-			cm.debugLog("Failed to get data from JSON:", err)
-		}
-		data, err := json.Marshal(snapshot)
-		if err != nil {
-			cm.debugLog("Failed to marshal JSON:", err)
-		}
-		args := InstallSnapshotArgs{
-			Term:              currentTerm,
-			LeaderId:          cm.id,
-			LastIncludedIndex: snapshot.LastIncludedIndex,
-			LastIncludedTerm:  snapshot.LastIncludedTerm,
-			Data:              data,
-		}
-		cm.debugLog("sending InstallSnapshot to %v: args=%+v", peerId, args)
-		var response InstallSnapshotResponse
-		cm_server := cm.server
-		cm.mu.Unlock()
-		if err := cm_server.Call(peerId,"ConsensusModule.InstallSnapshot", args, &response); err == nil {
+	peerIds := cm.peerIds
+	cm.mu.Unlock()
+	for _, peerId := range peerIds {
+		go func(peerId int) {
 			cm.mu.Lock()
-			defer cm.mu.Unlock()
-			if response.Term > cm.currentTerm {
-				cm.revertToFollower(response.Term)
+			var args InstallSnapshotArgs
+			// Do not know the index or index too close
+			if cm.matchIncludedIndex[peerId] == 0 || (cm.lastIncludedIndex-cm.matchIncludedIndex[peerId] <= 2) {
+				snapshot := Snapshot{}
+				args = InstallSnapshotArgs{
+					Term:              currentTerm,
+					LeaderId:          cm.id,
+					LastIncludedIndex: cm.lastIncludedIndex,
+					LastIncludedTerm:  cm.lastIncludedTerm,
+					Offset:            cm.matchIncludedIndex[peerId],
+					Data:              snapshot,
+				}
+			} else {
+				filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, cm.matchIncludedIndex[peerId]/SNAPSHOT_LOGSIZE+1)
+				datasnapshot, err := GetSnapshot(filename)
+				if err != nil{
+					cm.debugLog("Error when read snapshot from file")
+				}
+				args = InstallSnapshotArgs{
+					Term:              currentTerm,
+					LeaderId:          cm.id,
+					LastIncludedIndex: cm.lastIncludedIndex,
+					LastIncludedTerm:  cm.lastIncludedTerm,
+					Offset:            cm.matchIncludedIndex[peerId],
+					Data:              datasnapshot,
+				}
+				cm.debugLog("Snap shot send to %d with data %+v",peerId,datasnapshot)
 			}
-			cm.pendingInstallSnapshot[peerId] = false
-		} else{
-			cm.mu.Lock()
-			defer cm.mu.Unlock()
-			cm.debugLog("Error when send RPC ",err)
-			cm.pendingInstallSnapshot[peerId] = false
-		}
-	}(peerId, peerLastIncludedIndex)
-
+			
+			cm.debugLog("sending InstallSnapshot to %v: args=%+v", peerId, args)
+			var response InstallSnapshotResponse
+			cm_server := cm.server
+			cm.mu.Unlock()
+			if err := cm_server.Call(peerId, "ConsensusModule.InstallSnapshot", args, &response); err == nil {
+				cm.mu.Lock()
+				defer cm.mu.Unlock()
+				if response.Term > cm.currentTerm {
+					cm.revertToFollower(response.Term)
+				}
+				cm.matchIncludedIndex[peerId] = response.LastIncludedIndex
+				cm.debugLog("Update peer %d lastIncludedIndex %d", peerId, response.LastIncludedIndex)
+			} else {
+				cm.mu.Lock()
+				defer cm.mu.Unlock()
+				cm.debugLog("Error when send RPC ", err)
+			}
+		}(peerId)
+	}
 }
 
 // Do the install snapshot that receive from leader

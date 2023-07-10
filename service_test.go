@@ -135,13 +135,13 @@ func TestServices(t *testing.T) {
 				RestoreIsolatedServer(servers, rand_machine_1, num_server, failures)
 				failures[rand_machine_1] = false
 			}
-			if elapsed.Sub(start) > 15*time.Second && restore_machine_2 {
+			if elapsed.Sub(start) > 20*time.Second && restore_machine_2 {
 				restore_machine_2 = false
 				t.Logf("Restore machine %d", rand_machine_2)
 				RestoreIsolatedServer(servers, rand_machine_2, num_server, failures)
 				failures[rand_machine_2] = false
 			}
-			if elapsed.Sub(start) < 20*time.Second {
+			if elapsed.Sub(start) < 30*time.Second {
 				time.Sleep(time.Duration(50+rand.Intn(50)) * time.Millisecond)
 				for j := 0; j < 1+rand.Intn(4); j++ {
 					for _, i := range rand.Perm(num_server) {
@@ -152,7 +152,7 @@ func TestServices(t *testing.T) {
 					}
 				}
 			}
-			if elapsed.Sub(start) > 25*time.Second && restore_machine_3 {
+			if elapsed.Sub(start) > 40*time.Second && restore_machine_3 {
 				restore_machine_3 = false
 				t.Logf("Restore machine %d", rand_machine_3)
 				RestoreIsolatedServer(servers, rand_machine_3, num_server, failures)
@@ -161,7 +161,7 @@ func TestServices(t *testing.T) {
 		}
 
 	}()
-	time.Sleep(50 * time.Second)
+	time.Sleep(60 * time.Second)
 }
 
 // type Set struct {

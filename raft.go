@@ -20,14 +20,13 @@ type ConsensusModule struct {
 
 	server *Server
 
-
 	// Persistent state of Server
 	lastIncludedIndex int
 	lastIncludedTerm  int
 
-	currentTerm       int
-	votedFor          int
-	log               []Log
+	currentTerm int
+	votedFor    int
+	log         []Log
 
 	// Volatile state of Server
 	commitIndex int
@@ -44,10 +43,11 @@ type ConsensusModule struct {
 	applyStateMachineEvent chan struct{}
 
 	// Volatile leader state
+	// For append entries
 	nextIndex  map[int]int
 	matchIndex map[int]int
-	// Pending install snapshot
-	pendingInstallSnapshot []bool
+	// For snapshot
+	matchIncludedIndex map[int]int
 }
 
 func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan interface{}) *ConsensusModule {
@@ -64,11 +64,11 @@ func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan inte
 	// For easier calculation lastIncludeIndex will be the number of entry log already save
 	cm.lastIncludedIndex = 0
 	cm.lastIncludedTerm = -1
-	
+
 	cm.nextIndex = make(map[int]int)
 	cm.matchIndex = make(map[int]int)
 
-	cm.pendingInstallSnapshot = make([]bool,len(peerIds)+1)
+	cm.matchIncludedIndex = make(map[int]int)
 	go func() {
 		// Wait the start of server until setup all server
 		<-ready

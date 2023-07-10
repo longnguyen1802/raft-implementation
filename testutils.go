@@ -18,7 +18,7 @@ func IsolatedServer(servers []*Server, id int, num_server int) {
 }
 func RestoreIsolatedServer(servers []*Server, id int, num_server int, failures []bool) {
 	for i := 0; i < num_server; i++ {
-		if id != i && !failures[i]  {
+		if id != i && !failures[i] {
 			ConnectTwoServer(servers, id, i)
 		}
 	}
