@@ -8,30 +8,6 @@ import (
 	//"github.com/fortytw2/leaktest"
 )
 
-// It is similar to a crash where server cannot send request and response to any other server
-func DisconectTwoServer(servers []*Server, id1 int, id2 int) {
-	servers[id1].DisconnectPeer(id2)
-	servers[id2].DisconnectPeer(id1)
-}
-func ConnectTwoServer(servers []*Server, id1 int, id2 int) {
-	servers[id1].ConnectToPeer(id2, servers[id2].GetListenAddr())
-	servers[id2].ConnectToPeer(id1, servers[id1].GetListenAddr())
-}
-func IsolatedServer(servers []*Server, id int, num_server int) {
-	for i := 0; i < num_server; i++ {
-		if id != i {
-			DisconectTwoServer(servers, i, id)
-		}
-	}
-}
-func RestoreIsolatedServer(servers []*Server, id int, num_server int, failures []bool) {
-	for i := 0; i < num_server; i++ {
-		if id != i && (failures[i] == false) {
-			ConnectTwoServer(servers, id, i)
-		}
-	}
-}
-
 // func TestElectionBasic(t *testing.T) {
 // 	num_server := 3
 // 	servers := make([]*Server, num_server)
@@ -87,12 +63,11 @@ func RestoreIsolatedServer(servers []*Server, id int, num_server int, failures [
 //		}()
 //		time.Sleep(6 * time.Second)
 //	}
-func TestElectionBasic(t *testing.T) {
+func TestServices(t *testing.T) {
 	rand.Seed(time.Now().UnixNano())
 	num_server := 5
 	servers := make([]*Server, num_server)
 	failures := make([]bool, num_server)
-	connected := make([]bool, num_server)
 	ready := make(chan interface{})
 	for i := 0; i < num_server; i++ {
 		peerIds := make([]int, 0)
@@ -113,7 +88,6 @@ func TestElectionBasic(t *testing.T) {
 				servers[i].ConnectToPeer(j, servers[j].GetListenAddr())
 			}
 		}
-		connected[i] = true
 	}
 
 	client := NewClient(servers)

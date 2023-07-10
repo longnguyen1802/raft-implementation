@@ -51,6 +51,13 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 			response.Success = true
 			response.Term = cm.currentTerm
 			cm.debugLog("New log update: %v", cm.log)
+			// Set commit index
+			if args.LeaderCommit > cm.commitIndex {
+				cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
+				cm.debugLog("Change in commit index: %v", cm.commitIndex)
+				cm.applyStateMachineEvent <- struct{}{}
+				cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
+			}
 		} else {
 			// The server log does not have index at PrevLogIndex (An outdate log)
 			if args.PrevLogIndex >= len(cm.log) {
@@ -72,6 +79,7 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
 						cm.debugLog("Change in commit index: %v", cm.commitIndex)
 						cm.applyStateMachineEvent <- struct{}{}
+						cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
 					}
 				}
 			}

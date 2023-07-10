@@ -21,9 +21,11 @@ type ConsensusModule struct {
 	server *Server
 
 	// Persistent state of Server
-	currentTerm int
-	votedFor    int
-	log         []Log
+	lastIncludedIndex int
+	lastIncludedTerm  int
+	currentTerm       int
+	votedFor          int
+	log               []Log
 
 	// Volatile state of Server
 	commitIndex int

@@ -6,9 +6,9 @@ import (
 )
 
 type Snapshot struct {
-	LastIncludeIndex int   `json:"lastIncludeIndex"`
-	LastIncludeTerm  int   `json:"lastIncludeTerm"`
-	Logs             []Log `json:"log"`
+	LastIncludedIndex int   `json:"lastIncludedIndex"`
+	LastIncludedTerm  int   `json:"lastIncludedTerm"`
+	Logs              []Log `json:"log"`
 }
 
 func SaveSnapshot(snapshot Snapshot, filename string) error {
