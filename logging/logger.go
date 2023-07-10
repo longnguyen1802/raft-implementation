@@ -11,8 +11,8 @@ import (
 )
 
 var (
-	instance  zerolog.Logger
-	once      sync.Once
+	instance zerolog.Logger
+	once     sync.Once
 )
 
 type Logger struct {
