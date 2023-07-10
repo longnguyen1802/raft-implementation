@@ -8,208 +8,208 @@ import (
 func TestRequestVote(t *testing.T) {
 	tests := []struct {
 		name string
-		cm *ConsensusModule
+		cm   *ConsensusModule
 		args RequestVoteArgs
 		want RequestVoteResponse
 	}{
 		{
 			name: "Test startup request vote",
-			cm : &ConsensusModule{
-				id:100,
+			cm: &ConsensusModule{
+				id:          100,
 				currentTerm: 1,
-				votedFor: -1,
+				votedFor:    -1,
 			},
-			args : RequestVoteArgs {
-				Term: 1,
-				CandidateId: 1,
+			args: RequestVoteArgs{
+				Term:         1,
+				CandidateId:  101,
 				LastLogIndex: -1,
-				LastLogTerm: -1,
+				LastLogTerm:  -1,
 			},
-			want : RequestVoteResponse{
-				Term: 1,
+			want: RequestVoteResponse{
+				Term:        1,
 				VoteGranted: true,
-			},			
+			},
 		},
 		{
 			name: "Test outdated request vote",
-			cm : &ConsensusModule{
-				id:100,
+			cm: &ConsensusModule{
+				id:          100,
 				currentTerm: 2,
-				votedFor: -1,
+				votedFor:    -1,
 			},
-			args : RequestVoteArgs {
-				Term: 1,
-				CandidateId: 1,
+			args: RequestVoteArgs{
+				Term:         1,
+				CandidateId:  101,
 				LastLogIndex: -1,
-				LastLogTerm: -1,
+				LastLogTerm:  -1,
 			},
-			want : RequestVoteResponse{
-				Term: 2,
+			want: RequestVoteResponse{
+				Term:        2,
 				VoteGranted: false,
-			},			
+			},
 		},
 		{
 			name: "Test request server already vote",
-			cm : &ConsensusModule{
-				id:100,
+			cm: &ConsensusModule{
+				id:          100,
 				currentTerm: 1,
-				votedFor: 2,
+				votedFor:    2,
 			},
-			args : RequestVoteArgs {
-				Term: 1,
-				CandidateId: 1,
+			args: RequestVoteArgs{
+				Term:         1,
+				CandidateId:  101,
 				LastLogIndex: -1,
-				LastLogTerm: -1,
+				LastLogTerm:  -1,
 			},
-			want : RequestVoteResponse{
-				Term: 1,
+			want: RequestVoteResponse{
+				Term:        1,
 				VoteGranted: false,
-			},			
+			},
 		},
 		{
 			name: "Test request vote for old server",
-			cm : &ConsensusModule{
-				id:100,
+			cm: &ConsensusModule{
+				id:          100,
 				currentTerm: 1,
-				votedFor: 1,
+				votedFor:    1,
 			},
-			args : RequestVoteArgs {
-				Term: 1,
-				CandidateId: 1,
+			args: RequestVoteArgs{
+				Term:         1,
+				CandidateId:  101,
 				LastLogIndex: -1,
-				LastLogTerm: -1,
+				LastLogTerm:  -1,
 			},
-			want : RequestVoteResponse{
-				Term: 1,
+			want: RequestVoteResponse{
+				Term:        1,
 				VoteGranted: true,
-			},			
+			},
 		},
 		{
 			name: "Test log up-to-date vote",
-			cm : &ConsensusModule{
-				id:100,
+			cm: &ConsensusModule{
+				id:          100,
 				currentTerm: 1,
-				votedFor: -1,
+				votedFor:    -1,
 				log: []Log{
 					{
 						Command: "command",
-						Term: 1,
+						Term:    1,
 					},
 					{
 						Command: "command",
-						Term: 2,
+						Term:    2,
 					},
 					{
 						Command: "command",
-						Term: 3,
+						Term:    3,
 					},
 					{
 						Command: "command",
-						Term: 4,
+						Term:    4,
 					},
 					{
 						Command: "command",
-						Term: 5,
+						Term:    5,
 					},
 				},
 			},
-			args : RequestVoteArgs {
-				Term: 5,
-				CandidateId: 1,
+			args: RequestVoteArgs{
+				Term:         5,
+				CandidateId:  101,
 				LastLogIndex: 6,
-				LastLogTerm: 5,
+				LastLogTerm:  5,
 			},
-			want : RequestVoteResponse{
-				Term: 5,
+			want: RequestVoteResponse{
+				Term:        5,
 				VoteGranted: true,
-			},			
+			},
 		},
 		{
 			name: "Test log term not up-to-date vote",
-			cm : &ConsensusModule{
-				id:100,
+			cm: &ConsensusModule{
+				id:          100,
 				currentTerm: 1,
-				votedFor: -1,
+				votedFor:    -1,
 				log: []Log{
 					{
 						Command: "command",
-						Term: 1,
+						Term:    1,
 					},
 					{
 						Command: "command",
-						Term: 2,
+						Term:    2,
 					},
 					{
 						Command: "command",
-						Term: 3,
+						Term:    3,
 					},
 					{
 						Command: "command",
-						Term: 4,
+						Term:    4,
 					},
 					{
 						Command: "command",
-						Term: 5,
+						Term:    5,
 					},
 				},
 			},
-			args : RequestVoteArgs {
-				Term: 5,
-				CandidateId: 1,
+			args: RequestVoteArgs{
+				Term:         5,
+				CandidateId:  101,
 				LastLogIndex: 3,
-				LastLogTerm: 5,
+				LastLogTerm:  5,
 			},
-			want : RequestVoteResponse{
-				Term: 5,
+			want: RequestVoteResponse{
+				Term:        5,
 				VoteGranted: false,
-			},			
+			},
 		},
 		{
 			name: "Test term up to date but not log term not up-to-date vote",
-			cm : &ConsensusModule{
-				id:100,
+			cm: &ConsensusModule{
+				id:          100,
 				currentTerm: 1,
-				votedFor: -1,
+				votedFor:    -1,
 				log: []Log{
 					{
 						Command: "command",
-						Term: 1,
+						Term:    1,
 					},
 					{
 						Command: "command",
-						Term: 2,
+						Term:    2,
 					},
 					{
 						Command: "command",
-						Term: 3,
+						Term:    3,
 					},
 					{
 						Command: "command",
-						Term: 4,
+						Term:    4,
 					},
 					{
 						Command: "command",
-						Term: 5,
+						Term:    5,
 					},
 				},
 			},
-			args : RequestVoteArgs {
-				Term: 7,
-				CandidateId: 1,
+			args: RequestVoteArgs{
+				Term:         7,
+				CandidateId:  101,
 				LastLogIndex: 3,
-				LastLogTerm: 5,
+				LastLogTerm:  5,
 			},
-			want : RequestVoteResponse{
-				Term: 7,
+			want: RequestVoteResponse{
+				Term:        7,
 				VoteGranted: false,
-			},			
+			},
 		},
 	}
-	for _,tt := range tests {
-		t.Run(tt.name, func(t *testing.T){
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
 			response := &RequestVoteResponse{}
-			err := tt.cm.RequestVote(tt.args,response)
-			if err!= nil{
+			err := tt.cm.RequestVote(tt.args, response)
+			if err != nil {
 				t.Errorf("RequestVote returned an error: %v", err)
 			}
 
@@ -222,18 +222,17 @@ func TestRequestVote(t *testing.T) {
 
 func TestStartElection(t *testing.T) {
 	cm := &ConsensusModule{
-		state:              Follower,
-		currentTerm:        1,
-		id:                 1,
-		peerIds:            []int{2, 3},
+		state:       Follower,
+		currentTerm: 1,
+		id:          100,
+		peerIds:     []int{2, 3},
 	}
 
 	cm.startElection()
-
 
 	// Verify the state transition
 	if cm.state != Candidate {
 		t.Errorf("State transition after startElection failed. Expected state: Candidate, Actual state: %s", cm.state)
 	}
-	// Leader transition test in service_test 
+	// Leader transition test in service_test
 }

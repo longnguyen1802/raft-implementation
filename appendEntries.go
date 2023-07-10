@@ -16,8 +16,10 @@ type AppendEntriesArgs struct {
 }
 
 type AppendEntriesResponse struct {
-	Term    int
-	Success bool
+	Term              int
+	Success           bool
+	lastIncludedIndex int
+	lastIncludedTerm  int
 }
 
 // Receiver implementation
@@ -42,14 +44,12 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 	// Return false if request term < currentTerm (5.1)
 	if args.Term < cm.currentTerm {
 		response.Success = false
-		response.Term = cm.currentTerm
 	} else {
 		// All entries are different
 		if args.PrevLogIndex == -1 {
 			// Replace the whole current log by the master log entries
 			cm.log = append(cm.log[:0], args.Entries...)
 			response.Success = true
-			response.Term = cm.currentTerm
 			cm.debugLog("New log update: %v", cm.log)
 			// Set commit index
 			if args.LeaderCommit > cm.commitIndex {
@@ -62,18 +62,15 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 			// The server log does not have index at PrevLogIndex (An outdate log)
 			if args.PrevLogIndex >= len(cm.log) {
 				response.Success = false
-				response.Term = cm.currentTerm
 			} else {
 				// The term at PrevLogIndex are different with leader
 				if args.PrevLogTerm != cm.log[args.PrevLogIndex].Term {
 					response.Success = false
-					response.Term = cm.currentTerm
 				} else {
 					// Find the matching index then replace from that upward
 					cm.log = append(cm.log[:args.PrevLogIndex+1], args.Entries...)
 					cm.debugLog("New log update: %v", cm.log)
 					response.Success = true
-					response.Term = cm.currentTerm
 					// Set commit index
 					if args.LeaderCommit > cm.commitIndex {
 						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
@@ -85,6 +82,10 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 			}
 		}
 	}
+	// Common response state
+	response.Term = cm.currentTerm
+	response.lastIncludedIndex = cm.lastIncludedIndex
+	response.lastIncludedTerm = cm.lastIncludedTerm
 	cm.debugLog("AppendEntries response: %+v", *response)
 	return nil
 }

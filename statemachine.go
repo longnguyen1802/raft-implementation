@@ -15,6 +15,9 @@ func (cm *ConsensusModule) applyStateMachine() {
 		cm.debugLog("Apply new commit %d to state machine", cm.lastApplied)
 		// Apply to state machine can call a go routine function
 		// Pending
+		if cm.commitIndex >= cm.lastIncludedIndex+256 {
+			cm.TakeSnapshot()
+		}
 		cm.mu.Unlock()
 	}
 }

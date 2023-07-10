@@ -15,7 +15,7 @@ type Log struct {
 type ConsensusModule struct {
 	mu sync.Mutex
 
-	id      int
+	id      int // will equal to server id
 	peerIds []int
 
 	server *Server
@@ -57,6 +57,9 @@ func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan inte
 	cm.votedFor = -1
 	cm.commitIndex = -1
 	cm.lastApplied = -1
+	// For easier calculation lastIncludeIndex will be the number of entry log already save
+	cm.lastIncludedIndex = 0
+	cm.lastIncludedTerm = -1
 	cm.nextIndex = make(map[int]int)
 	cm.matchIndex = make(map[int]int)
 
