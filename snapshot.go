@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-const SNAPSHOT_LOGSIZE = 256
+const SNAPSHOT_LOGSIZE = 16
 
 type Snapshot struct {
 	LastIncludedIndex int   `json:"lastIncludedIndex"`
@@ -115,7 +115,7 @@ func TakeInstallSnapshot(snapshot Snapshot, id int) {
 func (cm *ConsensusModule) TakeSnapshot() {
 
 	lastIncludedIndex := cm.lastIncludedIndex + SNAPSHOT_LOGSIZE
-	lastIncludedTerm := cm.log[cm.lastIncludedIndex+255].Term
+	lastIncludedTerm := cm.log[cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1].Term
 	logs := cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
 
 	snapshot := Snapshot{
