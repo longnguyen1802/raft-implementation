@@ -22,7 +22,7 @@ func (cm *ConsensusModule) timeoutDuration() time.Duration {
 func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {
 	if len(cm.log) > 0 {
 		lastIndex := len(cm.log) - 1
-		return lastIndex, cm.log[lastIndex].Term
+		return getIndexFromLogEntry(lastIndex,cm.lastIncludedIndex), cm.log[lastIndex].Term
 	} else {
 		return -1, -1
 	}

@@ -164,9 +164,15 @@ func (cm *ConsensusModule) sendAppendEntries() {
 							//cm.AppendEntriesEvent <- struct{}{}
 						}
 					} else {
+						cm.debugLog("AppendEntries response from %d not success: nextIndex := %v, matchIndex := %v; commitIndex := %d", peerId, cm.nextIndex, cm.matchIndex, cm.commitIndex)
 						cm.nextIndex[peerId] -= 1
 					}
 				}
+			} else{
+				cm.mu.Lock()
+				defer cm.mu.Unlock()
+				// Error in send appendEntries RPC imply that two server are disconnected
+				cm.nextIndex[peerId] = getIndexFromLogEntry(len(cm.log),cm.lastIncludedIndex)
 			}
 		}(peerId)
 	}

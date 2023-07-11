@@ -161,7 +161,7 @@ func TestServices(t *testing.T) {
 		}
 
 	}()
-	time.Sleep(60 * time.Second)
+	time.Sleep(90 * time.Second)
 }
 
 // type Set struct {

@@ -89,7 +89,7 @@ func (cm *ConsensusModule) leaderLoop() {
 		cm.matchIndex[peerId] = -1
 		cm.matchIncludedIndex[peerId] = 0
 	}
-	ticker := time.NewTicker(50 * time.Millisecond)
+	ticker := time.NewTicker(300 * time.Millisecond)
 
 	// Start a goroutine to receive ticks
 	go func() {

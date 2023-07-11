@@ -50,7 +50,8 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 		response.LastIncludedIndex = cm.lastIncludedIndex
 		return nil
 	}
-	if args.LastIncludedIndex < cm.lastIncludedIndex {
+	// Revert to update LastIncludedIndex if have more data
+	if args.Data.LastIncludedIndex <= cm.lastIncludedIndex {
 		response.Term = currentTerm
 		response.LastIncludedIndex = cm.lastIncludedIndex
 		return nil
@@ -58,6 +59,7 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 	cm.debugLog("Valid snapshot send with %+v", args)
 	// Save snapshot to file here (dont accquire the lock when do this) consider create a read/write system lock only
 	TakeInstallSnapshot(args.Data, id)
+	cm.debugLog("Change in last include index from %d to %d",cm.lastIncludedIndex,args.Data.LastIncludedIndex)
 	cm.lastIncludedIndex = args.Data.LastIncludedIndex
 	cm.lastIncludedTerm = args.Data.LastIncludedTerm
 	cm.debugLog("Snap shot from data %+v",args.Data)
@@ -82,7 +84,7 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 			cm.mu.Lock()
 			var args InstallSnapshotArgs
 			// Do not know the index or index too close
-			if cm.matchIncludedIndex[peerId] == 0 || (cm.lastIncludedIndex-cm.matchIncludedIndex[peerId] <= 2) {
+			if cm.matchIncludedIndex[peerId] == 0 || (cm.lastIncludedIndex-cm.matchIncludedIndex[peerId] <= 2*SNAPSHOT_LOGSIZE) {
 				snapshot := Snapshot{}
 				args = InstallSnapshotArgs{
 					Term:              currentTerm,

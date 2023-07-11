@@ -24,6 +24,7 @@ func (cm *ConsensusModule) applyStateMachine() {
 			for {
 				if cm.lastApplied >= cm.lastIncludedIndex+SNAPSHOT_LOGSIZE {
 					// Truncate the log and update lastIncludedIndex
+					cm.debugLog("Taking snapshot function getting call with lastApplied %d and lastIncludedIndex %d", cm.lastApplied, cm.lastIncludedIndex)
 					cm.TakeSnapshot()
 				} else {
 					break
