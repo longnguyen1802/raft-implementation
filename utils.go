@@ -20,9 +20,9 @@ func (cm *ConsensusModule) timeoutDuration() time.Duration {
 }
 
 func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {
-	if len(cm.log) > 0 {
-		lastIndex := len(cm.log) - 1
-		return lastIndex, cm.log[lastIndex].Term
+	if cm.getLogSize() > 0 {
+		lastIndex := cm.getLogSize() - 1
+		return lastIndex, cm.getTerm(lastIndex)
 	} else {
 		return -1, -1
 	}
@@ -39,4 +39,29 @@ func (cm *ConsensusModule) debugLog(format string, args ...interface{}) {
 	format = fmt.Sprintf("[%d] ", cm.id) + format
 	log.Printf(format, args...)
 	defer loglock.Unlock()
+}
+
+func (cm *ConsensusModule) getTermAndSliceForIndex(prevLogIndex int) (int,[]Log) {
+	if prevLogIndex>=0 {
+		return cm.log[prevLogIndex].Term,cm.log[prevLogIndex+1:]
+	} else{
+		return -1,cm.log
+	}
+	
+	// lastIncludedIndex = cm.lastIncludedIndex
+	// if index >= lastIncludedIndex {
+	// 	return cm.log[index-lastIncludedIndex].Term,cm.log[index-lastIncludedIndex:]
+	// }
+}
+
+func (cm *ConsensusModule) getTerm(index int) int {
+	return cm.log[index].Term
+}
+
+func (cm *ConsensusModule) getLogSize() int {
+	return len(cm.log)
+}
+
+func (cm *ConsensusModule) getLogSlice(from int,to int) []Log{
+	return cm.log[from:to]
 }

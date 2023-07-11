@@ -44,9 +44,9 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 		cm.revertToFollower(args.Term)
 	}
 	cm.electionTimeoutReset = time.Now()
-	if len(cm.log) >= 2*SNAPSHOT_LOGSIZE {
-		cm.debugLog("Last %d entry of server is %+v",2*SNAPSHOT_LOGSIZE,cm.log[len(cm.log)-2*SNAPSHOT_LOGSIZE:])
-	}
+	// if len(cm.log) >= 2*SNAPSHOT_LOGSIZE {
+	// 	cm.debugLog("Last %d entry of server is %+v",2*SNAPSHOT_LOGSIZE,cm.log[len(cm.log)-2*SNAPSHOT_LOGSIZE:])
+	// }
 	// Get information only
 	if args.Offset == 0 || len(args.Data.Logs) == 0{
 		response.Term = currentTerm
@@ -60,11 +60,7 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 	}
 	cm.debugLog("Valid snapshot send with %+v", args)
 	// Save snapshot to file here (dont accquire the lock when do this) consider create a read/write system lock only
-	TakeInstallSnapshot(args.Data, id)
-	cm.lastIncludedIndex = args.Data.LastIncludedIndex
-	cm.lastIncludedTerm = args.Data.LastIncludedTerm
-	cm.debugLog("Snap shot from data %+v",args.Data)
-	cm.debugLog("Change in last Include index: %v", cm.lastIncludedIndex)
+	cm.TakeInstallSnapshot(args.Data, id)
 	cm.applyStateMachineEvent <- struct{}{}
 	cm.debugLog("Install snapshot with include index %v and include term %v", cm.lastIncludedIndex, cm.lastIncludedTerm)
 	
@@ -135,11 +131,18 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 }
 
 // Do the install snapshot that receive from leader
-func TakeInstallSnapshot(snapshot Snapshot, id int) {
+func (cm* ConsensusModule) TakeInstallSnapshot(snapshot Snapshot, id int) {
 	dirPath := fmt.Sprintf("snapshot/server%d", id)
 	makeDirIfNotExist(dirPath)
 	filename := fmt.Sprintf("snapshot/server%d/%d.json", id, snapshot.LastIncludedIndex/SNAPSHOT_LOGSIZE)
+	// Truncate the log
+	//cm.log = cm.log[SNAPSHOT_LOGSIZE:]
+
 	SaveSnapshot(snapshot, filename)
+	cm.lastIncludedIndex = snapshot.LastIncludedIndex
+	cm.lastIncludedTerm = snapshot.LastIncludedTerm
+	cm.debugLog("Snap shot from data %+v",snapshot)
+	cm.debugLog("Change in last Include index: %v", cm.lastIncludedIndex)
 
 }
 
@@ -149,7 +152,9 @@ func (cm *ConsensusModule) TakeSnapshot() {
 	lastIncludedIndex := cm.lastIncludedIndex + SNAPSHOT_LOGSIZE
 	lastIncludedTerm := cm.log[cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1].Term
 	logs := cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
-
+	// Truncate the log
+	//cm.log = cm.log[SNAPSHOT_LOGSIZE:]
+	
 	snapshot := Snapshot{
 		LastIncludedIndex: lastIncludedIndex,
 		LastIncludedTerm:  lastIncludedTerm,

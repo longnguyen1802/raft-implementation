@@ -51,27 +51,27 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 			cm.debugLog("New log update: %v", cm.log)
 			// Set commit index
 			if args.LeaderCommit > cm.commitIndex {
-				cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
+				cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1)))
 				cm.debugLog("Change in commit index: %v", cm.commitIndex)
 				cm.applyStateMachineEvent <- struct{}{}
 				cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
 			}
 		} else {
 			// The server log does not have index at PrevLogIndex (An outdate log)
-			if args.PrevLogIndex >= len(cm.log) {
+			if args.PrevLogIndex >= cm.getLogSize() {
 				response.Success = false
 			} else {
 				// The term at PrevLogIndex are different with leader
-				if args.PrevLogTerm != cm.log[args.PrevLogIndex].Term {
+				if args.PrevLogTerm != cm.getTerm(args.PrevLogIndex)  {
 					response.Success = false
 				} else {
 					// Find the matching index then replace from that upward
-					cm.log = append(cm.log[:args.PrevLogIndex+1], args.Entries...)
+					cm.log = append(cm.getLogSlice(0,args.PrevLogIndex+1),args.Entries...)
 					cm.debugLog("New log update: %v", cm.log)
 					response.Success = true
 					// Set commit index
 					if args.LeaderCommit > cm.commitIndex {
-						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
+						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1)))
 						cm.debugLog("Change in commit index: %v", cm.commitIndex)
 						cm.applyStateMachineEvent <- struct{}{}
 						cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
@@ -105,12 +105,14 @@ func (cm *ConsensusModule) sendAppendEntries() {
 			cm.mu.Lock()
 			nextIndex := cm.nextIndex[peerId]
 			prevLogIndex := nextIndex - 1
-			prevLogTerm := -1
-			if prevLogIndex >= 0 {
-				prevLogTerm = cm.log[prevLogIndex].Term
-			}
-			// Send all entries from nextIndex
-			entries := cm.log[nextIndex:]
+			// prevLogTerm := -1
+			// if prevLogIndex >= 0 {
+			// 	prevLogTerm = cm.log[prevLogIndex].Term
+			// }
+			// // Send all entries from nextIndex
+			// entries := cm.log[nextIndex:]
+			
+			prevLogTerm,entries := cm.getTermAndSliceForIndex(prevLogIndex)
 
 			args := AppendEntriesArgs{
 				Term:         currentTerm,
@@ -140,8 +142,8 @@ func (cm *ConsensusModule) sendAppendEntries() {
 
 						commitIndex := cm.commitIndex
 						// Commit all entries that have major agreement
-						for i := cm.commitIndex + 1; i < len(cm.log); i++ {
-							if cm.log[i].Term == cm.currentTerm {
+						for i := cm.commitIndex + 1; i < cm.getLogSize(); i++ {
+							if cm.getTerm(i) == cm.currentTerm {
 								matchCount := 1
 								for _, peerId := range cm.peerIds {
 									if cm.matchIndex[peerId] >= i {

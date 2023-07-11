@@ -85,7 +85,7 @@ func (cm *ConsensusModule) leaderLoop() {
 
 	// Setting nextIndex and matchIndex for each peer.
 	for _, peerId := range cm.peerIds {
-		cm.nextIndex[peerId] = len(cm.log)
+		cm.nextIndex[peerId] = cm.getLogSize()
 		cm.matchIndex[peerId] = -1
 		cm.matchIncludedIndex[peerId] = 0
 	}
