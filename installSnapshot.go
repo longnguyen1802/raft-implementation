@@ -50,7 +50,7 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 		response.LastIncludedIndex = cm.lastIncludedIndex
 		return nil
 	}
-	if args.LastIncludedIndex < cm.lastIncludedIndex {
+	if args.Data.LastIncludedIndex <= cm.lastIncludedIndex {
 		response.Term = currentTerm
 		response.LastIncludedIndex = cm.lastIncludedIndex
 		return nil
