@@ -1,0 +1,950 @@
+2023/07/11 10:04:18 [1] Election timeout started (415ms), term=0
+2023/07/11 10:04:19 [1] RequestVote: {Term:1 CandidateId:3 LastLogIndex:-1 LastLogTerm:-1} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]
+2023/07/11 10:04:19 [1] Term out dated
+2023/07/11 10:04:19 [1] becomes Follower with term=1; lastIncludedIndex =0, log=[]
+2023/07/11 10:04:19 [1] RequestVote response for candidate 3: &{Term:1 VoteGranted:true}
+2023/07/11 10:04:19 [1] Election timeout started (439ms), term=1
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: []
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Submit received by Follower: command 153
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 58 Term:1} {Command:command 290 Term:1}] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: [{command 58 1} {command 290 1}]
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:command 58 Term:1} {Command:command 290 Term:1}] LeaderCommit:-1}
+2023/07/11 10:04:19 [1] New log update: [{command 58 1} {command 290 1}]
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:1 PrevLogTerm:1 Entries:[{Command:command 871 Term:1}] LeaderCommit:1}
+2023/07/11 10:04:19 [1] New log update: [{command 58 1} {command 290 1} {command 871 1}]
+2023/07/11 10:04:19 [1] Change in commit index: 1
+2023/07/11 10:04:19 [1] Finish apply commit 1 to state machine
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Call apply state machine with commitIndex 1 and lastIncludedIndex 0
+2023/07/11 10:04:19 [1] Apply new commit 1 to state machine
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:2 PrevLogTerm:1 Entries:[] LeaderCommit:2}
+2023/07/11 10:04:19 [1] New log update: [{command 58 1} {command 290 1} {command 871 1}]
+2023/07/11 10:04:19 [1] Change in commit index: 2
+2023/07/11 10:04:19 [1] Finish apply commit 2 to state machine
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Call apply state machine with commitIndex 2 and lastIncludedIndex 0
+2023/07/11 10:04:19 [1] Apply new commit 2 to state machine
+2023/07/11 10:04:19 [1] Submit received by Follower: command 840
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:2 PrevLogTerm:1 Entries:[{Command:command 50 Term:1} {Command:command 455 Term:1}] LeaderCommit:2}
+2023/07/11 10:04:19 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1}]
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:4 PrevLogTerm:1 Entries:[{Command:command 733 Term:1}] LeaderCommit:4}
+2023/07/11 10:04:19 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1}]
+2023/07/11 10:04:19 [1] Change in commit index: 4
+2023/07/11 10:04:19 [1] Finish apply commit 4 to state machine
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Call apply state machine with commitIndex 4 and lastIncludedIndex 0
+2023/07/11 10:04:19 [1] Apply new commit 4 to state machine
+2023/07/11 10:04:19 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:4 PrevLogTerm:1 Entries:[{Command:command 733 Term:1}] LeaderCommit:4}
+2023/07/11 10:04:19 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1}]
+2023/07/11 10:04:19 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:19 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:5 PrevLogTerm:1 Entries:[] LeaderCommit:5}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 5
+2023/07/11 10:04:20 [1] Finish apply commit 5 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 5 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 5 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Submit received by Follower: command 63
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:5 PrevLogTerm:1 Entries:[{Command:command 874 Term:1}] LeaderCommit:5}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:6 PrevLogTerm:1 Entries:[{Command:command 770 Term:1}] LeaderCommit:6}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 6
+2023/07/11 10:04:20 [1] Finish apply commit 6 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 6 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 6 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:7 PrevLogTerm:1 Entries:[] LeaderCommit:7}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 7
+2023/07/11 10:04:20 [1] Finish apply commit 7 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 7 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 7 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Submit received by Follower: command 858
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:7 PrevLogTerm:1 Entries:[{Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1}] LeaderCommit:7}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:7 PrevLogTerm:1 Entries:[{Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1}] LeaderCommit:7}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:10 PrevLogTerm:1 Entries:[] LeaderCommit:10}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 10
+2023/07/11 10:04:20 [1] Finish apply commit 10 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 10 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 10 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:10 PrevLogTerm:1 Entries:[] LeaderCommit:10}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:10 PrevLogTerm:1 Entries:[{Command:command 853 Term:1}] LeaderCommit:10}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:11 PrevLogTerm:1 Entries:[] LeaderCommit:11}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 11
+2023/07/11 10:04:20 [1] Finish apply commit 11 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 11 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 11 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Submit received by Follower: command 34
+2023/07/11 10:04:20 [1] Submit received by Follower: command 278
+2023/07/11 10:04:20 [1] Submit received by Follower: command 351
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:11 PrevLogTerm:1 Entries:[{Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1}] LeaderCommit:11}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:14 PrevLogTerm:1 Entries:[{Command:command 475 Term:1}] LeaderCommit:14}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 14
+2023/07/11 10:04:20 [1] Finish apply commit 14 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 14 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 14 to state machine
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:14 PrevLogTerm:1 Entries:[{Command:command 475 Term:1}] LeaderCommit:14}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:15 PrevLogTerm:1 Entries:[] LeaderCommit:15}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 15
+2023/07/11 10:04:20 [1] Finish apply commit 15 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 15 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 15 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:15 PrevLogTerm:1 Entries:[] LeaderCommit:15}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:15 PrevLogTerm:1 Entries:[{Command:command 231 Term:1} {Command:command 505 Term:1}] LeaderCommit:15}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:17 PrevLogTerm:1 Entries:[] LeaderCommit:17}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 17
+2023/07/11 10:04:20 [1] Finish apply commit 17 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 17 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 17 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:17 PrevLogTerm:1 Entries:[] LeaderCommit:17}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Submit received by Follower: command 387
+2023/07/11 10:04:20 [1] Submit received by Follower: command 891
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:17 PrevLogTerm:1 Entries:[{Command:command 888 Term:1}] LeaderCommit:17}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:18 PrevLogTerm:1 Entries:[{Command:command 235 Term:1} {Command:command 92 Term:1}] LeaderCommit:18}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 18
+2023/07/11 10:04:20 [1] Finish apply commit 18 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 18 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 18 to state machine
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:18 PrevLogTerm:1 Entries:[{Command:command 235 Term:1} {Command:command 92 Term:1}] LeaderCommit:18}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:20 PrevLogTerm:1 Entries:[] LeaderCommit:20}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 20
+2023/07/11 10:04:20 [1] Finish apply commit 20 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 20 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 20 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Submit received by Follower: command 180
+2023/07/11 10:04:20 [1] Submit received by Follower: command 966
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 375 Term:1} {Command:command 222 Term:1}] LeaderCommit:20}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Submit received by Follower: command 979
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:20 PrevLogTerm:1 Entries:[{Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1}] LeaderCommit:22}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 22
+2023/07/11 10:04:20 [1] Finish apply commit 22 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 22 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 22 to state machine
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:22 PrevLogTerm:1 Entries:[{Command:command 254 Term:1} {Command:command 340 Term:1}] LeaderCommit:22}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:24 PrevLogTerm:1 Entries:[] LeaderCommit:24}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 24
+2023/07/11 10:04:20 [1] Finish apply commit 24 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 24 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 24 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:24 PrevLogTerm:1 Entries:[] LeaderCommit:24}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:24 PrevLogTerm:1 Entries:[{Command:command 707 Term:1}] LeaderCommit:24}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:25 PrevLogTerm:1 Entries:[{Command:command 143 Term:1}] LeaderCommit:25}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 25
+2023/07/11 10:04:20 [1] Finish apply commit 25 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 25 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 25 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:26 PrevLogTerm:1 Entries:[] LeaderCommit:26}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 26
+2023/07/11 10:04:20 [1] Finish apply commit 26 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 26 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 26 to state machine
+2023/07/11 10:04:20 [1] Submit received by Follower: command 185
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:26 PrevLogTerm:1 Entries:[{Command:command 114 Term:1}] LeaderCommit:26}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:27 PrevLogTerm:1 Entries:[{Command:command 548 Term:1} {Command:command 78 Term:1}] LeaderCommit:27}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 27
+2023/07/11 10:04:20 [1] Finish apply commit 27 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 27 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 27 to state machine
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:27 PrevLogTerm:1 Entries:[{Command:command 548 Term:1} {Command:command 78 Term:1}] LeaderCommit:27}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:0 LastIncludedTerm:-1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:29 PrevLogTerm:1 Entries:[] LeaderCommit:29}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 29
+2023/07/11 10:04:20 [1] Finish apply commit 29 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 29 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 29 to state machine
+2023/07/11 10:04:20 [1] Submit received by Follower: command 51
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:29 PrevLogTerm:1 Entries:[{Command:command 738 Term:1} {Command:command 86 Term:1}] LeaderCommit:29}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:29 PrevLogTerm:1 Entries:[{Command:command 738 Term:1} {Command:command 86 Term:1}] LeaderCommit:29}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:31 PrevLogTerm:1 Entries:[{Command:command 338 Term:1}] LeaderCommit:31}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 31
+2023/07/11 10:04:20 [1] Finish apply commit 31 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 31 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 31 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:32 PrevLogTerm:1 Entries:[] LeaderCommit:32}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 32
+2023/07/11 10:04:20 [1] Finish apply commit 32 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 32 and lastIncludedIndex 0
+2023/07/11 10:04:20 [1] Apply new commit 32 to state machine
+2023/07/11 10:04:20 [1] Taking snapshot with include index 32 and include term 1
+2023/07/11 10:04:20 [1] Submit received by Follower: command 739
+2023/07/11 10:04:20 [1] Submit received by Follower: command 338
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:0 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:32 PrevLogTerm:1 Entries:[{Command:command 853 Term:1} {Command:command 269 Term:1}] LeaderCommit:32}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:34 PrevLogTerm:1 Entries:[] LeaderCommit:34}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1}]
+2023/07/11 10:04:20 [1] Change in commit index: 34
+2023/07/11 10:04:20 [1] Finish apply commit 34 to state machine
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Call apply state machine with commitIndex 34 and lastIncludedIndex 32
+2023/07/11 10:04:20 [1] Apply new commit 34 to state machine
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:34 PrevLogTerm:1 Entries:[] LeaderCommit:34}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:34 PrevLogTerm:1 Entries:[{Command:command 678 Term:1}] LeaderCommit:34}
+2023/07/11 10:04:20 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1}]
+2023/07/11 10:04:20 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:20 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:35 PrevLogTerm:1 Entries:[] LeaderCommit:35}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 35
+2023/07/11 10:04:21 [1] Finish apply commit 35 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 35 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 35 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 381
+2023/07/11 10:04:21 [1] Submit received by Follower: command 545
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:35 PrevLogTerm:1 Entries:[{Command:command 335 Term:1}] LeaderCommit:35}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 915
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:36 PrevLogTerm:1 Entries:[{Command:command 261 Term:1} {Command:command 119 Term:1}] LeaderCommit:36}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 36
+2023/07/11 10:04:21 [1] Finish apply commit 36 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:36 PrevLogTerm:1 Entries:[{Command:command 261 Term:1} {Command:command 119 Term:1}] LeaderCommit:36}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 36 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 36 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:38 PrevLogTerm:1 Entries:[] LeaderCommit:38}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 38
+2023/07/11 10:04:21 [1] Finish apply commit 38 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 38 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 38 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:38 PrevLogTerm:1 Entries:[{Command:command 580 Term:1}] LeaderCommit:38}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:39 PrevLogTerm:1 Entries:[] LeaderCommit:39}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 39
+2023/07/11 10:04:21 [1] Finish apply commit 39 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 39 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 39 to state machine
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:39 PrevLogTerm:1 Entries:[{Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1}] LeaderCommit:39}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:42 PrevLogTerm:1 Entries:[] LeaderCommit:39}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:42 PrevLogTerm:1 Entries:[] LeaderCommit:42}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 42
+2023/07/11 10:04:21 [1] Finish apply commit 42 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 42 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 42 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:42 PrevLogTerm:1 Entries:[] LeaderCommit:42}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 506
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:42 PrevLogTerm:1 Entries:[{Command:command 897 Term:1}] LeaderCommit:42}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:43 PrevLogTerm:1 Entries:[{Command:command 530 Term:1}] LeaderCommit:42}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:44 PrevLogTerm:1 Entries:[{Command:command 486 Term:1}] LeaderCommit:45}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 45
+2023/07/11 10:04:21 [1] Finish apply commit 45 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 45 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 45 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:45 PrevLogTerm:1 Entries:[] LeaderCommit:45}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 19
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:45 PrevLogTerm:1 Entries:[{Command:command 177 Term:1}] LeaderCommit:45}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 444
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:46 PrevLogTerm:1 Entries:[{Command:command 488 Term:1}] LeaderCommit:46}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 46
+2023/07/11 10:04:21 [1] Finish apply commit 46 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 46 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 46 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:47 PrevLogTerm:1 Entries:[] LeaderCommit:47}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 47
+2023/07/11 10:04:21 [1] Finish apply commit 47 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 47 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 47 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 790
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:47 PrevLogTerm:1 Entries:[{Command:command 385 Term:1} {Command:command 64 Term:1}] LeaderCommit:47}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:47 PrevLogTerm:1 Entries:[{Command:command 385 Term:1} {Command:command 64 Term:1}] LeaderCommit:48}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 48
+2023/07/11 10:04:21 [1] Finish apply commit 48 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 48 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 48 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:49 PrevLogTerm:1 Entries:[] LeaderCommit:49}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 49
+2023/07/11 10:04:21 [1] Finish apply commit 49 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 49 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 49 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:49 PrevLogTerm:1 Entries:[{Command:command 913 Term:1}] LeaderCommit:49}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:50 PrevLogTerm:1 Entries:[{Command:command 987 Term:1}] LeaderCommit:50}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 50
+2023/07/11 10:04:21 [1] Finish apply commit 50 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 50 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 50 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:51 PrevLogTerm:1 Entries:[{Command:command 922 Term:1}] LeaderCommit:51}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 51
+2023/07/11 10:04:21 [1] Finish apply commit 51 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 51 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 51 to state machine
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:51 PrevLogTerm:1 Entries:[{Command:command 922 Term:1} {Command:command 386 Term:1}] LeaderCommit:51}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:53 PrevLogTerm:1 Entries:[] LeaderCommit:53}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 53
+2023/07/11 10:04:21 [1] Finish apply commit 53 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 53 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 53 to state machine
+2023/07/11 10:04:21 [1] Submit received by Follower: command 761
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:53 PrevLogTerm:1 Entries:[{Command:command 942 Term:1}] LeaderCommit:53}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1} {command 942 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 508
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:54 PrevLogTerm:1 Entries:[{Command:command 916 Term:1} {Command:command 255 Term:1}] LeaderCommit:54}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1} {command 942 1} {command 916 1} {command 255 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 54
+2023/07/11 10:04:21 [1] Finish apply commit 54 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 54 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 54 to state machine
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:54 PrevLogTerm:1 Entries:[{Command:command 916 Term:1} {Command:command 255 Term:1}] LeaderCommit:54}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1} {command 942 1} {command 916 1} {command 255 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:56 PrevLogTerm:1 Entries:[] LeaderCommit:56}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1} {command 942 1} {command 916 1} {command 255 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 56
+2023/07/11 10:04:21 [1] Finish apply commit 56 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 56 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 56 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 725
+2023/07/11 10:04:21 [1] Submit received by Follower: command 480
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:56 PrevLogTerm:1 Entries:[{Command:command 941 Term:1}] LeaderCommit:56}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1} {command 942 1} {command 916 1} {command 255 1} {command 941 1}]
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:57 PrevLogTerm:1 Entries:[{Command:command 397 Term:1}] LeaderCommit:57}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1} {command 942 1} {command 916 1} {command 255 1} {command 941 1} {command 397 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 57
+2023/07/11 10:04:21 [1] Finish apply commit 57 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 57 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 57 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Receive AppendEntries: {Term:1 LeaderId:3 PrevLogIndex:58 PrevLogTerm:1 Entries:[] LeaderCommit:58}
+2023/07/11 10:04:21 [1] New log update: [{command 58 1} {command 290 1} {command 871 1} {command 50 1} {command 455 1} {command 733 1} {command 874 1} {command 770 1} {command 429 1} {command 958 1} {command 681 1} {command 853 1} {command 307 1} {command 766 1} {command 53 1} {command 475 1} {command 231 1} {command 505 1} {command 888 1} {command 235 1} {command 92 1} {command 375 1} {command 222 1} {command 254 1} {command 340 1} {command 707 1} {command 143 1} {command 114 1} {command 548 1} {command 78 1} {command 738 1} {command 86 1} {command 338 1} {command 853 1} {command 269 1} {command 678 1} {command 335 1} {command 261 1} {command 119 1} {command 580 1} {command 37 1} {command 280 1} {command 569 1} {command 897 1} {command 530 1} {command 486 1} {command 177 1} {command 488 1} {command 385 1} {command 64 1} {command 913 1} {command 987 1} {command 922 1} {command 386 1} {command 942 1} {command 916 1} {command 255 1} {command 941 1} {command 397 1}]
+2023/07/11 10:04:21 [1] Change in commit index: 58
+2023/07/11 10:04:21 [1] Finish apply commit 58 to state machine
+2023/07/11 10:04:21 [1] AppendEntries response: {Term:1 Success:true}
+2023/07/11 10:04:21 [1] Call apply state machine with commitIndex 58 and lastIncludedIndex 32
+2023/07/11 10:04:21 [1] Apply new commit 58 to state machine
+2023/07/11 10:04:21 [1] Receive InstallSnapshot: {Term:1 LeaderId:3 LastIncludedIndex:32 LastIncludedTerm:1 Offset:32 Data:{LastIncludedIndex:0 LastIncludedTerm:0 Logs:[]}}
+2023/07/11 10:04:21 [1] Submit received by Follower: command 886
+2023/07/11 10:04:21 [1] Submit received by Follower: command 462
+2023/07/11 10:04:22 [1] Submit received by Follower: command 479
+2023/07/11 10:04:22 [1] Submit received by Follower: command 226
+2023/07/11 10:04:22 [1] Submit received by Follower: command 345
+2023/07/11 10:04:22 [1] Submit received by Follower: command 762
+2023/07/11 10:04:22 [1] Become Candidate (currentTerm=2); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:22 [1] Election timeout started (387ms), term=2
+2023/07/11 10:04:22 [1] sending RequestVote to 0: {Term:2 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 4: {Term:2 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 2: {Term:2 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 3: {Term:2 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 683
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 776
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 881
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 630
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 441
+2023/07/11 10:04:22 [1] Become Candidate (currentTerm=3); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:22 [1] Election timeout started (300ms), term=3
+2023/07/11 10:04:22 [1] sending RequestVote to 3: {Term:3 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 4: {Term:3 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 2: {Term:3 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 0: {Term:3 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 504
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 337
+2023/07/11 10:04:22 [1] Become Candidate (currentTerm=4); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:22 [1] Submit received by Candidate: command 518
+2023/07/11 10:04:22 [1] sending RequestVote to 3: {Term:4 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 2: {Term:4 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] sending RequestVote to 4: {Term:4 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:22 [1] Election timeout started (318ms), term=4
+2023/07/11 10:04:22 [1] sending RequestVote to 0: {Term:4 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 543
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 686
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 733
+2023/07/11 10:04:23 [1] Become Candidate (currentTerm=5); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:23 [1] Election timeout started (333ms), term=5
+2023/07/11 10:04:23 [1] sending RequestVote to 2: {Term:5 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] sending RequestVote to 0: {Term:5 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] sending RequestVote to 4: {Term:5 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] sending RequestVote to 3: {Term:5 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 437
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 494
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 428
+2023/07/11 10:04:23 [1] Become Candidate (currentTerm=6); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:23 [1] Election timeout started (596ms), term=6
+2023/07/11 10:04:23 [1] sending RequestVote to 0: {Term:6 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] sending RequestVote to 4: {Term:6 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] sending RequestVote to 3: {Term:6 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] sending RequestVote to 2: {Term:6 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 563
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 614
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 49
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 289
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 541
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 277
+2023/07/11 10:04:23 [1] Submit received by Candidate: command 5
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 904
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 659
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 815
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 248
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 962
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 222
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 480
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 524
+2023/07/11 10:04:24 [1] Become Candidate (currentTerm=7); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:24 [1] Election timeout started (534ms), term=7
+2023/07/11 10:04:24 [1] sending RequestVote to 3: {Term:7 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] sending RequestVote to 0: {Term:7 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] sending RequestVote to 4: {Term:7 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] sending RequestVote to 2: {Term:7 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 118
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 399
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 160
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 947
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 938
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 910
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 738
+2023/07/11 10:04:24 [1] Become Candidate (currentTerm=8); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:24 [1] Election timeout started (396ms), term=8
+2023/07/11 10:04:24 [1] sending RequestVote to 4: {Term:8 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] sending RequestVote to 3: {Term:8 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] sending RequestVote to 2: {Term:8 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] sending RequestVote to 0: {Term:8 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 753
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 160
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 742
+2023/07/11 10:04:24 [1] Submit received by Candidate: command 725
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 419
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 91
+2023/07/11 10:04:25 [1] Become Candidate (currentTerm=9); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:25 [1] sending RequestVote to 2: {Term:9 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] sending RequestVote to 3: {Term:9 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] sending RequestVote to 4: {Term:9 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] sending RequestVote to 0: {Term:9 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] Election timeout started (555ms), term=9
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 222
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 234
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 917
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 308
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 250
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 560
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 613
+2023/07/11 10:04:25 [1] Become Candidate (currentTerm=10); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:25 [1] Election timeout started (373ms), term=10
+2023/07/11 10:04:25 [1] sending RequestVote to 2: {Term:10 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] sending RequestVote to 4: {Term:10 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] sending RequestVote to 0: {Term:10 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] sending RequestVote to 3: {Term:10 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 229
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 350
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 582
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 162
+2023/07/11 10:04:25 [1] Submit received by Candidate: command 692
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 59
+2023/07/11 10:04:26 [1] Become Candidate (currentTerm=11); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:26 [1] sending RequestVote to 3: {Term:11 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] sending RequestVote to 2: {Term:11 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] Election timeout started (392ms), term=11
+2023/07/11 10:04:26 [1] sending RequestVote to 0: {Term:11 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] sending RequestVote to 4: {Term:11 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 252
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 887
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 453
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 189
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 15
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 886
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 356
+2023/07/11 10:04:26 [1] Become Candidate (currentTerm=12); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:26 [1] Election timeout started (588ms), term=12
+2023/07/11 10:04:26 [1] sending RequestVote to 3: {Term:12 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] sending RequestVote to 0: {Term:12 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] sending RequestVote to 2: {Term:12 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] sending RequestVote to 4: {Term:12 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 579
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 440
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 355
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 416
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 897
+2023/07/11 10:04:26 [1] Submit received by Candidate: command 432
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 740
+2023/07/11 10:04:27 [1] Become Candidate (currentTerm=13); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:27 [1] sending RequestVote to 4: {Term:13 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] sending RequestVote to 3: {Term:13 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] sending RequestVote to 0: {Term:13 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] sending RequestVote to 2: {Term:13 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] Election timeout started (404ms), term=13
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 572
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 372
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 614
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 109
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 381
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 109
+2023/07/11 10:04:27 [1] Become Candidate (currentTerm=14); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:27 [1] Election timeout started (568ms), term=14
+2023/07/11 10:04:27 [1] sending RequestVote to 2: {Term:14 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] sending RequestVote to 0: {Term:14 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] sending RequestVote to 3: {Term:14 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] sending RequestVote to 4: {Term:14 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 112
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 452
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 99
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 771
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 482
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 21
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 242
+2023/07/11 10:04:27 [1] Submit received by Candidate: command 132
+2023/07/11 10:04:28 [1] Become Candidate (currentTerm=15); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:28 [1] Election timeout started (468ms), term=15
+2023/07/11 10:04:28 [1] sending RequestVote to 3: {Term:15 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 4: {Term:15 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 2: {Term:15 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 0: {Term:15 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 861
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 230
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 45
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 116
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 248
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 139
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 415
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 751
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 393
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 842
+2023/07/11 10:04:28 [1] Become Candidate (currentTerm=16); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:28 [1] Election timeout started (398ms), term=16
+2023/07/11 10:04:28 [1] sending RequestVote to 4: {Term:16 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 2: {Term:16 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 3: {Term:16 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 0: {Term:16 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 931
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 492
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 427
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 456
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 588
+2023/07/11 10:04:28 [1] Submit received by Candidate: command 411
+2023/07/11 10:04:28 [1] Become Candidate (currentTerm=17); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:28 [1] sending RequestVote to 3: {Term:17 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 0: {Term:17 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 2: {Term:17 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] sending RequestVote to 4: {Term:17 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:28 [1] Election timeout started (483ms), term=17
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 112
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 215
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 72
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 962
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 794
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 619
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 479
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 253
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 352
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 858
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 259
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 113
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 24
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 984
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 168
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 766
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 255
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 918
+2023/07/11 10:04:29 [1] Become Candidate (currentTerm=18); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:29 [1] sending RequestVote to 2: {Term:18 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] sending RequestVote to 0: {Term:18 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] sending RequestVote to 3: {Term:18 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] sending RequestVote to 4: {Term:18 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] Election timeout started (504ms), term=18
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 687
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 455
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 170
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 940
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 186
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 911
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 51
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 680
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 278
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 243
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 129
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 683
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 396
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 313
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 38
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 926
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 108
+2023/07/11 10:04:29 [1] Become Candidate (currentTerm=19); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:29 [1] Election timeout started (332ms), term=19
+2023/07/11 10:04:29 [1] sending RequestVote to 3: {Term:19 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] sending RequestVote to 0: {Term:19 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] sending RequestVote to 4: {Term:19 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] sending RequestVote to 2: {Term:19 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 368
+2023/07/11 10:04:29 [1] Submit received by Candidate: command 622
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 877
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 85
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 771
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 464
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 508
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 498
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 697
+2023/07/11 10:04:30 [1] Become Candidate (currentTerm=20); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:30 [1] sending RequestVote to 0: {Term:20 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] sending RequestVote to 2: {Term:20 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] sending RequestVote to 3: {Term:20 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] sending RequestVote to 4: {Term:20 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] Election timeout started (562ms), term=20
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 521
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 368
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 482
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 159
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 659
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 975
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 775
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 367
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 113
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 127
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 22
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 444
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 565
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 975
+2023/07/11 10:04:30 [1] Become Candidate (currentTerm=21); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:30 [1] sending RequestVote to 0: {Term:21 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] Election timeout started (325ms), term=21
+2023/07/11 10:04:30 [1] sending RequestVote to 2: {Term:21 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] sending RequestVote to 4: {Term:21 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] sending RequestVote to 3: {Term:21 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 388
+2023/07/11 10:04:30 [1] Submit received by Candidate: command 164
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 384
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 565
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 215
+2023/07/11 10:04:31 [1] Become Candidate (currentTerm=22); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:31 [1] sending RequestVote to 0: {Term:22 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 3: {Term:22 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] Election timeout started (391ms), term=22
+2023/07/11 10:04:31 [1] sending RequestVote to 2: {Term:22 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 4: {Term:22 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 951
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 30
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 630
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 466
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 133
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 454
+2023/07/11 10:04:31 [1] Become Candidate (currentTerm=23); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:31 [1] sending RequestVote to 0: {Term:23 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 4: {Term:23 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 2: {Term:23 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 3: {Term:23 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] Election timeout started (326ms), term=23
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 842
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 903
+2023/07/11 10:04:31 [1] Submit received by Candidate: command 800
+2023/07/11 10:04:31 [1] Become Candidate (currentTerm=24); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:31 [1] Election timeout started (403ms), term=24
+2023/07/11 10:04:31 [1] sending RequestVote to 0: {Term:24 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 4: {Term:24 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 2: {Term:24 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:31 [1] sending RequestVote to 3: {Term:24 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 753
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 357
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 893
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 984
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 672
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 533
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 96
+2023/07/11 10:04:32 [1] Become Candidate (currentTerm=25); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:32 [1] sending RequestVote to 0: {Term:25 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] sending RequestVote to 3: {Term:25 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] sending RequestVote to 4: {Term:25 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] sending RequestVote to 2: {Term:25 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] Election timeout started (416ms), term=25
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 330
+2023/07/11 10:04:32 [1] Become Candidate (currentTerm=26); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:32 [1] sending RequestVote to 0: {Term:26 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] sending RequestVote to 4: {Term:26 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] sending RequestVote to 3: {Term:26 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] sending RequestVote to 2: {Term:26 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:32 [1] Election timeout started (352ms), term=26
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 836
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 728
+2023/07/11 10:04:32 [1] Submit received by Candidate: command 633
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 287
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 163
+2023/07/11 10:04:33 [1] Become Candidate (currentTerm=27); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:33 [1] sending RequestVote to 4: {Term:27 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] Election timeout started (525ms), term=27
+2023/07/11 10:04:33 [1] sending RequestVote to 3: {Term:27 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] sending RequestVote to 0: {Term:27 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] sending RequestVote to 2: {Term:27 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 33
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 604
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 911
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 626
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 535
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 608
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 225
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 302
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 239
+2023/07/11 10:04:33 [1] Become Candidate (currentTerm=28); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:33 [1] sending RequestVote to 0: {Term:28 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] Election timeout started (334ms), term=28
+2023/07/11 10:04:33 [1] sending RequestVote to 2: {Term:28 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] sending RequestVote to 3: {Term:28 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] sending RequestVote to 4: {Term:28 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 986
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 174
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 55
+2023/07/11 10:04:33 [1] Submit received by Candidate: command 966
+2023/07/11 10:04:33 [1] Become Candidate (currentTerm=29); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:33 [1] sending RequestVote to 3: {Term:29 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] sending RequestVote to 2: {Term:29 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] Election timeout started (347ms), term=29
+2023/07/11 10:04:33 [1] sending RequestVote to 4: {Term:29 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:33 [1] sending RequestVote to 0: {Term:29 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 142
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 725
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 12
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 528
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 330
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 211
+2023/07/11 10:04:34 [1] Become Candidate (currentTerm=30); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:34 [1] sending RequestVote to 2: {Term:30 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] sending RequestVote to 3: {Term:30 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] sending RequestVote to 4: {Term:30 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] Election timeout started (564ms), term=30
+2023/07/11 10:04:34 [1] sending RequestVote to 0: {Term:30 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 7
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 138
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 416
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 441
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 682
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 679
+2023/07/11 10:04:34 [1] Become Candidate (currentTerm=31); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:34 [1] sending RequestVote to 3: {Term:31 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] sending RequestVote to 4: {Term:31 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] sending RequestVote to 0: {Term:31 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] Election timeout started (376ms), term=31
+2023/07/11 10:04:34 [1] sending RequestVote to 2: {Term:31 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 33
+2023/07/11 10:04:34 [1] Submit received by Candidate: command 684
+2023/07/11 10:04:35 [1] Submit received by Candidate: command 126
+2023/07/11 10:04:35 [1] Submit received by Candidate: command 295
+2023/07/11 10:04:35 [1] Submit received by Candidate: command 151
+2023/07/11 10:04:35 [1] Become Candidate (currentTerm=32); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:35 [1] sending RequestVote to 0: {Term:32 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:35 [1] sending RequestVote to 2: {Term:32 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:35 [1] sending RequestVote to 4: {Term:32 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:35 [1] sending RequestVote to 3: {Term:32 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:35 [1] Election timeout started (481ms), term=32
+2023/07/11 10:04:35 [1] Submit received by Candidate: command 342
+2023/07/11 10:04:35 [1] Submit received by Candidate: command 493
+2023/07/11 10:04:35 [1] Submit received by Candidate: command 971
+2023/07/11 10:04:35 [1] Submit received by Candidate: command 227
+2023/07/11 10:04:35 [1] Become Candidate (currentTerm=33); lastIncludeIndex=32 log=[{Command:command 58 Term:1} {Command:command 290 Term:1} {Command:command 871 Term:1} {Command:command 50 Term:1} {Command:command 455 Term:1} {Command:command 733 Term:1} {Command:command 874 Term:1} {Command:command 770 Term:1} {Command:command 429 Term:1} {Command:command 958 Term:1} {Command:command 681 Term:1} {Command:command 853 Term:1} {Command:command 307 Term:1} {Command:command 766 Term:1} {Command:command 53 Term:1} {Command:command 475 Term:1} {Command:command 231 Term:1} {Command:command 505 Term:1} {Command:command 888 Term:1} {Command:command 235 Term:1} {Command:command 92 Term:1} {Command:command 375 Term:1} {Command:command 222 Term:1} {Command:command 254 Term:1} {Command:command 340 Term:1} {Command:command 707 Term:1} {Command:command 143 Term:1} {Command:command 114 Term:1} {Command:command 548 Term:1} {Command:command 78 Term:1} {Command:command 738 Term:1} {Command:command 86 Term:1} {Command:command 338 Term:1} {Command:command 853 Term:1} {Command:command 269 Term:1} {Command:command 678 Term:1} {Command:command 335 Term:1} {Command:command 261 Term:1} {Command:command 119 Term:1} {Command:command 580 Term:1} {Command:command 37 Term:1} {Command:command 280 Term:1} {Command:command 569 Term:1} {Command:command 897 Term:1} {Command:command 530 Term:1} {Command:command 486 Term:1} {Command:command 177 Term:1} {Command:command 488 Term:1} {Command:command 385 Term:1} {Command:command 64 Term:1} {Command:command 913 Term:1} {Command:command 987 Term:1} {Command:command 922 Term:1} {Command:command 386 Term:1} {Command:command 942 Term:1} {Command:command 916 Term:1} {Command:command 255 Term:1} {Command:command 941 Term:1} {Command:command 397 Term:1}]
+2023/07/11 10:04:35 [1] Election timeout started (553ms), term=33
+2023/07/11 10:04:35 [1] sending RequestVote to 2: {Term:33 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:35 [1] sending RequestVote to 4: {Term:33 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:35 [1] sending RequestVote to 0: {Term:33 CandidateId:1 LastLogIndex:58 LastLogTerm:1}
+2023/07/11 10:04:35 [1] sending RequestVote to 3: {Term:33 CandidateId:1 LastLogIndex:58 LastLogTerm:1}

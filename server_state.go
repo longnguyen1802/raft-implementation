@@ -34,7 +34,7 @@ func (s CMState) String() string {
 
 /****************************************** Become follower ************************************/
 func (cm *ConsensusModule) revertToFollower(term int) {
-	cm.debugLog("becomes Follower with term=%d; log=%v", term, cm.log)
+	cm.debugLog("becomes Follower with term=%d; lastIncludedIndex =%d, log=%+v", term,cm.lastIncludedIndex, cm.log)
 	cm.state = Follower
 	cm.currentTerm = term
 	cm.votedFor = -1
@@ -85,7 +85,7 @@ func (cm *ConsensusModule) leaderLoop() {
 
 	// Setting nextIndex and matchIndex for each peer.
 	for _, peerId := range cm.peerIds {
-		cm.nextIndex[peerId] = len(cm.log)
+		cm.nextIndex[peerId] = getIndexFromLogEntry(len(cm.log),cm.lastIncludedIndex)
 		cm.matchIndex[peerId] = -1
 		cm.matchIncludedIndex[peerId] = 0
 	}

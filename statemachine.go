@@ -23,6 +23,7 @@ func (cm *ConsensusModule) applyStateMachine() {
 			// Pending
 			for {
 				if cm.lastApplied >= cm.lastIncludedIndex+SNAPSHOT_LOGSIZE {
+					// Truncate the log and update lastIncludedIndex
 					cm.TakeSnapshot()
 				} else {
 					break
@@ -37,14 +38,16 @@ func (cm *ConsensusModule) applyStateMachine() {
 				cm.debugLog("Got error when load snapshot", err)
 			}
 			cm.lastApplied = cm.lastIncludedIndex
+			cm.debugLog("The applied snapshot is %+v", snapshot)
 			cm.debugLog("Apply new commit %d by take snapshot to state machine", cm.lastApplied)
-			// Redo this
-			if len(cm.log) < cm.lastIncludedIndex{ 
-				extendedArray :=  make([]Log, cm.lastIncludedIndex)
-				copy(extendedArray, cm.log[:])
-				cm.log = extendedArray
-			}
-			copy(cm.log[cm.lastIncludedIndex-SNAPSHOT_LOGSIZE:cm.lastIncludedIndex], snapshot.Logs)
+
+			// Update to current log
+			// if getIndexFromLogEntry(len(cm.log),cm.lastIncludedIndex) < cm.lastIncludedIndex{ 
+			// 	extendedArray :=  make([]Log, cm.lastIncludedIndex)
+			// 	copy(extendedArray, cm.log[:])
+			// 	cm.log = extendedArray
+			// }
+			//copy(cm.log[cm.lastIncludedIndex-SNAPSHOT_LOGSIZE:cm.lastIncludedIndex], snapshot.Logs)
 			cm.commitIndex = cm.lastIncludedIndex
 		}
 		cm.mu.Unlock()

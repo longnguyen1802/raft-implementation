@@ -44,34 +44,34 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 		response.Success = false
 	} else {
 		// All entries are different
-		if args.PrevLogIndex == -1 {
+		if getLogEntryIndex(args.PrevLogIndex,cm.lastIncludedIndex) == -1 {
 			// Replace the whole current log by the master log entries
 			cm.log = append(cm.log[:0], args.Entries...)
 			response.Success = true
 			cm.debugLog("New log update: %v", cm.log)
 			// Set commit index
 			if args.LeaderCommit > cm.commitIndex {
-				cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
+				cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(getLogEntryIndex(len(cm.log)-1,cm.lastIncludedIndex))))
 				cm.debugLog("Change in commit index: %v", cm.commitIndex)
 				cm.applyStateMachineEvent <- struct{}{}
 				cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
 			}
 		} else {
 			// The server log does not have index at PrevLogIndex (An outdate log)
-			if args.PrevLogIndex >= len(cm.log) {
+			if getLogEntryIndex(args.PrevLogIndex,cm.lastIncludedIndex) >= getLogEntryIndex(len(cm.log),cm.lastIncludedIndex) {
 				response.Success = false
 			} else {
 				// The term at PrevLogIndex are different with leader
-				if args.PrevLogTerm != cm.log[args.PrevLogIndex].Term {
+				if args.PrevLogTerm != cm.log[getLogEntryIndex(args.PrevLogIndex,cm.lastIncludedIndex)].Term {
 					response.Success = false
 				} else {
 					// Find the matching index then replace from that upward
-					cm.log = append(cm.log[:args.PrevLogIndex+1], args.Entries...)
+					cm.log = append(cm.log[:getLogEntryIndex(args.PrevLogIndex+1,cm.lastIncludedIndex)], args.Entries...)
 					cm.debugLog("New log update: %v", cm.log)
 					response.Success = true
 					// Set commit index
 					if args.LeaderCommit > cm.commitIndex {
-						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(len(cm.log)-1)))
+						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(getLogEntryIndex(len(cm.log)-1,cm.lastIncludedIndex))))
 						cm.debugLog("Change in commit index: %v", cm.commitIndex)
 						cm.applyStateMachineEvent <- struct{}{}
 						cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
@@ -103,14 +103,18 @@ func (cm *ConsensusModule) sendAppendEntries() {
 	for _, peerId := range peerIds {
 		go func(peerId int) {
 			cm.mu.Lock()
+
+			if getLogEntryIndex(cm.nextIndex[peerId],cm.lastIncludedIndex) < 0 {
+				cm.nextIndex[peerId] = cm.lastIncludedIndex
+			}
 			nextIndex := cm.nextIndex[peerId]
 			prevLogIndex := nextIndex - 1
 			prevLogTerm := -1
-			if prevLogIndex >= 0 {
-				prevLogTerm = cm.log[prevLogIndex].Term
+			if getLogEntryIndex(prevLogIndex,cm.lastIncludedIndex) >= 0 {
+				prevLogTerm = cm.log[getLogEntryIndex(prevLogIndex,cm.lastIncludedIndex)].Term
 			}
 			// Send all entries from nextIndex
-			entries := cm.log[nextIndex:]
+			entries := cm.log[getLogEntryIndex(nextIndex,cm.lastIncludedIndex):]
 
 			args := AppendEntriesArgs{
 				Term:         currentTerm,
@@ -140,16 +144,16 @@ func (cm *ConsensusModule) sendAppendEntries() {
 
 						commitIndex := cm.commitIndex
 						// Commit all entries that have major agreement
-						for i := cm.commitIndex + 1; i < len(cm.log); i++ {
+						for i :=  getLogEntryIndex(cm.commitIndex + 1,cm.lastIncludedIndex); i < len(cm.log); i++ {
 							if cm.log[i].Term == cm.currentTerm {
 								matchCount := 1
 								for _, peerId := range cm.peerIds {
-									if cm.matchIndex[peerId] >= i {
+									if cm.matchIndex[peerId] >= getIndexFromLogEntry(i,cm.lastIncludedIndex) {
 										matchCount++
 									}
 								}
 								if matchCount*2 > len(cm.peerIds)+1 {
-									cm.commitIndex = i
+									cm.commitIndex = getIndexFromLogEntry(i,cm.lastIncludedIndex)
 								}
 							}
 						}

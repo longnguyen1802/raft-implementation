@@ -66,7 +66,7 @@ func (cm *ConsensusModule) startElection() {
 	// Keep the number of vote
 	numVoteReceived := 1
 	// Send RequestVote RPCs to all peers
-	cm.debugLog("Become Candidate (currentTerm=%d); log=%v", currentTerm, cm.log)
+	cm.debugLog("Become Candidate (currentTerm=%d); lastIncludeIndex=%d log=%+v", currentTerm,cm.lastIncludedIndex, cm.log)
 	for _, peerId := range cm.peerIds {
 		go func(peerId int) {
 			cm.mu.Lock()

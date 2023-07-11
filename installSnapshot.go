@@ -143,9 +143,11 @@ func TakeInstallSnapshot(snapshot Snapshot, id int) {
 func (cm *ConsensusModule) TakeSnapshot() {
 
 	lastIncludedIndex := cm.lastIncludedIndex + SNAPSHOT_LOGSIZE
-	lastIncludedTerm := cm.log[cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1].Term
-	logs := cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
-
+	lastIncludedTerm := cm.log[getLogEntryIndex(lastIncludedIndex-1,cm.lastIncludedIndex)].Term
+	logs := cm.log[getLogEntryIndex(cm.lastIncludedIndex,cm.lastIncludedIndex) : getLogEntryIndex(cm.lastIncludedIndex,cm.lastIncludedIndex)+SNAPSHOT_LOGSIZE]
+	if cm.lastIncludedIndex > 2*SNAPSHOT_LOGSIZE{
+		cm.log = cm.log[SNAPSHOT_LOGSIZE:]
+	}
 	snapshot := Snapshot{
 		LastIncludedIndex: lastIncludedIndex,
 		LastIncludedTerm:  lastIncludedTerm,

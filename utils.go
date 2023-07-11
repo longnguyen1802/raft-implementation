@@ -40,3 +40,20 @@ func (cm *ConsensusModule) debugLog(format string, args ...interface{}) {
 	log.Printf(format, args...)
 	defer loglock.Unlock()
 }
+
+// Need to lock the file before use it or 
+func getLogEntryIndex(index int,lastIncludedIndex int) int {
+	if lastIncludedIndex <= 2*SNAPSHOT_LOGSIZE {
+		return index
+	} else {
+		return index - lastIncludedIndex + 2*SNAPSHOT_LOGSIZE
+	}
+}
+
+func getIndexFromLogEntry(index int,lastIncludedIndex int) int{
+	if lastIncludedIndex <= 2*SNAPSHOT_LOGSIZE {
+		return index
+	} else {
+		return index + lastIncludedIndex - 2*SNAPSHOT_LOGSIZE
+	}
+}
