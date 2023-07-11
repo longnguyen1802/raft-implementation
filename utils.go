@@ -16,7 +16,7 @@ var loglock sync.Mutex
 // According to the paper setting timeout to 300ms - 600ms
 
 func (cm *ConsensusModule) timeoutDuration() time.Duration {
-	return time.Duration(300+rand.Intn(300)) * time.Millisecond
+	return time.Duration(600+rand.Intn(600)) * time.Millisecond
 }
 
 func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {

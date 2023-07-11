@@ -44,6 +44,9 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 		cm.revertToFollower(args.Term)
 	}
 	cm.electionTimeoutReset = time.Now()
+	if len(cm.log) >= 2*SNAPSHOT_LOGSIZE {
+		cm.debugLog("Last %d entry of server is %+v",2*SNAPSHOT_LOGSIZE,cm.log[len(cm.log)-2*SNAPSHOT_LOGSIZE:])
+	}
 	// Get information only
 	if args.Offset == 0 || len(args.Data.Logs) == 0{
 		response.Term = currentTerm
@@ -64,6 +67,7 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 	cm.debugLog("Change in last Include index: %v", cm.lastIncludedIndex)
 	cm.applyStateMachineEvent <- struct{}{}
 	cm.debugLog("Install snapshot with include index %v and include term %v", cm.lastIncludedIndex, cm.lastIncludedTerm)
+	
 	return nil
 }
 
