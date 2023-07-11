@@ -65,10 +65,18 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 				if args.PrevLogTerm != cm.getTerm(args.PrevLogIndex)  {
 					response.Success = false
 				} else {
-					// Find the matching index then replace from that upward
-					cm.log = append(cm.getLogSlice(0,args.PrevLogIndex+1),args.Entries...)
-					cm.debugLog("New log update: %v", cm.log)
-					response.Success = true
+					// Sucess case need to divide to 2 
+					if args.PrevLogIndex+1 < cm.lastIncludedIndex {
+						// Update the log and return true (off course)
+						// replaace all the cmlog
+						cm.log = args.Entries[cm.lastIncludedIndex -(args.PrevLogIndex+1):]
+						response.Success = true
+					} else{
+						// Find the matching index then replace from that upward
+						cm.log = append(cm.getLogSlice(cm.lastIncludedIndex,args.PrevLogIndex+1),args.Entries...)
+						cm.debugLog("New log update: %v", cm.log)
+						response.Success = true
+					}
 					// Set commit index
 					if args.LeaderCommit > cm.commitIndex {
 						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1)))

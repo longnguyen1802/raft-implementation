@@ -136,7 +136,11 @@ func (cm* ConsensusModule) TakeInstallSnapshot(snapshot Snapshot, id int) {
 	makeDirIfNotExist(dirPath)
 	filename := fmt.Sprintf("snapshot/server%d/%d.json", id, snapshot.LastIncludedIndex/SNAPSHOT_LOGSIZE)
 	// Truncate the log
-	//cm.log = cm.log[SNAPSHOT_LOGSIZE:]
+	if len(cm.log) < SNAPSHOT_LOGSIZE {
+		cm.log = cm.log[len(cm.log):]
+	} else{
+		cm.log = cm.log[SNAPSHOT_LOGSIZE:]
+	}
 
 	SaveSnapshot(snapshot, filename)
 	cm.lastIncludedIndex = snapshot.LastIncludedIndex
@@ -150,10 +154,12 @@ func (cm* ConsensusModule) TakeInstallSnapshot(snapshot Snapshot, id int) {
 func (cm *ConsensusModule) TakeSnapshot() {
 
 	lastIncludedIndex := cm.lastIncludedIndex + SNAPSHOT_LOGSIZE
-	lastIncludedTerm := cm.log[cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1].Term
-	logs := cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
+	// lastIncludedTerm := cm.log[cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1].Term
+	lastIncludedTerm := cm.getTerm(cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1)
+	logs := cm.getLogSlice(cm.lastIncludedIndex , cm.lastIncludedIndex+SNAPSHOT_LOGSIZE)
+	//cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
 	// Truncate the log
-	//cm.log = cm.log[SNAPSHOT_LOGSIZE:]
+	cm.log = cm.log[SNAPSHOT_LOGSIZE:]
 	
 	snapshot := Snapshot{
 		LastIncludedIndex: lastIncludedIndex,

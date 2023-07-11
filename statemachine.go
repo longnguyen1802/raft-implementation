@@ -37,14 +37,14 @@ func (cm *ConsensusModule) applyStateMachine() {
 				cm.debugLog("Got error when load snapshot", err)
 			}
 			cm.lastApplied = cm.lastIncludedIndex
-			cm.debugLog("Apply new commit %d by take snapshot to state machine", cm.lastApplied)
+			cm.debugLog("Apply new commit %d by take snapshot %+v to state machine", cm.lastApplied,snapshot)
 			// Redo this
-			if cm.getLogSize() < cm.lastIncludedIndex{ 
-				extendedArray :=  make([]Log, cm.lastIncludedIndex)
-				copy(extendedArray, cm.log[:])
-				cm.log = extendedArray
-			}
-			copy(cm.log[cm.lastIncludedIndex-SNAPSHOT_LOGSIZE:cm.lastIncludedIndex], snapshot.Logs)
+			// if cm.getLogSize() < cm.lastIncludedIndex{ 
+			// 	extendedArray :=  make([]Log, cm.lastIncludedIndex)
+			// 	copy(extendedArray, cm.log[:])
+			// 	cm.log = extendedArray
+			// }
+			// copy(cm.log[cm.lastIncludedIndex-SNAPSHOT_LOGSIZE:cm.lastIncludedIndex], snapshot.Logs)
 			cm.commitIndex = cm.lastIncludedIndex
 		}
 		cm.mu.Unlock()
