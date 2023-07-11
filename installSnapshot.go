@@ -82,7 +82,7 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 			cm.mu.Lock()
 			var args InstallSnapshotArgs
 			// Do not know the index or index too close
-			if cm.matchIncludedIndex[peerId] == 0 || (cm.lastIncludedIndex-cm.matchIncludedIndex[peerId] <= 2) {
+			if cm.matchIncludedIndex[peerId] == 0 || (cm.lastIncludedIndex-cm.matchIncludedIndex[peerId] <= 2*SNAPSHOT_LOGSIZE) {
 				snapshot := Snapshot{}
 				args = InstallSnapshotArgs{
 					Term:              currentTerm,
