@@ -58,7 +58,7 @@ func compareConsensusState(cm1 *ConsensusModule, cm2 *ConsensusModule) bool {
 	lastIncludedTermCM1 := cm1.lastIncludedTerm
 	currentTermCM1 := cm1.currentTerm
 	logCM1 := cm1.log
-	commitIndexCM1 := cm1.commitIndex 
+	commitIndexCM1 := cm1.commitIndex
 	cm1.mu.Unlock()
 	cm2.mu.Lock()
 	idCM2 := cm2.id
@@ -66,22 +66,22 @@ func compareConsensusState(cm1 *ConsensusModule, cm2 *ConsensusModule) bool {
 	lastIncludedTermCM2 := cm2.lastIncludedTerm
 	currentTermCM2 := cm2.currentTerm
 	logCM2 := cm2.log
-	commitIndexCM2 := cm2.commitIndex 
+	commitIndexCM2 := cm2.commitIndex
 	cm2.mu.Unlock()
 	// Compare ram state
-	if lastIncludedIndexCM1!=lastIncludedIndexCM2 || lastIncludedTermCM1!=lastIncludedTermCM2{
+	if lastIncludedIndexCM1 != lastIncludedIndexCM2 || lastIncludedTermCM1 != lastIncludedTermCM2 {
 		return false
 	}
-	if currentTermCM1!=currentTermCM2 || commitIndexCM1!=commitIndexCM2{
+	if currentTermCM1 != currentTermCM2 || commitIndexCM1 != commitIndexCM2 {
 		return false
 	}
-	if !reflect.DeepEqual(logCM1,logCM2){
+	if !reflect.DeepEqual(logCM1, logCM2) {
 		return false
 	}
 	// Compare snapshot state
 	for {
-		cm1snapshot,_ := GetSnapshot(getSnapshotFile(idCM1, lastIncludedIndexCM1/SNAPSHOT_LOGSIZE))
-		cm2snapshot,_ := GetSnapshot(getSnapshotFile(idCM2, lastIncludedIndexCM2/SNAPSHOT_LOGSIZE))
+		cm1snapshot, _ := GetSnapshot(getSnapshotFile(idCM1, lastIncludedIndexCM1/SNAPSHOT_LOGSIZE))
+		cm2snapshot, _ := GetSnapshot(getSnapshotFile(idCM2, lastIncludedIndexCM2/SNAPSHOT_LOGSIZE))
 		if !cm1snapshot.compare(&cm2snapshot) {
 			return false
 		}

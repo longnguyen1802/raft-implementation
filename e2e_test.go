@@ -58,10 +58,10 @@ func TestRunNormal(t *testing.T) {
 
 	}()
 	time.Sleep(12 * time.Second)
-	for i:=0 ; i<num_server ;i++{
-		for j:=0; j<i;j++{
-			if !compareConsensusState(servers[j].cm,servers[i].cm) {
-				t.Errorf("Different in consensus between server %d and server %d",j,i)
+	for i := 0; i < num_server; i++ {
+		for j := 0; j < i; j++ {
+			if !compareConsensusState(servers[j].cm, servers[i].cm) {
+				t.Errorf("Different in consensus between server %d and server %d", j, i)
 			}
 		}
 	}
@@ -101,7 +101,7 @@ func TestFailOneMachine(t *testing.T) {
 		time.Sleep(1 * time.Second)
 		for {
 			elapsed := time.Now()
-			if elapsed.Sub(start) > 4*time.Second && crash_event{
+			if elapsed.Sub(start) > 4*time.Second && crash_event {
 				crash_event = false
 				IsolatedServer(servers, 0, num_server)
 			}
@@ -120,15 +120,15 @@ func TestFailOneMachine(t *testing.T) {
 
 	}()
 	time.Sleep(12 * time.Second)
-	for i:=0 ; i<num_server ;i++{
-		for j:=0; j<i;j++{
-			if j==0 {
-				if compareConsensusState(servers[j].cm,servers[i].cm) {
-					t.Errorf("Consensus between server %d and server %d should be different",j,i)
+	for i := 0; i < num_server; i++ {
+		for j := 0; j < i; j++ {
+			if j == 0 {
+				if compareConsensusState(servers[j].cm, servers[i].cm) {
+					t.Errorf("Consensus between server %d and server %d should be different", j, i)
 				}
-			} else{
-				if !compareConsensusState(servers[j].cm,servers[i].cm) {
-					t.Errorf("Different in consensus between server %d and server %d",j,i)
+			} else {
+				if !compareConsensusState(servers[j].cm, servers[i].cm) {
+					t.Errorf("Different in consensus between server %d and server %d", j, i)
 				}
 			}
 		}
@@ -233,10 +233,10 @@ func TestE2EServices(t *testing.T) {
 
 	}()
 	time.Sleep(60 * time.Second)
-	for i:=0 ; i<num_server ;i++{
-		for j:=0; j<i;j++{
-			if !compareConsensusState(servers[j].cm,servers[i].cm) {
-				t.Errorf("Different in consensus between server %d and server %d",j,i)
+	for i := 0; i < num_server; i++ {
+		for j := 0; j < i; j++ {
+			if !compareConsensusState(servers[j].cm, servers[i].cm) {
+				t.Errorf("Different in consensus between server %d and server %d", j, i)
 			}
 		}
 	}
