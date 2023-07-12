@@ -59,7 +59,7 @@ func TestRunNormal(t *testing.T) {
 	}()
 	time.Sleep(12 * time.Second)
 }
-func TestServices(t *testing.T) {
+func TestE2EServices(t *testing.T) {
 	rand.Seed(time.Now().UnixNano())
 	num_server := 5
 	servers := make([]*Server, num_server)
