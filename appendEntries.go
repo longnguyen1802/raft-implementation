@@ -65,15 +65,17 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 				if args.PrevLogTerm != cm.getTerm(args.PrevLogIndex)  {
 					response.Success = false
 				} else {
+
 					// Sucess case need to divide to 2 
-					if args.PrevLogIndex+1 < cm.lastIncludedIndex {
+					// Case 1 the PreviousLogIndex is not in the RAM (actual machine)
+					if args.PrevLogIndex+1 < cm.getLogStartIndex() {
 						// Update the log and return true (off course)
 						// replaace all the cmlog
-						cm.log = args.Entries[cm.lastIncludedIndex -(args.PrevLogIndex+1):]
+						cm.log = args.Entries[cm.getLogStartIndex() -(args.PrevLogIndex+1):]
 						response.Success = true
-					} else{
+					} else{ //Case 2 is when PrevLogIndex is in the RAM (actual machine)
 						// Find the matching index then replace from that upward
-						cm.log = append(cm.getLogSlice(cm.lastIncludedIndex,args.PrevLogIndex+1),args.Entries...)
+						cm.log = append(cm.getLogSlice(cm.getLogStartIndex(),args.PrevLogIndex+1),args.Entries...)
 						cm.debugLog("New log update: %v", cm.log)
 						response.Success = true
 					}

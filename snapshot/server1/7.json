@@ -1,134 +1,134 @@
 {
   "lastIncludedIndex": 224,
-  "lastIncludedTerm": 11,
+  "lastIncludedTerm": 20,
   "log": [
     {
-      "Command": "command 963",
-      "Term": 11
+      "Command": "command 770",
+      "Term": 10
     },
     {
-      "Command": "command 292",
-      "Term": 11
+      "Command": "command 366",
+      "Term": 10
     },
     {
-      "Command": "command 210",
-      "Term": 11
+      "Command": "command 82",
+      "Term": 10
     },
     {
-      "Command": "command 626",
-      "Term": 11
+      "Command": "command 291",
+      "Term": 10
     },
     {
-      "Command": "command 130",
-      "Term": 11
+      "Command": "command 893",
+      "Term": 10
     },
     {
-      "Command": "command 170",
-      "Term": 11
+      "Command": "command 441",
+      "Term": 10
     },
     {
-      "Command": "command 195",
-      "Term": 11
+      "Command": "command 843",
+      "Term": 10
     },
     {
-      "Command": "command 712",
-      "Term": 11
+      "Command": "command 458",
+      "Term": 10
     },
     {
-      "Command": "command 833",
-      "Term": 11
+      "Command": "command 16",
+      "Term": 10
     },
     {
-      "Command": "command 245",
-      "Term": 11
+      "Command": "command 269",
+      "Term": 10
     },
     {
-      "Command": "command 107",
-      "Term": 11
+      "Command": "command 314",
+      "Term": 10
     },
     {
-      "Command": "command 119",
-      "Term": 11
+      "Command": "command 553",
+      "Term": 10
     },
     {
-      "Command": "command 746",
-      "Term": 11
+      "Command": "command 857",
+      "Term": 10
     },
     {
-      "Command": "command 667",
-      "Term": 11
+      "Command": "command 499",
+      "Term": 20
     },
     {
-      "Command": "command 336",
-      "Term": 11
+      "Command": "command 783",
+      "Term": 20
     },
     {
-      "Command": "command 818",
-      "Term": 11
+      "Command": "command 825",
+      "Term": 20
     },
     {
-      "Command": "command 214",
-      "Term": 11
+      "Command": "command 44",
+      "Term": 20
     },
     {
-      "Command": "command 836",
-      "Term": 11
+      "Command": "command 393",
+      "Term": 20
     },
     {
-      "Command": "command 284",
-      "Term": 11
+      "Command": "command 827",
+      "Term": 20
     },
     {
-      "Command": "command 833",
-      "Term": 11
+      "Command": "command 206",
+      "Term": 20
     },
     {
-      "Command": "command 712",
-      "Term": 11
+      "Command": "command 526",
+      "Term": 20
     },
     {
-      "Command": "command 738",
-      "Term": 11
+      "Command": "command 296",
+      "Term": 20
     },
     {
-      "Command": "command 953",
-      "Term": 11
+      "Command": "command 461",
+      "Term": 20
     },
     {
-      "Command": "command 100",
-      "Term": 11
+      "Command": "command 221",
+      "Term": 20
     },
     {
-      "Command": "command 540",
-      "Term": 11
+      "Command": "command 639",
+      "Term": 20
     },
     {
-      "Command": "command 723",
-      "Term": 11
+      "Command": "command 634",
+      "Term": 20
     },
     {
-      "Command": "command 693",
-      "Term": 11
+      "Command": "command 489",
+      "Term": 20
     },
     {
-      "Command": "command 133",
-      "Term": 11
+      "Command": "command 39",
+      "Term": 20
     },
     {
-      "Command": "command 358",
-      "Term": 11
+      "Command": "command 694",
+      "Term": 20
     },
     {
-      "Command": "command 331",
-      "Term": 11
+      "Command": "command 476",
+      "Term": 20
     },
     {
-      "Command": "command 112",
-      "Term": 11
+      "Command": "command 881",
+      "Term": 20
     },
     {
-      "Command": "command 45",
-      "Term": 11
+      "Command": "command 994",
+      "Term": 20
     }
   ]
 }
