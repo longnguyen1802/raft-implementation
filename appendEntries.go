@@ -62,20 +62,20 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 				response.Success = false
 			} else {
 				// The term at PrevLogIndex are different with leader
-				if args.PrevLogTerm != cm.getTerm(args.PrevLogIndex)  {
+				if args.PrevLogTerm != cm.getTerm(args.PrevLogIndex) {
 					response.Success = false
 				} else {
 
-					// Sucess case need to divide to 2 
+					// Sucess case need to divide to 2
 					// Case 1 the PreviousLogIndex is not in the RAM (actual machine)
 					if args.PrevLogIndex+1 < cm.getLogStartIndex() {
 						// Update the log and return true (off course)
 						// replaace all the cmlog
-						cm.log = args.Entries[cm.getLogStartIndex() -(args.PrevLogIndex+1):]
+						cm.log = args.Entries[cm.getLogStartIndex()-(args.PrevLogIndex+1):]
 						response.Success = true
-					} else{ //Case 2 is when PrevLogIndex is in the RAM (actual machine)
+					} else { //Case 2 is when PrevLogIndex is in the RAM (actual machine)
 						// Find the matching index then replace from that upward
-						cm.log = append(cm.getLogSlice(cm.getLogStartIndex(),args.PrevLogIndex+1),args.Entries...)
+						cm.log = append(cm.getLogSlice(cm.getLogStartIndex(), args.PrevLogIndex+1), args.Entries...)
 						cm.debugLog("New log update: %v", cm.log)
 						response.Success = true
 					}
@@ -121,8 +121,8 @@ func (cm *ConsensusModule) sendAppendEntries() {
 			// }
 			// // Send all entries from nextIndex
 			// entries := cm.log[nextIndex:]
-			
-			prevLogTerm,entries := cm.getTermAndSliceForIndex(prevLogIndex)
+
+			prevLogTerm, entries := cm.getTermAndSliceForIndex(prevLogIndex)
 
 			args := AppendEntriesArgs{
 				Term:         currentTerm,

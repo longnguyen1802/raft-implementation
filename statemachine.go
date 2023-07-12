@@ -13,7 +13,7 @@ func (cm *ConsensusModule) applyStateMachine() {
 		// Check where signal come from
 		// Come from commit no need to change the log
 		cm.debugLog("Call apply state machine with commitIndex %d and lastIncludedIndex %d", cm.commitIndex, cm.lastIncludedIndex)
-		if cm.commitIndex > cm.lastIncludedIndex - 1 {
+		if cm.commitIndex > cm.lastIncludedIndex-1 {
 			if cm.commitIndex > cm.lastApplied {
 				//logs = cm.log[cm.lastApplied+1 : cm.commitIndex+1]
 				cm.lastApplied = cm.commitIndex
@@ -29,17 +29,15 @@ func (cm *ConsensusModule) applyStateMachine() {
 				}
 			}
 		} else {
-			dirPath := fmt.Sprintf("snapshot/server%d", cm.id)
-			makeDirIfNotExist(dirPath)
 			filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, cm.lastIncludedIndex/SNAPSHOT_LOGSIZE)
 			snapshot, err := GetSnapshot(filename)
 			if err != nil {
 				cm.debugLog("Got error when load snapshot", err)
 			}
 			cm.lastApplied = cm.lastIncludedIndex
-			cm.debugLog("Apply new commit %d by take snapshot %+v to state machine", cm.lastApplied,snapshot)
+			cm.debugLog("Apply new commit %d by take snapshot %+v to state machine", cm.lastApplied, snapshot)
 			// Redo this
-			// if cm.getLogSize() < cm.lastIncludedIndex{ 
+			// if cm.getLogSize() < cm.lastIncludedIndex{
 			// 	extendedArray :=  make([]Log, cm.lastIncludedIndex)
 			// 	copy(extendedArray, cm.log[:])
 			// 	cm.log = extendedArray

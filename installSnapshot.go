@@ -48,7 +48,7 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 	// 	cm.debugLog("Last %d entry of server is %+v",2*SNAPSHOT_LOGSIZE,cm.log[len(cm.log)-2*SNAPSHOT_LOGSIZE:])
 	// }
 	// Get information only
-	if args.Offset == 0 || len(args.Data.Logs) == 0{
+	if args.Offset == 0 || len(args.Data.Logs) == 0 {
 		response.Term = currentTerm
 		response.LastIncludedIndex = cm.lastIncludedIndex
 		return nil
@@ -63,7 +63,9 @@ func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *I
 	cm.TakeInstallSnapshot(args.Data, id)
 	cm.applyStateMachineEvent <- struct{}{}
 	cm.debugLog("Install snapshot with include index %v and include term %v", cm.lastIncludedIndex, cm.lastIncludedTerm)
-	
+	// Update term and last included index
+	response.Term = cm.currentTerm
+	response.LastIncludedIndex = cm.lastIncludedIndex
 	return nil
 }
 
@@ -95,7 +97,7 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 			} else {
 				filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, cm.matchIncludedIndex[peerId]/SNAPSHOT_LOGSIZE+1)
 				datasnapshot, err := GetSnapshot(filename)
-				if err != nil{
+				if err != nil {
 					cm.debugLog("Error when read snapshot from file")
 				}
 				args = InstallSnapshotArgs{
@@ -106,9 +108,9 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 					Offset:            cm.matchIncludedIndex[peerId],
 					Data:              datasnapshot,
 				}
-				cm.debugLog("Snap shot send to %d with data %+v",peerId,datasnapshot)
+				cm.debugLog("Snap shot send to %d with data %+v", peerId, datasnapshot)
 			}
-			
+
 			cm.debugLog("sending InstallSnapshot to %v: args=%+v", peerId, args)
 			var response InstallSnapshotResponse
 			cm_server := cm.server
@@ -131,21 +133,22 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 }
 
 // Do the install snapshot that receive from leader
-func (cm* ConsensusModule) TakeInstallSnapshot(snapshot Snapshot, id int) {
+func (cm *ConsensusModule) TakeInstallSnapshot(snapshot Snapshot, id int) {
+	makeDirIfNotExist("snapshot")
 	dirPath := fmt.Sprintf("snapshot/server%d", id)
 	makeDirIfNotExist(dirPath)
 	filename := fmt.Sprintf("snapshot/server%d/%d.json", id, snapshot.LastIncludedIndex/SNAPSHOT_LOGSIZE)
 	// Truncate the log
 	if len(cm.log) < SNAPSHOT_LOGSIZE {
 		cm.log = cm.log[len(cm.log):]
-	} else{
+	} else {
 		cm.log = cm.log[SNAPSHOT_LOGSIZE:]
 	}
 
 	SaveSnapshot(snapshot, filename)
 	cm.lastIncludedIndex = snapshot.LastIncludedIndex
 	cm.lastIncludedTerm = snapshot.LastIncludedTerm
-	cm.debugLog("Snap shot from data %+v",snapshot)
+	cm.debugLog("Snap shot from data %+v", snapshot)
 	cm.debugLog("Change in last Include index: %v", cm.lastIncludedIndex)
 
 }
@@ -155,17 +158,18 @@ func (cm *ConsensusModule) TakeSnapshot() {
 
 	lastIncludedIndex := cm.lastIncludedIndex + SNAPSHOT_LOGSIZE
 	// lastIncludedTerm := cm.log[cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1].Term
-	lastIncludedTerm := cm.getTerm(cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1)
-	logs := cm.getLogSlice(cm.lastIncludedIndex , cm.lastIncludedIndex+SNAPSHOT_LOGSIZE)
+	lastIncludedTerm := cm.getTerm(cm.lastIncludedIndex + SNAPSHOT_LOGSIZE - 1)
+	logs := cm.getLogSlice(cm.lastIncludedIndex, cm.lastIncludedIndex+SNAPSHOT_LOGSIZE)
 	//cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
 	// Truncate the log
 	cm.log = cm.log[SNAPSHOT_LOGSIZE:]
-	
+
 	snapshot := Snapshot{
 		LastIncludedIndex: lastIncludedIndex,
 		LastIncludedTerm:  lastIncludedTerm,
 		Logs:              logs,
 	}
+	makeDirIfNotExist("snapshot")
 	dirPath := fmt.Sprintf("snapshot/server%d", cm.id)
 	makeDirIfNotExist(dirPath)
 	filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, lastIncludedIndex/SNAPSHOT_LOGSIZE)
