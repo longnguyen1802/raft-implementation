@@ -5,7 +5,9 @@ package raft
 This file contain all the state transistion of server. If there is mistake in a state debug here
 
 ****/
-import "time"
+import (
+	"time"
+)
 
 type CMState int
 
@@ -83,16 +85,24 @@ func (cm *ConsensusModule) leaderLoop() {
 
 	// Setting nextIndex and matchIndex for each peer.
 	for _, peerId := range cm.peerIds {
-		cm.nextIndex[peerId] = len(cm.log)
+		cm.nextIndex[peerId] = cm.getLogSize()
 		cm.matchIndex[peerId] = -1
+		cm.matchIncludedIndex[peerId] = 0
 	}
+	ticker := time.NewTicker(50 * time.Millisecond)
+
+	// Start a goroutine to receive ticks
+	go func() {
+		for range ticker.C {
+			cm.sendInstallSnapshot()
+		}
+	}()
 
 	// Send heartbeat (AppendEntries) every 50ms in background.
 	// Also run when receive command from client or resend commit to other peers
 	go func(heartbeatTimeout time.Duration) {
 		// Immediately send Append Entries to peers.
 		cm.sendAppendEntries()
-
 		t := time.NewTimer(heartbeatTimeout)
 		defer t.Stop()
 		for {

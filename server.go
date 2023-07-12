@@ -135,3 +135,7 @@ func (rpp *RPCProxy) RequestVote(args RequestVoteArgs, response *RequestVoteResp
 func (rpp *RPCProxy) AppendEntries(args AppendEntriesArgs, response *AppendEntriesResponse) error {
 	return rpp.cm.AppendEntries(args, response)
 }
+
+func (rpp *RPCProxy) InstallSnapshot(args InstallSnapshotArgs, response *InstallSnapshotResponse) error {
+	return rpp.cm.InstallSnapshot(args, response)
+}
