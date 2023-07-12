@@ -7,7 +7,6 @@ import (
 	"strconv"
 	"testing"
 	"time"
-	"reflect"
 )
 
 func getFollowerAndLeaderId() (int, int) {
@@ -55,7 +54,7 @@ func TestInstallSnapshot(t *testing.T) {
 			args: InstallSnapshotArgs{
 				Term:              2,
 				LeaderId:          leaderId,
-				LastIncludedIndex: 3*SNAPSHOT_LOGSIZE,
+				LastIncludedIndex: 3 * SNAPSHOT_LOGSIZE,
 				LastIncludedTerm:  123,
 				Offset:            0,
 				Data:              Snapshot{},
@@ -73,19 +72,19 @@ func TestInstallSnapshot(t *testing.T) {
 				currentTerm:            2,
 				votedFor:               -1,
 				applyStateMachineEvent: make(chan struct{}, 16),
-				lastIncludedIndex:      2*SNAPSHOT_LOGSIZE,
+				lastIncludedIndex:      2 * SNAPSHOT_LOGSIZE,
 			},
 			args: InstallSnapshotArgs{
 				Term:              2,
 				LeaderId:          leaderId,
-				LastIncludedIndex: 2*SNAPSHOT_LOGSIZE,
+				LastIncludedIndex: 2 * SNAPSHOT_LOGSIZE,
 				LastIncludedTerm:  123,
 				Offset:            0,
 				Data:              Snapshot{},
 			},
 			want: InstallSnapshotResponse{
 				Term:              2,
-				LastIncludedIndex: 2*SNAPSHOT_LOGSIZE,
+				LastIncludedIndex: 2 * SNAPSHOT_LOGSIZE,
 			},
 			checkSnapshot: false,
 		},
@@ -96,19 +95,19 @@ func TestInstallSnapshot(t *testing.T) {
 				currentTerm:            2,
 				votedFor:               -1,
 				applyStateMachineEvent: make(chan struct{}, 16),
-				lastIncludedIndex:      4*SNAPSHOT_LOGSIZE,
+				lastIncludedIndex:      4 * SNAPSHOT_LOGSIZE,
 			},
 			args: InstallSnapshotArgs{
 				Term:              2,
 				LeaderId:          leaderId,
-				LastIncludedIndex: 2*SNAPSHOT_LOGSIZE,
+				LastIncludedIndex: 2 * SNAPSHOT_LOGSIZE,
 				LastIncludedTerm:  123,
 				Offset:            0,
 				Data:              Snapshot{},
 			},
 			want: InstallSnapshotResponse{
 				Term:              2,
-				LastIncludedIndex: 4*SNAPSHOT_LOGSIZE,
+				LastIncludedIndex: 4 * SNAPSHOT_LOGSIZE,
 			},
 			checkSnapshot: false,
 		},
@@ -119,24 +118,23 @@ func TestInstallSnapshot(t *testing.T) {
 				currentTerm:            2,
 				votedFor:               -1,
 				applyStateMachineEvent: make(chan struct{}, 16),
-				lastIncludedIndex:      2*SNAPSHOT_LOGSIZE,
-				commitIndex:			SNAPSHOT_LOGSIZE-1,
+				lastIncludedIndex:      2 * SNAPSHOT_LOGSIZE,
+				commitIndex:            SNAPSHOT_LOGSIZE - 1,
 			},
 			args: InstallSnapshotArgs{
 				Term:              2,
 				LeaderId:          leaderId,
-				LastIncludedIndex: 3*SNAPSHOT_LOGSIZE,
+				LastIncludedIndex: 3 * SNAPSHOT_LOGSIZE,
 				LastIncludedTerm:  123,
-				Offset:            2*SNAPSHOT_LOGSIZE,
+				Offset:            2 * SNAPSHOT_LOGSIZE,
 				Data:              generateRandomSnapshot(3),
 			},
 			want: InstallSnapshotResponse{
 				Term:              2,
-				LastIncludedIndex: 3*SNAPSHOT_LOGSIZE,
+				LastIncludedIndex: 3 * SNAPSHOT_LOGSIZE,
 			},
 			checkSnapshot: true,
 		},
-		
 	}
 
 	for _, tt := range tests {
@@ -153,23 +151,19 @@ func TestInstallSnapshot(t *testing.T) {
 				t.Errorf("Installsnapshot response doesn't match expected value. Got %+v, want %+v", *response, tt.want)
 			}
 			if tt.checkSnapshot {
-				getSnapshot,_ := GetSnapshot(getSnapshotFile(followerId,tt.args.LastIncludedIndex/SNAPSHOT_LOGSIZE))
-				if !reflect.DeepEqual(tt.args.Data.Logs, getSnapshot.Logs) {
-					t.Errorf("Installsnapshot doesn't match expected value. Got %+v, want %+v", getSnapshot.Logs, tt.args.Data.Logs)
+				getSnapshot, _ := GetSnapshot(getSnapshotFile(followerId, tt.args.LastIncludedIndex/SNAPSHOT_LOGSIZE))
+				if !getSnapshot.compare(&tt.args.Data) {
+					t.Errorf("Installsnapshot doesn't match expected value. Got %+v, want %+v", getSnapshot, tt.args.Data)
 				}
 			}
 		})
 	}
 	// For apply state machine to run (avoid any error)
-	time.Sleep(1*time.Second)
+	time.Sleep(1 * time.Second)
 	cleanSnapshot(100)
 }
 
 func cleanSnapshot(serverId int) {
 	folder := fmt.Sprintf("snapshot/server%d", serverId)
 	os.RemoveAll(folder)
-}
-
-func getSnapshotFile(serverId int, snapshotIndex int) string {
-	return fmt.Sprintf("snapshot/server%d/%d.json", serverId, snapshotIndex)
 }

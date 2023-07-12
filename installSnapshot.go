@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"reflect"
 	"time"
 )
 
@@ -15,6 +16,14 @@ type Snapshot struct {
 	LastIncludedIndex int   `json:"lastIncludedIndex"`
 	LastIncludedTerm  int   `json:"lastIncludedTerm"`
 	Logs              []Log `json:"log"`
+}
+
+// Compare two snapshot for debugging
+func (s *Snapshot) compare(other *Snapshot) bool {
+	if s.LastIncludedIndex != other.LastIncludedIndex || s.LastIncludedTerm != other.LastIncludedTerm {
+		return false
+	}
+	return reflect.DeepEqual(s.Logs, other.Logs)
 }
 
 // Modify from the paper
