@@ -13,6 +13,7 @@ type AppendEntriesArgs struct {
 	PrevLogTerm  int
 	Entries      []Log
 	LeaderCommit int
+	Config       Configuration
 }
 
 type AppendEntriesResponse struct {
@@ -40,10 +41,21 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 	cm.electionTimeoutReset = time.Now()
 
 	// Return false if request term < currentTerm (5.1)
+	// Invalid leader
 	if args.Term < cm.currentTerm {
 		response.Success = false
 	} else {
 		// All entries are different
+		// Sound a valid leader update config
+		if !cm.config.Compare(&args.Config) {
+			// Indicate that there is new config
+			cm.config = &args.Config
+			// Update server config
+			cm.server.UpdateConfig(args.Config)
+			// Update local config
+
+		}
+
 		if args.PrevLogIndex == -1 {
 			// Replace the whole current log by the master log entries
 			cm.log = append(cm.log[:0], args.Entries...)
@@ -115,12 +127,6 @@ func (cm *ConsensusModule) sendAppendEntries() {
 			cm.mu.Lock()
 			nextIndex := cm.nextIndex[peerId]
 			prevLogIndex := nextIndex - 1
-			// prevLogTerm := -1
-			// if prevLogIndex >= 0 {
-			// 	prevLogTerm = cm.log[prevLogIndex].Term
-			// }
-			// // Send all entries from nextIndex
-			// entries := cm.log[nextIndex:]
 
 			prevLogTerm, entries := cm.getTermAndSliceForIndex(prevLogIndex)
 
@@ -131,6 +137,7 @@ func (cm *ConsensusModule) sendAppendEntries() {
 				PrevLogTerm:  prevLogTerm,
 				Entries:      entries,
 				LeaderCommit: cm.commitIndex,
+				Config:       *cm.config,
 			}
 			cm.debugLog("sending AppendEntries to %v: nextIndex=%d, args=%+v", peerId, nextIndex, args)
 			var response AppendEntriesResponse

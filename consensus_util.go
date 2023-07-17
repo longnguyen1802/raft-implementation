@@ -2,6 +2,7 @@ package raft
 
 import (
 	"fmt"
+	"net"
 )
 
 // Want to make the system more robust and easy to change, might have many way to save the log of the node. But need to follwo the rule
@@ -84,4 +85,10 @@ func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {
 	} else {
 		return -1, -1
 	}
+}
+
+func (cm *ConsensusModule) updateMachine(id int, addr net.Addr) {
+	cm.mu.Lock()
+	defer cm.mu.Unlock()
+	cm.config.updateMachine(id, addr)
 }

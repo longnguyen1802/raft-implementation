@@ -51,6 +51,7 @@ func (s *Server) Serve() {
 		log.Fatal(err)
 	}
 	s.mu.Unlock()
+	s.cm.updateMachine(s.cm.id, s.GetListenAddr())
 
 	s.wg.Add(1)
 	// Serve connection
@@ -97,6 +98,7 @@ func (s *Server) ConnectToPeer(peerId int, addr net.Addr) error {
 			return err
 		}
 		s.peerClients[peerId] = client
+		s.cm.updateMachine(peerId, addr)
 	}
 	return nil
 }
@@ -138,4 +140,15 @@ func (rpp *RPCProxy) AppendEntries(args AppendEntriesArgs, response *AppendEntri
 
 func (rpp *RPCProxy) InstallSnapshot(args InstallSnapshotArgs, response *InstallSnapshotResponse) error {
 	return rpp.cm.InstallSnapshot(args, response)
+}
+
+func (s *Server) UpdateConfig(config Configuration) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	for i := 0; i < config.ClusterSize; i++ {
+		if i != s.serverId {
+			client, _ := rpc.Dial(config.MachineInfo[i].Protocol, config.MachineInfo[i].Address)
+			s.peerClients[i] = client
+		}
+	}
 }

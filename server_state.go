@@ -81,6 +81,7 @@ func (cm *ConsensusModule) electionTimeout() {
 
 /****************************************** Leader State ****************************************************/
 // Run this loop as long as the server is not fail
+// Have the lock
 func (cm *ConsensusModule) leaderLoop() {
 
 	// Setting nextIndex and matchIndex for each peer.

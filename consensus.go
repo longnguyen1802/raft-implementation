@@ -48,6 +48,8 @@ type ConsensusModule struct {
 	matchIndex map[int]int
 	// For snapshot
 	matchIncludedIndex map[int]int
+	// Configuretaion
+	config *Configuration
 }
 
 func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan interface{}) *ConsensusModule {
@@ -69,6 +71,8 @@ func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan inte
 	cm.matchIndex = make(map[int]int)
 
 	cm.matchIncludedIndex = make(map[int]int)
+	// Config
+	cm.config = NewConfiguration(len(peerIds) + 1)
 	go func() {
 		// Wait the start of server until setup all server
 		<-ready
