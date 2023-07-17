@@ -85,3 +85,95 @@ func (cm *ConsensusModule) lastLogIndexAndTerm() (int, int) {
 		return -1, -1
 	}
 }
+
+/********************************** State Getter and Setter Function ******************************/
+func (cm *ConsensusModule) getLastIncludedIndex() int {
+	return cm.lastIncludedIndex
+}
+
+func (cm *ConsensusModule) setLastIncludedIndex(newIncludedIndex int) {
+	cm.lastIncludedIndex = newIncludedIndex
+}
+
+func (cm *ConsensusModule) getLastIncludedTerm() int {
+	return cm.lastIncludedTerm
+}
+
+func (cm *ConsensusModule) setLastIncludedTerm(newIncludedTerm int) {
+	cm.lastIncludedTerm = newIncludedTerm
+}
+
+func (cm *ConsensusModule) getCurrentTerm() int {
+	return cm.currentTerm
+}
+
+func (cm *ConsensusModule) setCurrentTerm(newTerm int) {
+	cm.currentTerm = newTerm
+}
+
+func (cm *ConsensusModule) getVotedFor() int {
+	return cm.votedFor
+}
+
+func (cm *ConsensusModule) setVotedFor(peerId int) {
+	cm.votedFor = peerId
+}
+
+func (cm *ConsensusModule) getLog() []Log {
+	return cm.log
+}
+
+func (cm *ConsensusModule) setLog(newLog []Log) {
+	cm.log = newLog
+}
+
+func (cm *ConsensusModule) extendLog(newLog []Log) {
+	cm.log = append(cm.log, newLog...)
+}
+
+func (cm *ConsensusModule) appendLog(elem Log) {
+	cm.log = append(cm.log, elem)
+}
+
+func (cm *ConsensusModule) getCommitIndex() int {
+	return cm.commitIndex
+}
+
+func (cm *ConsensusModule) setCommitIndex(newCommitIndex int) {
+	cm.commitIndex = newCommitIndex
+}
+
+func (cm *ConsensusModule) getAllNextIndex() map[int]int {
+	return cm.nextIndex
+}
+
+func (cm *ConsensusModule) getNextIndex(peerId int) int {
+	return cm.nextIndex[peerId]
+}
+
+func (cm *ConsensusModule) setNextIndex(peerId int, newNextIndex int) {
+	cm.nextIndex[peerId] = newNextIndex
+}
+
+func (cm *ConsensusModule) getAllMatchIndex() map[int]int {
+	return cm.matchIndex
+}
+
+func (cm *ConsensusModule) getMatchndex(peerId int) int {
+	return cm.matchIndex[peerId]
+}
+
+func (cm *ConsensusModule) setMatchIndex(peerId int, newMatchIndex int) {
+	cm.matchIndex[peerId] = newMatchIndex
+}
+func (cm *ConsensusModule) getAllMatchIncludedIndex() map[int]int {
+	return cm.matchIncludedIndex
+}
+
+func (cm *ConsensusModule) getMatchIncludedIndex(peerId int) int {
+	return cm.matchIncludedIndex[peerId]
+}
+
+func (cm *ConsensusModule) setMatchIncludedIndex(peerId int, newMatchIncludedIndex int) {
+	cm.matchIncludedIndex[peerId] = newMatchIncludedIndex
+}
