@@ -20,6 +20,7 @@ func (cm *ConsensusModule) timeoutDuration() time.Duration {
 }
 
 func (cm *ConsensusModule) debugLog(format string, args ...interface{}) {
+	//debug.DebugLog(cm.id, format, args)
 	f, err := os.OpenFile("debuglog/server"+strconv.Itoa(cm.id)+".txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)

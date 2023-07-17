@@ -3,6 +3,8 @@ package raft
 import (
 	"math"
 	"time"
+
+	"github.com/nhatlong/raft/storage"
 )
 
 type AppendEntriesArgs struct {
@@ -11,7 +13,7 @@ type AppendEntriesArgs struct {
 
 	PrevLogIndex int
 	PrevLogTerm  int
-	Entries      []Log
+	Entries      []storage.Log
 	LeaderCommit int
 }
 
@@ -24,15 +26,11 @@ type AppendEntriesResponse struct {
 func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *AppendEntriesResponse) error {
 	cm.mu.Lock()
 	defer cm.mu.Unlock()
-	// Consider no response from Failure machine
-	// if cm.state == Failure {
-	// 	return nil
-	// }
 
 	cm.debugLog("Receive AppendEntries: %+v", args)
 
 	// Revert to follower if term is not up to date
-	if args.Term > cm.currentTerm {
+	if args.Term > cm.GetCurrentTerm() {
 		cm.revertToFollower(args.Term)
 	}
 
@@ -40,21 +38,24 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 	cm.electionTimeoutReset = time.Now()
 
 	// Return false if request term < currentTerm (5.1)
-	if args.Term < cm.currentTerm {
+	if args.Term < cm.GetCurrentTerm() {
 		response.Success = false
 	} else {
 		// All entries are different
 		if args.PrevLogIndex == -1 {
 			// Replace the whole current log by the master log entries
-			cm.log = append(cm.log[:0], args.Entries...)
+			//cm.log = append(cm.log[:0], args.Entries...)
+			cm.appendLog(args.Entries)
 			response.Success = true
-			cm.debugLog("New log update: %v", cm.log)
+			//cm.debugLog(cm.id,("New log update: %v", cm.log)
+			cm.debugLog("New log update: %v")
 			// Set commit index
-			if args.LeaderCommit > cm.commitIndex {
-				cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1)))
-				cm.debugLog("Change in commit index: %v", cm.commitIndex)
+			if args.LeaderCommit > cm.GetCommitIndex() {
+				cm.UpdateCommitIndex(int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1))))
+				//cm.GetCommitIndex() = int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1)))
+				cm.debugLog("Change in commit index: %v", cm.GetCommitIndex())
 				cm.applyStateMachineEvent <- struct{}{}
-				cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
+				cm.debugLog("Finish apply commit %v to state machine", cm.GetCommitIndex())
 			}
 		} else {
 			// The server log does not have index at PrevLogIndex (An outdate log)
@@ -71,29 +72,32 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 					if args.PrevLogIndex+1 < cm.getLogStartIndex() {
 						// Update the log and return true (off course)
 						// replaace all the cmlog
-						cm.log = args.Entries[cm.getLogStartIndex()-(args.PrevLogIndex+1):]
+						//cm.log = args.Entries[cm.getLogStartIndex()-(args.PrevLogIndex+1):]
+						cm.UpdateLog(args.Entries[cm.getLogStartIndex()-(args.PrevLogIndex+1):])
 						response.Success = true
 					} else { //Case 2 is when PrevLogIndex is in the RAM (actual machine)
 						// Find the matching index then replace from that upward
-						cm.log = append(cm.getLogSlice(cm.getLogStartIndex(), args.PrevLogIndex+1), args.Entries...)
-						cm.debugLog("New log update: %v", cm.log)
+						cm.UpdateLog(append(cm.getLogSlice(cm.getLogStartIndex(), args.PrevLogIndex+1), args.Entries...))
+						//cm.log = append(cm.getLogSlice(cm.getLogStartIndex(), args.PrevLogIndex+1), args.Entries...)
+						cm.debugLog("New log update: %v", cm.getLog())
 						response.Success = true
 					}
 					// Set commit index
-					if args.LeaderCommit > cm.commitIndex {
-						cm.commitIndex = int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1)))
-						cm.debugLog("Change in commit index: %v", cm.commitIndex)
+					if args.LeaderCommit > cm.GetCommitIndex() {
+						//cm.GetCommitIndex() = int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1)))
+						cm.UpdateCommitIndex(int(math.Min(float64(args.LeaderCommit), float64(cm.getLogSize()-1))))
+						cm.debugLog("Change in commit index: %v", cm.GetCommitIndex())
 						cm.applyStateMachineEvent <- struct{}{}
-						cm.debugLog("Finish apply commit %v to state machine", cm.commitIndex)
+						cm.debugLog("Finish apply commit %v to state machine", cm.GetCommitIndex())
 					}
 				}
 			}
 		}
 	}
 	// Common response state
-	response.Term = cm.currentTerm
+	response.Term = cm.GetCurrentTerm()
 	cm.debugLog("AppendEntries response: %+v", *response)
-	//cm.debugLog("Current cm state term := %d, commitIndex:= %d, lastIncludedIndex := %d",cm.currentTerm,cm.commitIndex,cm.lastIncludedIndex)
+	cm.debugLog("End of append entries")
 	return nil
 }
 
@@ -106,21 +110,15 @@ func (cm *ConsensusModule) sendAppendEntries() {
 		return
 	}
 
-	currentTerm := cm.currentTerm
+	currentTerm := cm.GetCurrentTerm()
 	peerIds := cm.peerIds
 	cm.mu.Unlock()
 
 	for _, peerId := range peerIds {
 		go func(peerId int) {
 			cm.mu.Lock()
-			nextIndex := cm.nextIndex[peerId]
+			nextIndex := cm.GetNextIndex(peerId)
 			prevLogIndex := nextIndex - 1
-			// prevLogTerm := -1
-			// if prevLogIndex >= 0 {
-			// 	prevLogTerm = cm.log[prevLogIndex].Term
-			// }
-			// // Send all entries from nextIndex
-			// entries := cm.log[nextIndex:]
 
 			prevLogTerm, entries := cm.getTermAndSliceForIndex(prevLogIndex)
 
@@ -130,7 +128,7 @@ func (cm *ConsensusModule) sendAppendEntries() {
 				PrevLogIndex: prevLogIndex,
 				PrevLogTerm:  prevLogTerm,
 				Entries:      entries,
-				LeaderCommit: cm.commitIndex,
+				LeaderCommit: cm.GetCommitIndex(),
 			}
 			cm.debugLog("sending AppendEntries to %v: nextIndex=%d, args=%+v", peerId, nextIndex, args)
 			var response AppendEntriesResponse
@@ -139,7 +137,7 @@ func (cm *ConsensusModule) sendAppendEntries() {
 			if err := cm_server.Call(peerId, "ConsensusModule.AppendEntries", args, &response); err == nil {
 				cm.mu.Lock()
 				defer cm.mu.Unlock()
-				if response.Term > cm.currentTerm {
+				if response.Term > cm.GetCurrentTerm() {
 					cm.revertToFollower(response.Term)
 					return
 				}
@@ -147,32 +145,33 @@ func (cm *ConsensusModule) sendAppendEntries() {
 				if cm.state == Leader && currentTerm == response.Term {
 					// In case of success upadre the next index and match index
 					if response.Success {
-						cm.nextIndex[peerId] = nextIndex + len(entries)
-						cm.matchIndex[peerId] = cm.nextIndex[peerId] - 1
+						cm.UpdateNextIndex(peerId, nextIndex+len(entries))
+						//cm.nextIndex[peerId] = nextIndex + len(entries)
+						cm.UpdateMatchIndex(peerId, cm.GetNextIndex(peerId)-1)
+						//cm.matchIndex[peerId] = cm.nextIndex[peerId] - 1
 
-						commitIndex := cm.commitIndex
+						commitIndex := cm.GetCommitIndex()
 						// Commit all entries that have major agreement
-						for i := cm.commitIndex + 1; i < cm.getLogSize(); i++ {
-							if cm.getTerm(i) == cm.currentTerm {
+						for i := cm.GetCommitIndex() + 1; i < cm.getLogSize(); i++ {
+							if cm.getTerm(i) == cm.GetCurrentTerm() {
 								matchCount := 1
 								for _, peerId := range cm.peerIds {
-									if cm.matchIndex[peerId] >= i {
+									if cm.GetMatchIndex(peerId) >= i {
 										matchCount++
 									}
 								}
 								if matchCount*2 > len(cm.peerIds)+1 {
-									cm.commitIndex = i
+									cm.UpdateCommitIndex(i)
 								}
 							}
 						}
-						cm.debugLog("AppendEntries response from %d success: nextIndex := %v, matchIndex := %v; commitIndex := %d", peerId, cm.nextIndex, cm.matchIndex, cm.commitIndex)
+						cm.debugLog("AppendEntries response from %d success: nextIndex := %v, matchIndex := %v; commitIndex := %d", peerId, cm.GetAllNextIndex(), cm.GetAllMatchIndex(), cm.GetCommitIndex())
 						// Change in commit index (some command successfull get majority)
-						if cm.commitIndex != commitIndex {
+						if cm.GetCommitIndex() != commitIndex {
 							cm.applyStateMachineEvent <- struct{}{}
-							//cm.AppendEntriesEvent <- struct{}{}
 						}
 					} else {
-						cm.nextIndex[peerId] -= 1
+						cm.UpdateNextIndex(peerId, cm.GetNextIndex(peerId)-1)
 					}
 				}
 			}

@@ -4,8 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
-	"os"
+	"reflect"
 )
 
 const SNAPSHOT_LOGSIZE = 32
@@ -16,39 +15,62 @@ type Snapshot struct {
 	Logs              []Log `json:"log"`
 }
 
-type StableStorage struct{
+func (s *Snapshot) Compare(other *Snapshot) bool {
+	if s.LastIncludedIndex != other.LastIncludedIndex || s.LastIncludedTerm != other.LastIncludedTerm {
+		return false
+	}
+	return reflect.DeepEqual(s.Logs, other.Logs)
+}
+
+type StableStorage struct {
 	serverId int
 }
 
-func (ss *StableStorage) GetTerm(index int) int{
-	fileIndex := index/SNAPSHOT_LOGSIZE +1
-	snapshot,_ := ss.GetSnapshot(fileIndex)
-	return snapshot.Logs[index].Term
+func NewStableStorage(serverId int) *StableStorage {
+	ss := new(StableStorage)
+	ss.serverId = serverId
+	return ss
 }
 
-func (ss *StableStorage) GetLogSlice(from int,to int) []Log {
-	//
-	return nil
+func (ss *StableStorage) GetTerm(index int) int {
+	fileIndex := index/SNAPSHOT_LOGSIZE + 1
+	snapshot := ss.GetSnapshot(fileIndex)
+	return snapshot.Logs[index%SNAPSHOT_LOGSIZE].Term
 }
 
-func (ss*StableStorage) GetSnapshot(fileIndex int) (Snapshot,error){
-	return GetSnapshotFromFile(ss.getFileName(fileIndex))
-}
+func (ss *StableStorage) GetLogSlice(from int, to int) []Log {
+	begin := from
+	logSlice := make([]Log, to-from)
+	for {
+		snapshot := ss.GetSnapshot(from/SNAPSHOT_LOGSIZE + 1)
 
-func (ss *StableStorage) getFileName(fileIndex int) string {
-	return fmt.Sprintf("snapshot/server%d/%d.json",ss.serverId,fileIndex)
-}
-
-
-func makeDirIfNotExist(dirPath string) {
-	if _, err := os.Stat(dirPath); os.IsNotExist(err) {
-		// Create the directory
-		err := os.Mkdir(dirPath, 0755)
-		if err != nil {
-			log.Fatal("Failed to create directory:", err)
+		if from/SNAPSHOT_LOGSIZE == to/SNAPSHOT_LOGSIZE {
+			copy(logSlice[from-begin:to-begin], snapshot.Logs[from%SNAPSHOT_LOGSIZE:to%SNAPSHOT_LOGSIZE])
+			break
+		} else {
+			copy(logSlice[from-begin:(from/SNAPSHOT_LOGSIZE+1)*SNAPSHOT_LOGSIZE-begin], snapshot.Logs[from%SNAPSHOT_LOGSIZE:])
+			from = (from/SNAPSHOT_LOGSIZE + 1) * SNAPSHOT_LOGSIZE
+			if from == to {
+				break
+			}
 		}
 	}
+	return logSlice
 }
+
+func (ss *StableStorage) GetSnapshot(fileIndex int) Snapshot {
+
+	snapshot, _ := GetSnapshotFromFile(ss.GetFileName(fileIndex))
+	// if err != nil {
+	// 	//debug.DebugLog(ss.serverId, "Error when get snapshot from file %v", ss.GetFileName(fileIndex))
+	// }
+	return snapshot
+}
+
+func (ss *StableStorage) GetFileName(fileIndex int) string {
+	return fmt.Sprintf("snapshot/server%d/%d.json", ss.serverId, fileIndex)
+}
+
 func SaveSnapshotToFile(snapshot Snapshot, filename string) error {
 	snapShotdata, err := json.MarshalIndent(snapshot, "", "  ")
 	if err != nil {

@@ -22,32 +22,32 @@ func (cm *ConsensusModule) RequestVote(args RequestVoteArgs, response *RequestVo
 	// Get the last log index and term of this server
 	lastLogIndex, lastLogTerm := cm.lastLogIndexAndTerm()
 
-	cm.debugLog("RequestVote: %+v [currentTerm=%d, votedFor=%d, log index/term=(%d, %d)]", args, cm.currentTerm, cm.votedFor, lastLogIndex, lastLogTerm)
+	cm.debugLog("RequestVote: %+v [currentTerm=%d, votedFor=%d, log index/term=(%d, %d)]", args, cm.GetCurrentTerm(), cm.GetVoteFor(), lastLogIndex, lastLogTerm)
 	// Revert to follower if the term is not up to date (Rules for Servers)
-	if args.Term > cm.currentTerm {
+	if args.Term > cm.GetCurrentTerm() {
 		cm.debugLog("Term out dated")
 		cm.revertToFollower(args.Term)
 	}
 
 	// If request term < currentTerm return false (5.1)
-	if args.Term < cm.currentTerm {
+	if args.Term < cm.GetCurrentTerm() {
 		response.VoteGranted = false
-		response.Term = cm.currentTerm
+		response.Term = cm.GetCurrentTerm()
 	} else {
 		// Check vote granted criteria
-		if (cm.votedFor == -1 || cm.votedFor == args.CandidateId) &&
+		if (cm.GetVoteFor() == -1 || cm.GetVoteFor() == args.CandidateId) &&
 			(args.LastLogTerm > lastLogTerm ||
 				(args.LastLogTerm == lastLogTerm && args.LastLogIndex >= lastLogIndex)) {
 			// Response result
 			response.VoteGranted = true
-			response.Term = cm.currentTerm
+			response.Term = cm.GetCurrentTerm()
 			// Set server state
-			cm.votedFor = args.CandidateId
+			cm.VoteFor(args.CandidateId)
 			// Reset timeout when vote for a candidate
 			cm.electionTimeoutReset = time.Now()
 		} else {
 			response.VoteGranted = false
-			response.Term = cm.currentTerm
+			response.Term = cm.GetCurrentTerm()
 		}
 	}
 	cm.debugLog("RequestVote response for candidate %d: %+v", args.CandidateId, response)
@@ -56,17 +56,17 @@ func (cm *ConsensusModule) RequestVote(args RequestVoteArgs, response *RequestVo
 
 func (cm *ConsensusModule) startElection() {
 	cm.state = Candidate
-	cm.currentTerm += 1
+	cm.UpdateCurrentTerm(cm.GetCurrentTerm() + 1)
 	// Note the current term for this election
-	currentTerm := cm.currentTerm
+	currentTerm := cm.GetCurrentTerm()
 	// Reset timeout when become Candidate
 	cm.electionTimeoutReset = time.Now()
 	// Vote for itself
-	cm.votedFor = cm.id
+	cm.VoteFor(cm.id)
 	// Keep the number of vote
 	numVoteReceived := 1
 	// Send RequestVote RPCs to all peers
-	cm.debugLog("Become Candidate (currentTerm=%d); log=%v", currentTerm, cm.log)
+	cm.debugLog("Become Candidate (currentTerm=%d); log=%v", currentTerm, cm.getLog())
 	for _, peerId := range cm.peerIds {
 		go func(peerId int) {
 			cm.mu.Lock()

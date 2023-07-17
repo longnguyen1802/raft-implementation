@@ -4,13 +4,11 @@ package raft
 import (
 	"sync"
 	"time"
+
+	"github.com/nhatlong/raft/storage"
 )
 
 // Consider moving this to elsewhere (It is actually the main data structure)
-type Log struct {
-	Command string
-	Term    int
-}
 
 type ConsensusModule struct {
 	mu sync.Mutex
@@ -19,19 +17,6 @@ type ConsensusModule struct {
 	peerIds []int
 
 	server *Server
-
-	// Persistent state of Server
-	lastIncludedIndex int
-	lastIncludedTerm  int
-
-	currentTerm int
-	votedFor    int
-	log         []Log
-
-	// Volatile state of Server
-	commitIndex int
-	lastApplied int
-
 	// State of server
 	state CMState
 	// Store the last election reset timestamp
@@ -41,13 +26,8 @@ type ConsensusModule struct {
 	AppendEntriesEvent chan struct{}
 	// This will enforce to run applyStateMachine when there is new commit log
 	applyStateMachineEvent chan struct{}
-
-	// Volatile leader state
-	// For append entries
-	nextIndex  map[int]int
-	matchIndex map[int]int
-	// For snapshot
-	matchIncludedIndex map[int]int
+	// Storage
+	Storage *storage.StorageInterface
 }
 
 func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan interface{}) *ConsensusModule {
@@ -58,17 +38,7 @@ func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan inte
 	cm.applyStateMachineEvent = make(chan struct{}, 16)
 	cm.AppendEntriesEvent = make(chan struct{}, 1)
 	cm.state = Follower
-	cm.votedFor = -1
-	cm.commitIndex = -1
-	cm.lastApplied = -1
-	// For easier calculation lastIncludeIndex will be the number of entry log already save
-	cm.lastIncludedIndex = 0
-	cm.lastIncludedTerm = -1
-
-	cm.nextIndex = make(map[int]int)
-	cm.matchIndex = make(map[int]int)
-
-	cm.matchIncludedIndex = make(map[int]int)
+	cm.Storage = storage.NewStorageInterface(cm.id)
 	go func() {
 		// Wait the start of server until setup all server
 		<-ready
@@ -87,10 +57,11 @@ func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan inte
 // Can do better by response the leader id but assume this will not happen
 func (cm *ConsensusModule) SubmitCommand(command string) bool {
 	cm.mu.Lock()
-	cm.debugLog("Submit received by %v: %v", cm.state, command)
+	// debug.DebugLog(cm.id, "Submit received by %v: %v", cm.state, command)
 	if cm.state == Leader {
-		cm.log = append(cm.log, Log{Command: command, Term: cm.currentTerm})
-		cm.debugLog("New log update: %v", cm.log)
+		cm.Storage.AppendCommand(command, cm.GetCurrentTerm())
+		//cm.log = append(cm.log, Log{Command: command, Term: cm.currentTerm})
+		// debug.DebugLog(cm.id, "New log update: %v", cm.getLog())
 		cm.mu.Unlock()
 		// Trigger append entries event
 		cm.AppendEntriesEvent <- struct{}{}

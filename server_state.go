@@ -34,10 +34,10 @@ func (s CMState) String() string {
 
 /****************************************** Become follower ************************************/
 func (cm *ConsensusModule) revertToFollower(term int) {
-	cm.debugLog("becomes Follower with term=%d; log=%v", term, cm.log)
+	cm.debugLog("becomes Follower with term=%d; log=%v", term, cm.getLog())
 	cm.state = Follower
-	cm.currentTerm = term
-	cm.votedFor = -1
+	cm.UpdateCurrentTerm(term)
+	cm.VoteFor(-1)
 	cm.electionTimeoutReset = time.Now()
 
 	go cm.electionTimeout()
@@ -47,7 +47,7 @@ func (cm *ConsensusModule) revertToFollower(term int) {
 func (cm *ConsensusModule) electionTimeout() {
 	timeoutDuration := cm.timeoutDuration()
 	cm.mu.Lock()
-	termStarted := cm.currentTerm
+	termStarted := cm.GetCurrentTerm()
 	cm.mu.Unlock()
 	cm.debugLog("Election timeout started (%v), term=%d", timeoutDuration, termStarted)
 	// Run a ticker timer
@@ -64,7 +64,7 @@ func (cm *ConsensusModule) electionTimeout() {
 		}
 
 		// Current term change quit timmer
-		if termStarted != cm.currentTerm {
+		if termStarted != cm.GetCurrentTerm() {
 			cm.mu.Unlock()
 			return
 		}
@@ -85,9 +85,9 @@ func (cm *ConsensusModule) leaderLoop() {
 
 	// Setting nextIndex and matchIndex for each peer.
 	for _, peerId := range cm.peerIds {
-		cm.nextIndex[peerId] = cm.getLogSize()
-		cm.matchIndex[peerId] = -1
-		cm.matchIncludedIndex[peerId] = 0
+		cm.UpdateNextIndex(peerId, cm.getLogSize())
+		cm.UpdateMatchIndex(peerId, -1)
+		cm.UpdateMatchIncludedIndex(peerId, 0)
 	}
 	ticker := time.NewTicker(50 * time.Millisecond)
 

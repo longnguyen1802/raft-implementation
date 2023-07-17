@@ -1,30 +1,10 @@
 package raft
 
 import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"log"
-	"os"
-	"reflect"
 	"time"
+
+	"github.com/nhatlong/raft/storage"
 )
-
-const SNAPSHOT_LOGSIZE = 32
-
-type Snapshot struct {
-	LastIncludedIndex int   `json:"lastIncludedIndex"`
-	LastIncludedTerm  int   `json:"lastIncludedTerm"`
-	Logs              []Log `json:"log"`
-}
-
-// Compare two snapshot for debugging
-func (s *Snapshot) compare(other *Snapshot) bool {
-	if s.LastIncludedIndex != other.LastIncludedIndex || s.LastIncludedTerm != other.LastIncludedTerm {
-		return false
-	}
-	return reflect.DeepEqual(s.Logs, other.Logs)
-}
 
 // Modify from the paper
 // Explain and proof will be given
@@ -34,7 +14,7 @@ type InstallSnapshotArgs struct {
 	LastIncludedIndex int
 	LastIncludedTerm  int
 	Offset            int
-	Data              Snapshot
+	Data              storage.Snapshot
 }
 
 type InstallSnapshotResponse struct {
@@ -46,35 +26,33 @@ type InstallSnapshotResponse struct {
 func (cm *ConsensusModule) InstallSnapshot(args InstallSnapshotArgs, response *InstallSnapshotResponse) error {
 	cm.mu.Lock()
 	defer cm.mu.Unlock()
-	currentTerm := cm.currentTerm
-	id := cm.id
+	currentTerm := cm.GetCurrentTerm()
 	cm.debugLog("Receive InstallSnapshot: %+v", args)
 	if args.Term > currentTerm {
 		cm.revertToFollower(args.Term)
 	}
 	cm.electionTimeoutReset = time.Now()
-	// if len(cm.log) >= 2*SNAPSHOT_LOGSIZE {
-	// 	cm.debugLog("Last %d entry of server is %+v",2*SNAPSHOT_LOGSIZE,cm.log[len(cm.log)-2*SNAPSHOT_LOGSIZE:])
-	// }
-	// Get information only
 	if args.Offset == 0 || len(args.Data.Logs) == 0 {
 		response.Term = currentTerm
-		response.LastIncludedIndex = cm.lastIncludedIndex
+		response.LastIncludedIndex = cm.GetLastIncludedIndex()
+		cm.debugLog("End of install snapshot")
 		return nil
 	}
-	if args.Data.LastIncludedIndex <= cm.lastIncludedIndex {
+	if args.Data.LastIncludedIndex <= cm.GetLastIncludedIndex() {
 		response.Term = currentTerm
-		response.LastIncludedIndex = cm.lastIncludedIndex
+		response.LastIncludedIndex = cm.GetLastIncludedIndex()
+		cm.debugLog("End of install snapshot")
 		return nil
 	}
 	cm.debugLog("Valid snapshot send with %+v", args)
 	// Save snapshot to file here (dont accquire the lock when do this) consider create a read/write system lock only
-	cm.TakeInstallSnapshot(args.Data, id)
+	cm.TakeInstallSnapshot(args.Data)
 	cm.applyStateMachineEvent <- struct{}{}
-	cm.debugLog("Install snapshot with include index %v and include term %v", cm.lastIncludedIndex, cm.lastIncludedTerm)
+	cm.debugLog("Install snapshot with include index %d and include term %d", cm.GetLastIncludedIndex(), cm.GetLastIncludedTerm())
 	// Update term and last included index
-	response.Term = cm.currentTerm
-	response.LastIncludedIndex = cm.lastIncludedIndex
+	response.Term = cm.GetCurrentTerm()
+	response.LastIncludedIndex = cm.GetLastIncludedIndex()
+	cm.debugLog("End of install snapshot")
 	return nil
 }
 
@@ -85,7 +63,7 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 		cm.mu.Unlock()
 		return
 	}
-	currentTerm := cm.currentTerm
+	currentTerm := cm.GetCurrentTerm()
 	peerIds := cm.peerIds
 	cm.mu.Unlock()
 	for _, peerId := range peerIds {
@@ -93,44 +71,46 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 			cm.mu.Lock()
 			var args InstallSnapshotArgs
 			// Do not know the index or index too close
-			if cm.matchIncludedIndex[peerId] == 0 || (cm.lastIncludedIndex-cm.matchIncludedIndex[peerId] <= 2*SNAPSHOT_LOGSIZE) {
-				snapshot := Snapshot{}
+			if cm.GetMatchIncludedIndex(peerId) == 0 || (cm.GetLastIncludedIndex()-cm.GetMatchIncludedIndex(peerId) <= 2*storage.SNAPSHOT_LOGSIZE) {
+				snapshot := storage.Snapshot{}
 				args = InstallSnapshotArgs{
 					Term:              currentTerm,
 					LeaderId:          cm.id,
-					LastIncludedIndex: cm.lastIncludedIndex,
-					LastIncludedTerm:  cm.lastIncludedTerm,
-					Offset:            cm.matchIncludedIndex[peerId],
+					LastIncludedIndex: cm.GetLastIncludedIndex(),
+					LastIncludedTerm:  cm.GetLastIncludedTerm(),
+					Offset:            cm.GetMatchIncludedIndex(peerId),
 					Data:              snapshot,
 				}
 			} else {
-				filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, cm.matchIncludedIndex[peerId]/SNAPSHOT_LOGSIZE+1)
-				datasnapshot, err := GetSnapshot(filename)
-				if err != nil {
-					cm.debugLog("Error when read snapshot from file")
-				}
+				datasnapshot := cm.GetSnapshot(cm.GetMatchIncludedIndex(peerId)/storage.SNAPSHOT_LOGSIZE + 1)
+				//filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, cm.matchIncludedIndex[peerId]/SNAPSHOT_LOGSIZE+1)
+				// datasnapshot, err := GetSnapshot(filename)
+				// if err != nil {
+				// 	cm.debugLog("Error when read snapshot from file")
+				// }
 				args = InstallSnapshotArgs{
 					Term:              currentTerm,
 					LeaderId:          cm.id,
-					LastIncludedIndex: cm.lastIncludedIndex,
-					LastIncludedTerm:  cm.lastIncludedTerm,
-					Offset:            cm.matchIncludedIndex[peerId],
+					LastIncludedIndex: cm.GetLastIncludedIndex(),
+					LastIncludedTerm:  cm.GetLastIncludedTerm(),
+					Offset:            cm.GetMatchIncludedIndex(peerId),
 					Data:              datasnapshot,
 				}
 				cm.debugLog("Snap shot send to %d with data %+v", peerId, datasnapshot)
 			}
 
-			cm.debugLog("sending InstallSnapshot to %v: args=%+v", peerId, args)
+			cm.debugLog("sending InstallSnapshot to %d: args=%+v", peerId, args)
 			var response InstallSnapshotResponse
 			cm_server := cm.server
 			cm.mu.Unlock()
 			if err := cm_server.Call(peerId, "ConsensusModule.InstallSnapshot", args, &response); err == nil {
 				cm.mu.Lock()
 				defer cm.mu.Unlock()
-				if response.Term > cm.currentTerm {
+				if response.Term > cm.GetCurrentTerm() {
 					cm.revertToFollower(response.Term)
 				}
-				cm.matchIncludedIndex[peerId] = response.LastIncludedIndex
+				//cm.matchIncludedIndex[peerId] = response.LastIncludedIndex
+				cm.UpdateMatchIncludedIndex(peerId, response.LastIncludedIndex)
 				cm.debugLog("Update peer %d lastIncludedIndex %d", peerId, response.LastIncludedIndex)
 			} else {
 				cm.mu.Lock()
@@ -139,84 +119,4 @@ func (cm *ConsensusModule) sendInstallSnapshot() {
 			}
 		}(peerId)
 	}
-}
-
-// Do the install snapshot that receive from leader
-func (cm *ConsensusModule) TakeInstallSnapshot(snapshot Snapshot, id int) {
-	makeDirIfNotExist("snapshot")
-	dirPath := fmt.Sprintf("snapshot/server%d", id)
-	makeDirIfNotExist(dirPath)
-	filename := fmt.Sprintf("snapshot/server%d/%d.json", id, snapshot.LastIncludedIndex/SNAPSHOT_LOGSIZE)
-	// Truncate the log
-	if len(cm.log) < SNAPSHOT_LOGSIZE {
-		cm.log = cm.log[len(cm.log):]
-	} else {
-		cm.log = cm.log[SNAPSHOT_LOGSIZE:]
-	}
-
-	SaveSnapshot(snapshot, filename)
-	cm.lastIncludedIndex = snapshot.LastIncludedIndex
-	cm.lastIncludedTerm = snapshot.LastIncludedTerm
-	cm.debugLog("Snap shot from data %+v", snapshot)
-	cm.debugLog("Change in last Include index: %v", cm.lastIncludedIndex)
-
-}
-
-// Expect to get the lock from applyStateMachine (this operation will be very quick)
-func (cm *ConsensusModule) TakeSnapshot() {
-
-	lastIncludedIndex := cm.lastIncludedIndex + SNAPSHOT_LOGSIZE
-	// lastIncludedTerm := cm.log[cm.lastIncludedIndex+SNAPSHOT_LOGSIZE-1].Term
-	lastIncludedTerm := cm.getTerm(cm.lastIncludedIndex + SNAPSHOT_LOGSIZE - 1)
-	logs := cm.getLogSlice(cm.lastIncludedIndex, cm.lastIncludedIndex+SNAPSHOT_LOGSIZE)
-	//cm.log[cm.lastIncludedIndex : cm.lastIncludedIndex+SNAPSHOT_LOGSIZE]
-	// Truncate the log
-	cm.log = cm.log[SNAPSHOT_LOGSIZE:]
-
-	snapshot := Snapshot{
-		LastIncludedIndex: lastIncludedIndex,
-		LastIncludedTerm:  lastIncludedTerm,
-		Logs:              logs,
-	}
-	makeDirIfNotExist("snapshot")
-	dirPath := fmt.Sprintf("snapshot/server%d", cm.id)
-	makeDirIfNotExist(dirPath)
-	filename := fmt.Sprintf("snapshot/server%d/%d.json", cm.id, lastIncludedIndex/SNAPSHOT_LOGSIZE)
-	SaveSnapshot(snapshot, filename)
-	cm.lastIncludedIndex = lastIncludedIndex
-	cm.lastIncludedTerm = lastIncludedTerm
-	cm.debugLog("Taking snapshot with include index %v and include term %v", lastIncludedIndex, lastIncludedTerm)
-}
-
-/************************************************************ Utils function but only for snapshot *************************************************/
-func makeDirIfNotExist(dirPath string) {
-	if _, err := os.Stat(dirPath); os.IsNotExist(err) {
-		// Create the directory
-		err := os.Mkdir(dirPath, 0755)
-		if err != nil {
-			log.Fatal("Failed to create directory:", err)
-		}
-	}
-}
-func SaveSnapshot(snapshot Snapshot, filename string) error {
-	snapShotdata, err := json.MarshalIndent(snapshot, "", "  ")
-	if err != nil {
-		return err
-	}
-	err = ioutil.WriteFile(filename, snapShotdata, 0644)
-	return err
-}
-
-func GetSnapshot(filename string) (Snapshot, error) {
-	snapshot := Snapshot{}
-	jsonData, err := ioutil.ReadFile(filename)
-	if err != nil {
-		return snapshot, err
-	}
-
-	err = json.Unmarshal(jsonData, &snapshot)
-	if err != nil {
-		return Snapshot{}, err
-	}
-	return snapshot, nil
 }
