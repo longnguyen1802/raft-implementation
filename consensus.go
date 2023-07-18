@@ -71,8 +71,8 @@ func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan inte
 	cm.matchIndex = make(map[int]int)
 
 	cm.matchIncludedIndex = make(map[int]int)
-	// Config
-	cm.config = NewConfiguration(len(peerIds) + 1)
+	// Config with number of server in the cluster and the list of server id
+	cm.config = NewConfiguration(len(peerIds)+1, append(cm.peerIds, cm.id))
 	go func() {
 		// Wait the start of server until setup all server
 		<-ready
@@ -80,9 +80,9 @@ func NewConsensusModule(id int, peerIds []int, server *Server, ready <-chan inte
 		cm.electionTimeoutReset = time.Now()
 		cm.mu.Unlock()
 		cm.electionTimeout()
+		go cm.applyStateMachine()
 	}()
 
-	go cm.applyStateMachine()
 	return cm
 }
 

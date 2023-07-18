@@ -12,13 +12,16 @@ type MachineInformation struct {
 
 type Configuration struct {
 	ClusterSize int
-	MachineInfo []MachineInformation
+	MachineIds  []int
+	MachineInfo map[int]MachineInformation
 }
 
-func NewConfiguration(size int) *Configuration {
+func NewConfiguration(size int, ids []int) *Configuration {
 	c := new(Configuration)
 	c.ClusterSize = size
-	c.MachineInfo = make([]MachineInformation, size)
+	c.MachineIds = make([]int, size)
+	copy(c.MachineIds, ids)
+	c.MachineInfo = make(map[int]MachineInformation)
 	return c
 }
 
