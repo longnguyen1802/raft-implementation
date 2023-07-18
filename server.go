@@ -142,6 +142,10 @@ func (rpp *RPCProxy) InstallSnapshot(args InstallSnapshotArgs, response *Install
 	return rpp.cm.InstallSnapshot(args, response)
 }
 
+func (rpp *RPCProxy) AddMachine(args AddMachineArgs, response *AddMachineResponse) error {
+	return rpp.cm.AddMachine(args, response)
+}
+
 func (s *Server) UpdateConfig(config Configuration) {
 	s.mu.Lock()
 	defer s.mu.Unlock()

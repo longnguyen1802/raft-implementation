@@ -54,9 +54,9 @@ func (cm *ConsensusModule) AppendEntries(args AppendEntriesArgs, response *Appen
 			cm.server.UpdateConfig(args.Config)
 			// Update local config
 			cm.peerIds = make([]int, 0)
-			for _, i := range args.Config.MachineIds {
-				if i != cm.id {
-					cm.peerIds = append(cm.peerIds, i)
+			for _, peerId := range args.Config.MachineIds {
+				if peerId != cm.id {
+					cm.peerIds = append(cm.peerIds, peerId)
 				}
 			}
 		}

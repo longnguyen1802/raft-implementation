@@ -1,0 +1,59 @@
+2023/07/18 11:01:25 [5] Argument to send addmachine is {Id:5 Info:{Protocol:tcp Address:[::]:37897}}
+2023/07/18 11:01:25 [5] Argument to send addmachine is {Id:5 Info:{Protocol:tcp Address:[::]:37897}}
+2023/07/18 11:01:25 [5] Election timeout started (569ms), term=0
+2023/07/18 11:01:25 [5] Argument to send addmachine is {Id:5 Info:{Protocol:tcp Address:[::]:37897}}
+2023/07/18 11:01:25 [5] Argument to send addmachine is {Id:5 Info:{Protocol:tcp Address:[::]:37897}}
+2023/07/18 11:01:25 [5] Argument to send addmachine is {Id:5 Info:{Protocol:tcp Address:[::]:37897}}
+2023/07/18 11:01:25 [5] Error when send Add machine RPC%!(EXTRA <nil>)
+2023/07/18 11:01:25 [5] Error when send Add machine RPC%!(EXTRA <nil>)
+2023/07/18 11:01:25 [5] Error when send Add machine RPC%!(EXTRA <nil>)
+2023/07/18 11:01:25 [5] Error when send Add machine RPC%!(EXTRA <nil>)
+2023/07/18 11:01:25 [5] Error when send Add machine RPC%!(EXTRA <nil>)
+2023/07/18 11:01:26 [5] Become Candidate (currentTerm=1); log=[]
+2023/07/18 11:01:26 [5] sending RequestVote to 0: {Term:1 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] sending RequestVote to 3: {Term:1 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] sending RequestVote to 4: {Term:1 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] Election timeout started (787ms), term=1
+2023/07/18 11:01:26 [5] sending RequestVote to 1: {Term:1 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] sending RequestVote to 2: {Term:1 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] received RequestVoteResponse from peer 0 {Term:1 VoteGranted:false}
+2023/07/18 11:01:26 [5] Become Candidate (currentTerm=2); log=[]
+2023/07/18 11:01:26 [5] Election timeout started (800ms), term=2
+2023/07/18 11:01:26 [5] sending RequestVote to 1: {Term:2 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] sending RequestVote to 0: {Term:2 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] sending RequestVote to 2: {Term:2 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] sending RequestVote to 3: {Term:2 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] sending RequestVote to 4: {Term:2 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:26 [5] received RequestVoteResponse from peer 0 {Term:2 VoteGranted:false}
+2023/07/18 11:01:27 [5] Become Candidate (currentTerm=3); log=[]
+2023/07/18 11:01:27 [5] Election timeout started (742ms), term=3
+2023/07/18 11:01:27 [5] sending RequestVote to 0: {Term:3 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:27 [5] sending RequestVote to 4: {Term:3 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:27 [5] sending RequestVote to 1: {Term:3 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:27 [5] sending RequestVote to 2: {Term:3 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:27 [5] sending RequestVote to 3: {Term:3 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:27 [5] received RequestVoteResponse from peer 0 {Term:3 VoteGranted:false}
+2023/07/18 11:01:28 [5] Become Candidate (currentTerm=4); log=[]
+2023/07/18 11:01:28 [5] Election timeout started (840ms), term=4
+2023/07/18 11:01:28 [5] sending RequestVote to 0: {Term:4 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:28 [5] sending RequestVote to 3: {Term:4 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:28 [5] sending RequestVote to 1: {Term:4 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:28 [5] sending RequestVote to 2: {Term:4 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:28 [5] sending RequestVote to 4: {Term:4 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:28 [5] received RequestVoteResponse from peer 0 {Term:4 VoteGranted:false}
+2023/07/18 11:01:29 [5] Become Candidate (currentTerm=5); log=[]
+2023/07/18 11:01:29 [5] Election timeout started (736ms), term=5
+2023/07/18 11:01:29 [5] sending RequestVote to 2: {Term:5 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:29 [5] sending RequestVote to 1: {Term:5 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:29 [5] sending RequestVote to 0: {Term:5 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:29 [5] sending RequestVote to 3: {Term:5 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:29 [5] sending RequestVote to 4: {Term:5 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:29 [5] received RequestVoteResponse from peer 0 {Term:5 VoteGranted:false}
+2023/07/18 11:01:30 [5] Become Candidate (currentTerm=6); log=[]
+2023/07/18 11:01:30 [5] Election timeout started (669ms), term=6
+2023/07/18 11:01:30 [5] sending RequestVote to 0: {Term:6 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:30 [5] sending RequestVote to 2: {Term:6 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:30 [5] sending RequestVote to 1: {Term:6 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:30 [5] sending RequestVote to 3: {Term:6 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:30 [5] sending RequestVote to 4: {Term:6 CandidateId:5 LastLogIndex:-1 LastLogTerm:-1}
+2023/07/18 11:01:30 [5] received RequestVoteResponse from peer 0 {Term:6 VoteGranted:false}

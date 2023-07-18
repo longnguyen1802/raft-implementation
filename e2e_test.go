@@ -264,3 +264,73 @@ func TestE2EServices(t *testing.T) {
 // func (s *Set) Print() {
 // 	fmt.Println(s.myset)
 // }
+
+func TestAddMachine(t *testing.T) {
+	rand.Seed(time.Now().UnixNano())
+	num_server := 5
+	servers := make([]*Server, num_server)
+	ready := make(chan interface{})
+	for i := 0; i < num_server; i++ {
+		peerIds := make([]int, 0)
+		for p := 0; p < num_server; p++ {
+			if p != i {
+				peerIds = append(peerIds, p)
+			}
+		}
+
+		servers[i] = NewServer(i, peerIds, ready)
+		servers[i].Serve()
+	}
+
+	for i := 0; i < num_server; i++ {
+		for j := 0; j < num_server; j++ {
+			if i != j {
+				servers[i].ConnectToPeer(j, servers[j].GetListenAddr())
+			}
+		}
+	}
+
+	client := NewClient(servers)
+	close(ready)
+	// Config new server
+	currentIds := make([]int, 0)
+	newReady := make(chan interface{})
+	for _, server := range servers {
+		currentIds = append(currentIds, server.serverId)
+	}
+	newServer := NewServer(num_server, currentIds, newReady)
+	newServer.Serve()
+	servers = append(servers, newServer)
+	for i := 0; i < num_server; i++ {
+		ConnectTwoServer(servers, i, num_server)
+	}
+	startNewMachine := false
+	// End config
+	go func() {
+		start := time.Now()
+		time.Sleep(1 * time.Second)
+		for {
+			elapsed := time.Now()
+			if elapsed.Sub(start) < 9*time.Second {
+				time.Sleep(time.Duration(50+rand.Intn(50)) * time.Millisecond)
+				for j := 0; j < 1+rand.Intn(4); j++ {
+					for _, i := range rand.Perm(num_server) {
+						result := client.sendCommand(i, "command "+strconv.Itoa(rand.Intn(1000)))
+						if result {
+							break
+						}
+					}
+				}
+			}
+			if elapsed.Sub(start) > 11*time.Second && !startNewMachine {
+				startNewMachine = true
+				close(newReady)
+				newServer.cm.sendAddMachine()
+			}
+		}
+
+	}()
+
+	time.Sleep(16 * time.Second)
+
+}
